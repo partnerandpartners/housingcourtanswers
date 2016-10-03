@@ -1,0 +1,29 @@
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after : 0;
+}

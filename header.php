@@ -4,12 +4,9 @@
 		<meta charset="<?php esc_attr(bloginfo('charset')) ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
-
 		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/favicon-152.png">
-
 		<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/img/favicon-144.png">
 
@@ -37,118 +34,68 @@
 	<?php wp_head(); ?>
 	</head>
 	<body data-spy="scroll" data-target="#nav" data-offset="70" <?php body_class('no-js'); ?>>
-	    <?php if ( ( is_front_page() )  ) { 
-	
-			//include 'inc/default-nav.php'; 
-		?>
-		<header class="navbar navbar-default navbar-fixed-top" id="top" role="banner">
-		  <div class="container">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hca-navbar" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
-		    </div>
-		
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
-		    <?php
-					if( has_nav_menu( 'main' ) ) {
-						wp_nav_menu( array(
-							'theme_location' => 'main',
-							'container' => false,
-							'depth' => -1,
-							'menu_class' => 'nav navbar-nav',
-							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-						) );
-					}
+	  <?php if ((is_front_page())) { ?>
+			<header class="navbar navbar-default navbar-fixed-top" id="top" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hca-navbar" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
+						<?php
+							if( has_nav_menu( 'main' ) ) {
+								wp_nav_menu( array(
+									'theme_location' => 'main',
+									'container' => false,
+									'depth' => -1,
+									'menu_class' => 'nav navbar-nav',
+									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+								) );
+							}
+						?>
+					</nav><!-- /.navbar-collapse -->
+				</div><!-- /.container -->
+			</header>
+    <?php } elseif ( ( is_search() )  ) { ?>
+			<!-- search page navigation -->
+    <?php } else { ?>
+			<!-- sub page navigation -->
+			<header class="not-home navbar navbar-default navbar-fixed-top" id="top" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hca-navbar" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
+						<?php
+							if( has_nav_menu( 'main' ) ) {
+								wp_nav_menu( array(
+									'theme_location' => 'main',
+									'container' => false,
+									'depth' => -1,
+									'menu_class' => 'nav navbar-nav',
+									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+								) );
+							}
+						?>
+					</nav><!-- /.navbar-collapse -->
+				</div><!-- /.container -->
+			</header>
+		<?php } ?>
+		<section class="site-content" id="site-content">
 
-			  ?>
-		      <ul class="nav navbar-nav">
-		        <a class="btn btn-primary call-button" role="button" href="#">Donate</a>
-		      </ul>
-		    </nav><!-- /.navbar-collapse -->
-		  </div><!-- /.container -->
-        </header>
-        <?php } elseif ( ( is_search() )  ) { ?>
-        
-        <header class="navbar navbar-default navbar-fixed-top" id="top" role="banner">
-		  <div class="container">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hca-navbar" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
-		    </div>
-		
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
-		    <?php
-					if( has_nav_menu( 'main' ) ) {
-						wp_nav_menu( array(
-							'theme_location' => 'main',
-							'container' => false,
-							'depth' => -1,
-							'menu_class' => 'nav navbar-nav',
-							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-						) );
-					}
-
-			  ?>
-		      <ul class="nav navbar-nav">
-		        <a class="btn btn-primary call-button" role="button" href="#">Donate</a>
-		      </ul>
-		    </nav><!-- /.navbar-collapse -->
-		  </div><!-- /.container -->
-        </header>
-        
-        <?php } else { ?>
-        
-        <header class="not-home navbar navbar-default navbar-fixed-top" id="top" role="banner">
-		  <div class="container">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hca-navbar" area-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
-		    </div>
-		
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
-		    <?php
-					if( has_nav_menu( 'main' ) ) {
-						wp_nav_menu( array(
-							'theme_location' => 'main',
-							'container' => false,
-							'depth' => -1,
-							'menu_class' => 'nav navbar-nav',
-							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-						) );
-					}
-
-			  ?>
-		    
-		      <ul class="nav navbar-nav">
-		        <a class="btn btn-primary call-button" role="button" href="#">Donate</a>
-		      </ul>
-		    </nav><!-- /.navbar-collapse -->
-		  </div><!-- /.container -->
-        </header>
-        
-	        
-         <?php } ?>
-<section class="site-content" id="site-content">
-
-<?php get_search_form(); ?>
+		<?php // get_search_form(); ?>

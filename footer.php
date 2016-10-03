@@ -22,7 +22,7 @@
 	 <span class="small-header">Navigation</span>
 		 <div class="footer-nav">
 		 <?php
-	
+
 			if( has_nav_menu( 'footer' ) ) {
 				wp_nav_menu( array(
 					'theme_location' => 'footer',
@@ -82,7 +82,6 @@
 	  <span class="design-credit">Design & Development by <a href="" target="_blank">Partner & Partners</a></span>
     </div>
   </div>
-
 </footer>
 
 <?php wp_footer(); ?>

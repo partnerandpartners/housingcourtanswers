@@ -1,0 +1,89 @@
+$button-padding: $spacer-y/2 $spacer-x * 1.5;
+
+.btn {
+  font-weight: bold;
+  font-size: inherit;
+  line-height: inherit;;
+  background: transparent;
+  display: inline-block;
+  outline: none;
+  -webkit-appearance: none;
+  padding: $button-padding;
+  text-decoration: none;
+  position: relative;
+  line-height: 2.25rem;
+  border: 1px solid transparent;
+  &.btn-xl {
+    font-size: $font-size-xl;
+    @media screen and (max-width: 640px) {
+      font-size: $font-size-lg;
+    }
+    padding: $spacer-y * 1.5 $spacer-y * 1.5 ;
+  }
+  &.btn-lg {
+    font-size: $font-size-lg;
+    padding: $spacer-y * .75 $spacer-x $spacer-y * .75 $spacer-x;
+  }
+  &.btn-md {
+    font-size: $font-size-md;
+    padding: $spacer-y * 0.5 $spacer-x $spacer-y * 0.5 $spacer-x;
+  }
+  &.btn-sm {
+    font-size: $font-size-base;
+    padding: $spacer-y * 0.5 $spacer-x $spacer-y * 0.5 $spacer-x;
+  }
+  &.btn-xs {
+    font-size: $font-size-xs;
+    padding: $spacer-y * 0.5 $spacer-x $spacer-y * 0.5 $spacer-x;
+  }
+  &:hover {
+    color: $body-bg;
+    text-decoration: none;
+    background-color: $body-color;
+  }
+}
+
+.solid {
+  border: $border-width solid $body-color;
+}
+
+.dotted {
+  border: $border-width dotted $body-color;
+}
+
+.glossary {
+  .glossary-term-container {
+    border: $border-width dotted $body-color;
+    display: inline-table;
+    margin: 0;
+    padding: 0;
+    &.term-lg {
+      font-size: $font-size-lg;
+      padding: $spacer-y * .75 $spacer-x $spacer-y * .8 $spacer-x;
+      @media screen and (max-width: 640px) {
+        font-size: $font-size-base;
+        padding: $spacer-y * 0.5 $spacer-x * 0.75 $spacer-y * 0.55 $spacer-x * 0.5;
+      }
+    }
+    &.term-md {
+      font-size: $font-size-md;
+      padding: $spacer-y * .75 $spacer-x $spacer-y * .8 $spacer-x;
+      @media screen and (max-width: 640px) {
+        font-size: $font-size-base;
+        padding: $spacer-y * 0.5 $spacer-x * 0.75 $spacer-y * 0.55 $spacer-x * 0.5;
+      }
+    }
+    &.term-sm {
+      font-size: $font-size-sm;
+      padding: $spacer-y * 0.5 $spacer-x * 0.75 $spacer-y * 0.55 $spacer-x * 0.5;
+    }
+    & > a {
+      font-weight: normal;
+    }
+    &:hover {
+      border: $border-width solid $body-color;
+      background-color: $body-bg;
+      color: $body-color;
+    }
+  }
+}

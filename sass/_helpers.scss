@@ -1,0 +1,143 @@
+// Placeholder image div
+.placeholder {
+  @include aspect-ratio(3, 2);
+  background: $gray-lighter;
+}
+
+.placeholder--square,
+.square-placeholder {
+  @include aspect-ratio(1,1);
+  background: $gray-lighter;
+}
+
+.placeholder--sponsor {
+  @include aspect-ratio(2, 1);
+  background: $gray-lighter;
+  .content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.left-align {
+  float: left;
+}
+
+.right-align {
+  float: right;
+}
+
+.light {
+  opacity: 0.2;
+}
+
+.dotted-separator {
+  background: none;
+  border-top: 1px dotted #000;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+}
+
+// Paragraph Styling
+
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.accordian-content {
+  display: none;
+  &.visible {
+    display: block;
+  }
+}
+
+// Boxes
+.boxes {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  & > div {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.box {
+  @extend .solid;
+  padding: $spacer $spacer * 1.35 $spacer * 1.5 $spacer * 1.25 ;
+  // & > div {
+  //   display: block;
+  // }
+  // display: flex;
+  // width: 25%;
+
+}
+
+.box-link {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  &:hover {
+    .box {
+      background-color: $body-color;
+      color: $body-bg;
+    }
+    .see-thru {
+      opacity: 1;
+      color: $body-bg;
+    }
+  }
+}
+
+ul.list-unstyled,
+ol.list-unstyled {
+  list-style-type: none;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+ul.inline,
+ol.inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+  }
+}
+
+table.unstyled {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+  // @media screen and (max-width: 800px) {
+  //   li {
+  //     font-size: $mobile-menu-bar-font-size;
+  //   }
+  //   li a span:first-of-type {
+  //     width: $mobile-menu-bar-dot-size;
+  //     height: $mobile-menu-bar-dot-size;
+  //     border-radius: $mobile-menu-bar-dot-size / 2.0;
+  //     max-width: $mobile-menu-bar-dot-size;
+  //     min-width: $mobile-menu-bar-dot-size;
+  //   }
+  // }

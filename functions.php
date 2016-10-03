@@ -4,40 +4,23 @@
 require_once( 'external/housing-court-rest-api.php' );
 
 function housing_enqueue() {
-	wp_enqueue_style( 'housingyo', get_stylesheet_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'hca-styles', get_stylesheet_directory_uri() . '/css/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'housing_enqueue' );
 
-
-require_once( 'external/starkers-utilities.php' );
-
-add_theme_support('post-thumbnails');
-add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer', 10 );
-add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
-
-function starkers_script_enqueuer() {
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '', true );
-	wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery') );
-	wp_register_script( 'compiled', get_template_directory_uri().'/js/compiled.js', array('jquery', 'bootstrap'), '', true );
-	// 
-
-	// wp_register_script(
-	// 	'autocomplete-setup',
-	// 	get_template_directory_uri() . '/js/autocomplete-setup.js',
-	// 	array( 'compiled' ),
-	// 	'',
-	// 	true
-	// );
-
-	// wp_enqueue_script( 'autocomplete-setup' );
-
-  wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'compiled' ), '', true );
-	wp_enqueue_script( 'site' );
-
+function script_enqueuer() {
+	//wp_deregister_script('jquery');
+	//wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '', true );
+	//wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery') );
+	//wp_register_script( 'compiled', get_template_directory_uri().'/js/compiled.js', array('jquery', 'bootstrap'), '', true );
+	wp_register_script( 'sitejs', get_template_directory_uri().'/js/hca.min.js', '', true );
+		wp_enqueue_script( 'sitejs' );
 	wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
 			wp_enqueue_style( 'screen' );
 }
+add_action( 'wp_enqueue_scripts', 'script_enqueuer', 10 );
+
+add_theme_support('post-thumbnails');
 
 function hca_print_tag_list() {
 	$tags = get_terms('post_tag',array());
@@ -46,25 +29,24 @@ function hca_print_tag_list() {
 		$term_link = esc_url( get_term_link( $tag ) );
 		echo '<li>'.$tag->name.'</li>';
 	}
- 
 }
 
 	/**
-	* 
+	*
 	* Register the navigation menus for the site.
-	* 
+	*
 	*/
 	function housingcourtanswers_register_nav_menus() {
 		register_nav_menu( 'main', 'Main Menu' );
 		register_nav_menu( 'footer', 'Footer Menu' );
 	}
-	add_action( 'after_setup_theme', 'housingcourtanswers_register_nav_menus' );	
-	
-	
+	add_action( 'after_setup_theme', 'housingcourtanswers_register_nav_menus' );
+
+
 	/**
-	 * 
+	 *
 	 * Adds 'Read More' button to the excerpt.
-	 * 
+	 *
 	 */
 	function new_excerpt_more( $more ) {
 		global $post;
@@ -72,17 +54,17 @@ function hca_print_tag_list() {
 		return '...<br/><a class="btn read-more-button" role="button" href="'. get_permalink( get_the_ID() ) . '">'.$text.' &rarr;</a>';
 	}
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
-	
-	
+
+
 	function custom_excerpt_length( $length ) {
 		return 32;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-	
-	
-	
+
+
+
 	function hca_custom_post_types() {
-	
+
 		// Events
 		$event_labels = array(
 			'name' => 'Events',
@@ -105,8 +87,8 @@ function hca_print_tag_list() {
 			'supports' => array('title','editor','comments','excerpt','revisions')
 		);
 		register_post_type( 'event', $event_args );
-	
-	
+
+
 		// News
 		$news_labels = array(
 			'name' => 'News',
@@ -129,7 +111,7 @@ function hca_print_tag_list() {
 			'supports' => array('title','editor','comments','excerpt','revisions')
 		);
 		register_post_type( 'news', $news_args );
-		
+
 		// Resources & Links
 		$resource_labels = array(
 			'name' => 'Resources & Links',
@@ -151,20 +133,20 @@ function hca_print_tag_list() {
 			'supports' => array('title','editor','comments','excerpt','revisions')
 		);
 		register_post_type( 'resource', $resource_args );
-		
+
 	}
-	
+
 	add_action( 'init', 'hca_custom_post_types' );
-	
-	
-	
+
+
+
 	/**
 	 * Upcoming events query
 	 *
 	 * @return void
 	 * @author Keir Whitaker
 	 */
-	
+
 function hca_get_upcoming_events_query() {
 	$current_timestamp = current_time('timestamp');
 
@@ -200,7 +182,7 @@ function hca_get_upcoming_events_home_query() {
 
 	return $upcoming_events_query;
 }
-		
+
 function hca_get_past_events_query() {
 	$current_timestamp = current_time('timestamp');
 
@@ -218,7 +200,7 @@ function hca_get_past_events_query() {
 
 	return $past_events_query;
 }
-		
+
 		function hca_get_news_query() {
 	$current_timestamp = time();
 
@@ -232,7 +214,7 @@ function hca_get_past_events_query() {
 
 	return $news_query;
 		}
-		
+
 		function hca_get_recent_news_query() {
 	$current_timestamp = time();
 
@@ -246,7 +228,7 @@ function hca_get_past_events_query() {
 
 	return $recent_news_query;
 		}
-		
+
 		function hca_get_resources_query() {
 
 	$args = array(
@@ -261,12 +243,12 @@ function hca_get_past_events_query() {
 		}
 
 /**
- * Custom callback for outputting comments 
+ * Custom callback for outputting comments
  *
  * @return void
  * @author Keir Whitaker
  */
-	
+
 	function hca_search_more_posts_button( $args, $search_query ) {
 	$default_args = array(
 		'see_all_text' => 'See all posts',
@@ -292,29 +274,6 @@ function hca_get_past_events_query() {
 		echo '</a></div></div>';
 	}
 }
-
-
-
-/**
- * Custom callback for outputting comments 
- *
- * @return void
- * @author Keir Whitaker
- */
-function starkers_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment; 
-	?>
-	<?php if ( $comment->comment_approved == '1' ): ?>	
-	<li>
-		<article id="comment-<?php comment_ID() ?>">
-			<?php echo get_avatar( $comment ); ?>
-			<h4><?php comment_author_link() ?></h4>
-			<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
-			<?php comment_text() ?>
-		</article>
-	<?php endif;
-}
-
 
 function wpb_move_comment_field_to_bottom( $fields ) {
 	$comment_field = $fields['comment'];
@@ -467,7 +426,7 @@ function housing_court_previous_next_post( $post_id ) {
       else if( $index_of_post_id_in_category_hierarchy == ( sizeof( $post_ids ) -1 ) ) {
         echo '<h2>NO NEXT POST</h2>';
       }
-      // 
+      //
       else {
         $previous_post_id = $post_ids[$index_of_post_id_in_category_hierarchy - 1];
         $next_post_id = $post_ids[$index_of_post_id_in_category_hierarchy + 1];
