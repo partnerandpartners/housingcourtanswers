@@ -43,14 +43,6 @@ $button-padding: $spacer-y/2 $spacer-x * 1.5;
   }
 }
 
-.solid {
-  border: $border-width solid $body-color;
-}
-
-.dotted {
-  border: $border-width dotted $body-color;
-}
-
 .glossary {
   .glossary-term-container {
     border: $border-width dotted $body-color;

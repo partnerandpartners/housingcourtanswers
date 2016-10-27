@@ -11,22 +11,30 @@
 ?>
 <?php get_header();?>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-8">
-				<?php if ( have_posts() ): ?>
-				<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
-				<div class="main-lead"><?php echo category_description(); ?></div>
-				<?php endif; ?>
+<div class="container-fluid full-bg-green">
+	<div class="container">
+		<?php  get_search_form(); ?>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+					<?php if ( have_posts() ): ?>
+					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
+					<div class="main-lead"><?php echo category_description(); ?></div>
+					<?php endif; ?>
+			</div>
 		</div>
-		<!-- <div class="col-md-4 col-md-offset-1">
-				<p class="hotline-small-title">Housing Court Answers Hotline</p>
-				</br>9 am to 5 pm
-				</br>Tuesday — Thursday
-				</br><a class="btn btn-default hotline-btn" role="button" href="">Call (212) 962-4795</a>
-		</div> -->
 	</div>
 </div>
+
+<?php $categories = get_terms( 'category', array(
+    'orderby'    => 'term_group',
+    'hide_empty' => 0,
+) );
+foreach ($categories as $category) {
+	echo $category->name;
+}
+?>
 
 <div class="container">
    <div class="row">

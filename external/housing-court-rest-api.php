@@ -265,6 +265,6 @@ function housing_court_add_inline_autocomplete_json() {
 	$base_url_array = array(
 		'base_url' => home_url('/')
 	);
-	wp_localize_script( 'site', 'autocomplete_base_url', $base_url_array );
+	wp_localize_script( 'sitejs', 'autocomplete_base_url', $base_url_array );
 }
 add_action( 'wp_enqueue_scripts', 'housing_court_add_inline_autocomplete_json', 20 );

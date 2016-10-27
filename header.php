@@ -63,7 +63,6 @@
 					</nav><!-- /.navbar-collapse -->
 				</div><!-- /.container -->
 			</header>
-    <?php } elseif ( ( is_search() )  ) { ?>
 			<!-- search page navigation -->
     <?php } else { ?>
 			<!-- sub page navigation -->
@@ -97,5 +96,3 @@
 			</header>
 		<?php } ?>
 		<section class="site-content" id="site-content">
-
-		<?php // get_search_form(); ?>

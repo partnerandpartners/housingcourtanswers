@@ -342,13 +342,13 @@ var search_input_selector = '#search-input';
 
           $('#for-landlords-results').empty();
           results = for_landlords_idx.search( $(this).val() );
-          
+
           if( results.length == 1 ) {
             $('#for-landlords-results').append('<div class="count">' + results.length + ' results</div>');
           } else {
             $('#for-landlords-results').append('<div class="count">' + results.length + ' results</div>');
           }
-          
+
           var num_for_landlords_added = 0;
 
           $(results).each(function(index, result){

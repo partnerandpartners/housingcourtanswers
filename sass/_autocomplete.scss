@@ -1,0 +1,46 @@
+// Turning off the autocomplete display to begin with
+#autocomplete {
+  display: none;
+}
+
+#search-section.active {
+  z-index: 1000;
+  background: transparent;
+}
+
+// Styles for the overlay
+#autocomplete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $background-blue;
+  z-index: 100;
+  display: none;
+}
+
+#autocomplete-overlay.visible {
+  display: block;
+}
+
+.search-form {
+  position: relative;
+  z-index: 1000;
+}
+
+#autocomplete {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: auto;
+  z-index: 10000;
+}
+
+body.autocomplete-active #autocomplete {
+  display: block;
+  border: 2px solid;
+  padding-bottom: 15px;
+}
