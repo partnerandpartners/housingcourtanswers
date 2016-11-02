@@ -57,7 +57,7 @@ $ft_items = wp_get_menu_array('For Tenants');
 
 			<!-- Top Section of each category -->
 			<a href="<?php echo $link ?>">
-				<h2 id="<?php echo $title ?>"><?php echo $title ?></h2>
+				<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
 			</a>
 			<p class="lead"><?php echo $description ?></p>
 
@@ -92,23 +92,13 @@ $ft_items = wp_get_menu_array('For Tenants');
 
 					</div><div class="row md-m-b-3">
 						<div class="col-sm-6">
-							<div class="<?php echo $card_class ?>">
-								<a href="<?php echo $sub_link ?>">
-									<h4><?php echo $sub_title ?></h4>
-								</a>
-								<p><?php echo $sub_description ?></p>
-							</div>
+							<?php include('templates/card.php') ?>
 						</div>
 
 					<?php	} else { ?>
 
 					<div class="col-sm-6">
-						<div class="<?php echo $card_class ?>">
-							<a href="<?php echo $sub_link ?>">
-								<h4><?php echo $sub_title ?></h4>
-							</a>
-							<p><?php echo $sub_description ?></p>
-						</div>
+						<?php include('templates/card.php') ?>
 					</div>
 
 					<?php
