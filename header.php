@@ -33,7 +33,7 @@
 		<![endif]-->
 	<?php wp_head(); ?>
 	</head>
-	<body data-spy="scroll" data-target="#nav" data-offset="70" <?php body_class('no-js'); ?>>
+	<body data-spy="scroll" data-target="#scroll-nav" data-offset="10" <?php body_class('no-js'); ?>>
 	  <?php if ((is_front_page())) { ?>
 			<header class="navbar navbar-default navbar-fixed-top" id="top" role="navigation">
 				<div class="container">

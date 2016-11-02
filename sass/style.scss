@@ -28,6 +28,7 @@
 //@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
 //@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
 //@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
 
 // Components w/ JavaScript
@@ -55,19 +56,49 @@
 @import "autocomplete";
 @import "responsive-padding";
 
-.card {
+// #main-content-container {
+// 	position: relative;
+// }
+#scroll-nav {
+	ul.sub-nav {
+		li {
+			&.active {
+				color: $hca-blue;
+			}
+		}
+	}
+}
+
+.affix {
+	top: 70px;
+}
+
+.anchor {
+	display: block;
+	height: 70px;
+	margin-top: -70px;
+	visibility: hidden;
+}
+
+.card, .card-stack {
 	border: 3px solid #000;
 	padding: 1em 1em 2em 1em;
 	position: relative;
 	background-color: #fff;
+	.badge {
+	  background-color: $hca-blue;
+		padding: 6px 10px;
+		border-radius: 12px;
+    margin-bottom: .325em;
+	}
+}
+
+
+.card {
 	margin-left: 1em;
 }
 
 .card-stack {
-	border: 3px solid #000;
-	padding: 1em 1em 2em 1em;
-	position: relative;
-	background-color: #fff;
   &:before {
   	content: "";
     width: 100%;

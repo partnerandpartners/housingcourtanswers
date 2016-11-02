@@ -15,8 +15,8 @@
 // $GLOBALS['current_category_id'] = $current_category->cat_ID;
 
 $ft_items = wp_get_menu_array('For Tenants');
-	$output_array = array('main' => '', 'scrollspy' => '' );
-// $for_tenants_menu = wp_get_nav_menu_items('For Tenants');
+$output_array = array('main' => '', 'scrollspy' => '' );
+//$for_tenants_menu = wp_get_nav_menu_items('For Tenants');
 // print "<pre style='font-size: 10px;'>";
 // print_r($for_tenants_menu);
 // print "</pre>";
@@ -40,7 +40,7 @@ $ft_items = wp_get_menu_array('For Tenants');
 
 <hr/>
 
-<div class="container">
+<div id="main-content-container" class="container" >
 	<div class="row">
 		<div class="col-md-8">
 			<?php
@@ -49,17 +49,21 @@ $ft_items = wp_get_menu_array('For Tenants');
 					$id = (int)$ft_item['ID']; // Get the item ID
 					$title = $ft_item['title']; // Get the item title
 					$type = $ft_item['type'];
-					$link = get_term_link($id); // Get the item link
+					$link = get_term_link($id);
+					$slug = get_term($id)->slug; // Get the item link
 					$tip_num = get_category($id)->count; // Get the amount of posts
 					$description = term_description($id); // Get the description
-					$output_array['scrollspy'] .= '<li><a href="#' . $title . '"> ' . $title . '</a></li>';
+					$output_array['scrollspy'] .= '<li><a href="#' . $slug . '">' . $title . '</a></li>';
 			?>
 
 			<!-- Top Section of each category -->
-			<a href="<?php echo $link ?>">
-				<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
-			</a>
-			<p class="lead"><?php echo $description ?></p>
+			<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
+			<div>
+				<a href="<?php echo $link ?>">
+					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
+				</a>
+				<div class="lead"><?php echo $description ?></div>
+			</div>
 
 			<?php
 			//echo '<li><a href=" '. $link.' "><h3>' . $title . '</h3></a>' .$description.'</li>';
@@ -80,7 +84,7 @@ $ft_items = wp_get_menu_array('For Tenants');
 						$sub_description = term_description($sub_id);
 						$card_class = 'card-stack';
 					} elseif ($sub_type == 'post') {
-						$sub_link = $ft_child['link'];
+							$sub_link = $ft_child['url'];
 							// getting the post excerpt
 							$the_post = get_post($sub_id);
 							setup_postdata($the_post);
@@ -115,8 +119,12 @@ $ft_items = wp_get_menu_array('For Tenants');
 			} ?>
 		</div><!-- col-md-8 -->
 
-		<div class="col-md-4 scrollspy">
-			<?php echo $output_array['scrollspy']; ?>
+		<div class="col-md-4">
+			<div id="scroll-nav" role="navigation">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="310" data-offset-bottom="200">
+					<?php echo $output_array['scrollspy']; ?>
+				</ul>
+			</div>
 		</div>
 
 	</div>
