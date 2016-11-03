@@ -22,23 +22,23 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 // print "</pre>";
 ?>
 
-<div class="container-fluid full-bg-green">
+<div class="container-fluid full bg-green">
 	<div class="container">
-		<?php get_search_form(); ?>
+		<div class="row">
+			<?php get_search_form(); ?>
+		</div>
 	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
 					<?php if ( have_posts() ): ?>
 					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
-					<div class="main-lead"><?php echo category_description(); ?></div>
+					<div class="main-lead sm-m-b-3"><?php echo category_description(); ?></div>
 					<?php endif; ?>
 			</div>
 		</div>
 	</div>
 </div>
-
-<hr/>
 
 <div id="main-content-container" class="container" >
 	<div class="row">
@@ -57,13 +57,12 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 			?>
 
 			<!-- Top Section of each category -->
-			<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
-			<div>
+			<div class="sm-m-b-6">
+				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
 				<a href="<?php echo $link ?>">
 					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
 				</a>
-				<div class="lead"><?php echo $description ?></div>
-			</div>
+				<div class="lead xs-m-b-1"><?php echo $description ?></div>
 
 			<?php
 			//echo '<li><a href=" '. $link.' "><h3>' . $title . '</h3></a>' .$description.'</li>';
@@ -111,17 +110,18 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 				} ?>
 
 			</div><!-- .row -->
-
+		</div><!-- div with margin bottom -->
 			<?php
 				} else {
 					echo '**Something is wrong here**';
 				}
 			} ?>
+
 		</div><!-- col-md-8 -->
 
-		<div class="col-md-4">
+		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="310" data-offset-bottom="200">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="420" data-offset-bottom="400">
 					<?php echo $output_array['scrollspy']; ?>
 				</ul>
 			</div>

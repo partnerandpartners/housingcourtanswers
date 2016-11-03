@@ -84,14 +84,11 @@ h6, .h6 {
   font-size: ceil(($lead-font-size * 1.3));
 }
 
-@media screen and (max-width: 640px) {
-
-}
-
-.arrow-sm {
-  font-size: 2.5em;
-  line-height: 0;
-  vertical-align: middle;
+a.more-link {
+  font-size: $font-size-base;
+  color: $hca-blue;
+  letter-spacing: .05em;
+  line-height: 1.4;
 }
 
 .detail {
@@ -139,20 +136,6 @@ address {
 
 .opt-algn-l {
   margin-left: -0.125em;
-}
-
-.m-b-sm {
-  margin-bottom: 0.714em !important;
-}
-
-.comment-date {
-  font-size: 1em;
-  margin-top: 0.5em;
-}
-
-.comment-content p{
-  margin-top:0.714em;
-  margin-bottom: 0;
 }
 
 // Alignment
