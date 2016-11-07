@@ -21,6 +21,14 @@
   }
 }
 
+.bg-green {
+  background-color: $bg-green;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
 .solid {
   border: $border-width solid $body-color;
 }

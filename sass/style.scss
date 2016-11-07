@@ -53,7 +53,7 @@
 @import "typography";
 @import "forms";
 @import "modals-popups";
-@import "autocomplete";
+@import "search";
 @import "responsive-padding";
 
 // #main-content-container {
@@ -123,12 +123,4 @@
     	left:$font-size-base * 0.4;
     }
   }
-}
-
-.full {
-	padding-top: 7em;
-	margin-bottom: 4em;
-	&.bg-green {
-		background-color: $bg-green;
-	}
 }

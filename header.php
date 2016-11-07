@@ -35,7 +35,7 @@
 	</head>
 	<body data-spy="scroll" data-target="#scroll-nav" data-offset="70" <?php body_class('no-js'); ?>>
 	  <?php if ((is_front_page())) { ?>
-			<header class="navbar navbar-default navbar-fixed-top" id="top" role="navigation">
+			<header class="navbar navbar-fixed-top" id="top" role="navigation">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -66,7 +66,11 @@
 			<!-- search page navigation -->
     <?php } else { ?>
 			<!-- sub page navigation -->
-			<header class="not-home navbar navbar-default navbar-fixed-top" id="top" role="navigation">
+			<?php if (is_category('For Tenants')) {?>
+				<header class="not-home navbar navbar-fixed-top" id="top" role="navigation">
+			<?php } else { ?>
+				<header class="not-home navbar navbar-fixed-top bg-white" id="top" role="navigation">
+			<?php } ?>
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">

@@ -30,13 +30,26 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-7">
+					<div class="header-image-left" style="">
+						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-left.png" />
+						<img class="clouds" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
+						<img class="clouds" id="cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
+						<img class="clouds" id="cloud-right" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
+
+					</div>
 					<?php if ( have_posts() ): ?>
 					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
-					<div class="main-lead sm-m-b-3"><?php echo category_description(); ?></div>
+					<div class="main-lead"><?php echo category_description(); ?></div>
 					<?php endif; ?>
 			</div>
-		</div>
+			<div class="col-md-5">
+				<div class="header-image-right" style="">
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png" />
+					<img class="img-responsive right-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-right.png" />
+				</div>
+			</div>
+	</div>
 	</div>
 </div>
 
@@ -121,7 +134,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="420" data-offset-bottom="400">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="400">
 					<?php echo $output_array['scrollspy']; ?>
 				</ul>
 			</div>

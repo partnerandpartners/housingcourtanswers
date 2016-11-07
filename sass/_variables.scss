@@ -43,7 +43,9 @@ $brand-danger:              #d9534f !default;
 $background-blue:           rgba(10, 70, 215, 0.87);
 $light-blue:                blue;
 $hca-blue:                  rgb(0, 114, 255);
-$bg-green:                  rgb(194,237,224);
+$bg-green:                  rgb(183,241,225);
+$hca-light-green:           rgb(105,209,181);
+$hca-bright-green:          rgb(0,190,142);
 $red:                       red;
 
 
@@ -177,7 +179,7 @@ $font-size-xl:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-base:          15px;
-$font-size-md:            ceil(($font-size-base * 1.025)); // ~18px
+$font-size-md:            ceil(($font-size-base * 1.025)); // ~15px
 $font-size-lg:            ceil(($font-size-base * 1.06)); // ~16px
 $font-size-xl:            floor(($font-size-base * 1.15)); // ~18px
 $font-size-sm:            ceil(($font-size-base * .825));

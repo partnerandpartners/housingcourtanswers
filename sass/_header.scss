@@ -21,3 +21,85 @@ header {
     margin-right: 10px;
   }
 }
+
+.full {
+	padding-top: 7em;
+	margin-bottom: 4em;
+  overflow: hidden;
+	&.bg-green {
+		background-color: $bg-green;
+	}
+}
+
+.header-image-left, .header-image-right { position: relative; img { position: absolute;z-index: 1; } }
+
+@keyframes cloudies {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -120px;
+  }
+}
+
+$cloudies-time: 45s;
+
+.header-image-left {
+  height: 165px;
+  img {
+    &.clouds {
+      top:0;
+      z-index: 0;
+    }
+    &#cloud-left{
+      left: 165px;
+      width: 100px;
+      top:10px;
+      animation-duration: $cloudies-time;
+      animation-name: cloudies;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+    &#cloud-center{
+      left: 345px;
+      width: 170px;
+      top:0;
+      animation-duration: $cloudies-time;
+      animation-name: cloudies;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+    &#cloud-right{
+      left: 520px;
+      width: 100px;
+      top:45px;
+      animation-duration: $cloudies-time;
+      animation-name: cloudies;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+    width: 100%;
+    height: auto;
+    max-width: 760px;
+  }
+}
+
+.header-image-right {
+  height: 440px;
+  img.main-image {
+    width: 90%;
+    height: auto;
+    top: 20px;
+    left: -25px;
+  }
+  img.right-image {
+    width: 15%;
+    height: auto;
+    top: 14px;
+    right: 0;
+  }
+}

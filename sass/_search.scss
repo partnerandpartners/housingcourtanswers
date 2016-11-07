@@ -1,3 +1,23 @@
+// ****** SEARCH ******
+.search-section {
+  #search-input {
+    width: 100%;
+    font-size: $font-size-xl;
+    padding: 1em;
+    line-height: 1;
+    border: solid 3px;
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        opacity: 0.15;
+      }
+    }
+  }
+}
+
+
+// ****** AUTOCOMPLETE ******
+
 // Turning off the autocomplete display to begin with
 #autocomplete {
   display: none;
@@ -15,9 +35,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: $background-blue;
+  background: #fff;
   z-index: 100;
   display: none;
+}
+
+.bg-green {
+  #autocomplete-overlay {
+    background: $hca-bright-green;
+  }
 }
 
 #autocomplete-overlay.visible {
@@ -31,7 +57,7 @@
 
 #autocomplete {
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: 0;
   right: 0;
   background: #fff;
