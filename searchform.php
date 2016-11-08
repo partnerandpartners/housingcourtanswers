@@ -21,7 +21,7 @@
 			      				<div class="col-sm-6 xs-top">
 			      					<div class="autocomplete-section">
 						            <div><span class="small-header" id="terms-results-label">Suggested Terms</span></div>
-						            <div id="tag-results" class="small-header results-box"></div>
+						            <div id="tag-results" class="results-box"></div>
 						          </div>
 			      				</div>
 			      			</div>

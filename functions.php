@@ -84,7 +84,9 @@ function hca_print_tag_list() {
 	function new_excerpt_more( $more ) {
 		global $post;
 		$text = 'Read More';
-		return '...<br/><a class="btn read-more-button" role="button" href="'. get_permalink( get_the_ID() ) . '">'.$text.' &rarr;</a>';
+		//return '...<br/><a class="btn read-more-button" role="button" href="'. get_permalink( get_the_ID() ) . '">'.$text.' &rarr;</a>';
+		return '...<br/>';
+
 	}
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
 

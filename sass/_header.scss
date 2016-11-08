@@ -9,7 +9,7 @@ header {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1;
   height: 50px;
   & > img {
@@ -22,13 +22,53 @@ header {
   }
 }
 
+.not-home {
+  .navbar-nav>li {
+    opacity: 0.25;
+    &:hover {
+      opacity: 1;
+    }
+    &.current-menu-item {
+      opacity: 1;
+    }
+  }
+}
+
+.navbar-nav>li {
+  font-size: $font-size-xl;
+  text-transform: uppercase;
+  margin-right: 30px;
+  &>a {
+    padding: 15px 0px 10px 0;
+    &:hover {
+        background-color: transparent;
+        border-bottom: solid 3px;
+    }
+  }
+  &:last-of-type {
+    margin-right: 0px;
+  }
+  &.current-menu-item {
+    border-bottom: solid 3px;
+    opacity: 1;
+    &:hover {
+        background-color: transparent;
+        border-bottom: solid 0px;
+    }
+  }
+
+}
+
 .full {
 	padding-top: 7em;
 	margin-bottom: 4em;
   overflow: hidden;
-	&.bg-green {
-		background-color: $bg-green;
-	}
+}
+
+.home {
+  .full {
+    overflow: visible;
+  }
 }
 
 .header-image-left, .header-image-right { position: relative; img { position: absolute;z-index: 1; } }

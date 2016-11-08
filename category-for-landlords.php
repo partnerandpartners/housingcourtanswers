@@ -9,143 +9,142 @@
  * @since 		Starkers 4.0
  */
 ?>
-<?php get_header();?>
+<?php get_header();
+// Get the current page category and assign it to global variables
+// $GLOBALS['current_category'] = get_category( get_query_var( 'cat' ) );
+// $GLOBALS['current_category_id'] = $current_category->cat_ID;
 
-<div class="container">
-	<div class="row lg-bottom sm-top">
-		<div class="col-md-7">
-		<?php if ( have_posts() ): ?>
-			<h1 class="category-title"><?php echo single_cat_title( '', false ); ?></h1>
-			<h5 class="category-description"><?php echo category_description(); ?></h5>
-		<?php endif; ?>
+$ft_items = wp_get_menu_array('For Landlords');
+$output_array = array('main' => '', 'scrollspy' => '' );
+//$for_tenants_menu = wp_get_nav_menu_items('For Tenants');
+// print "<pre style='font-size: 10px;'>";
+// print_r($for_tenants_menu);
+// print "</pre>";
+?>
+
+<div class="container-fluid full bg pink">
+	<div class="container">
+		<div class="row">
+			<?php get_search_form(); ?>
 		</div>
-		<div class="col-md-4 col-md-offset-1">
-			<!-- <div class="hotline-callout"> -->
-				<span class="hotline-small-title">Housing Court Answers Hotline</span>
-				</br>9 am to 5 pm
-				</br>Tuesday — Thursday
-				</br><a class="btn btn-default hotline-btn" role="button" href="">Call (212) 962-4795</a>
-			<!-- </div> -->
-		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+					<div class="header-image-left" style="">
+						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-left.png" />
+						<img class="clouds" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
+						<img class="clouds" id="cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
+						<img class="clouds" id="cloud-right" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
+
+					</div>
+					<?php if ( have_posts() ): ?>
+					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
+					<div class="main-lead"><?php echo category_description(); ?></div>
+					<?php endif; ?>
+			</div>
+			<div class="col-md-5">
+				<div class="header-image-right" style="">
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png" />
+					<img class="img-responsive right-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-right.png" />
+				</div>
+			</div>
+	</div>
 	</div>
 </div>
 
-<div class="container">
-   <div class="row">
-	   <div class="col-md-9" role="main">
-	      <span class="anchor" id="court"></span>		
-	      <div class="category-page-section highlight">
-		    <?php 
-			$args = array('cat'=>'14','-3', 'posts_per_page'=>3, 'order'=>'DESC');
-			$query = new WP_Query($args);
+<div id="main-content-container" class="container" >
+	<div class="row">
+		<div class="col-md-8">
+			<?php
+			// Loop over each item in the For Tenants Menu
+			foreach ($ft_items as $ft_item ) {
+					$id = (int)$ft_item['ID']; // Get the item ID
+					$title = $ft_item['title']; // Get the item title
+					$type = $ft_item['type'];
+					$link = get_term_link($id);
+					$slug = get_term($id)->slug; // Get the item link
+					$tip_num = get_category($id)->count; // Get the amount of posts
+					$description = term_description($id); // Get the description
+					$output_array['scrollspy'] .= '<li><a href="#' . $slug . '">' . $title . '</a></li>';
 			?>
-			<h3 class="section-title"><?php echo get_cat_name(14);?></h3>
-			<h6 class="section-description"><?php echo category_description(14); ?></h6>
-			<hr/>
-				<?php while($query->have_posts()): $query->the_post();?>
-				<?php $postid = get_the_ID(); ?>
-				         <article class="post-category-section">
-							<h5 class="small-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							<?php the_excerpt(); ?>	
-			             </article>
-			    <?php endwhile;?>
-				<?php 
-			    $category_id = get_cat_ID( 'What will happen in court if I go to court without a lawyer?' );
-				$category_link = get_category_link( $category_id );
-				?>
-			   <a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg" role="button">More On Court Process</a>
-		   </div>
-		   
-		   <span class="anchor" id="eviction"></span>
-		   <div class="category-page-section highlight">
-		    <?php 
-			$args = array('cat'=>'15','-3', 'posts_per_page'=>3, 'order'=>'DESC');
-			$query = new WP_Query($args);
-			?>
-			<h3 class="section-title"><?php echo get_cat_name(15);?></h3>
-			<h6 class="section-description"><?php echo category_description(15); ?></h6>
-			<hr/>
-				<?php while($query->have_posts()): $query->the_post();?>
-				<?php $postid = get_the_ID(); ?>
-				         <article class="post-category-section">
-							<h5 class="small-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							<?php the_excerpt(); ?>	
-			             </article>
-			    <?php endwhile;?>
-				<?php 
-			    $category_id = get_cat_ID( 'I want to evict my tenant' );
-				$category_link = get_category_link( $category_id );
-				?>
-			   <a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg" role="button">More On Evictions</a>
-		   </div>
-		   
-		   <span class="anchor" id="hp-actions"></span>
-		   <div class="category-page-section highlight">
-		    <?php 
-			$args = array('cat'=>'165','-3', 'posts_per_page'=>3, 'order'=>'DESC');
-			$query = new WP_Query($args);
-			?>
-			<h3 class="section-title"><?php echo get_cat_name(165);?></h3>
-			<h6 class="section-description"><?php echo category_description(165); ?></h6>
-			<hr/>
-				<?php while($query->have_posts()): $query->the_post();?>
-				<?php $postid = get_the_ID(); ?>
-				         <article class="post-category-section">
-							<h5 class="small-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							<?php the_excerpt(); ?>	
-			             </article>
-			    <?php endwhile;?>
-				<?php 
-			    $category_id = get_cat_ID( 'What happens if my tenant brings me to court with an HP Action?' );
-				$category_link = get_category_link( $category_id );
-				?>
-			   <a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg" role="button">More On HP Actions</a>
-		   </div>
-		   
-		   <span class="anchor" id="collecting-rent"></span>
-		   <div class="category-page-section highlight">
-		    <?php 
-			$args = array('cat'=>'166','-3', 'posts_per_page'=>3, 'order'=>'DESC');
-			$query = new WP_Query($args);
-			?>
-			<h3 class="section-title"><?php echo get_cat_name(166);?></h3>
-			<h6 class="section-description"><?php echo category_description(166); ?></h6>
-			<hr/>
-				<?php while($query->have_posts()): $query->the_post();?>
-				<?php $postid = get_the_ID(); ?>
-				         <article class="post-category-section">
-							<h5 class="small-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							<?php the_excerpt(); ?>	
-			             </article>
-			    <?php endwhile;?>
-				<?php 
-			    $category_id = get_cat_ID( 'How should I collect rent?' );
-				$category_link = get_category_link( $category_id );
-				?>
-			   <a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg" role="button">More On Collecting Rent</a>
-		   </div>
-		   
-		 </div>
-		
-		<div id="scroll-spy" class="col-md-3" role="complementary">
-			  <div id="nav">
-				  <ul id="nav" class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="402" data-offset-bottom="906">              
-						<span class="small-header">Landlord Topics</span>
-						<li>
-						  <a href="#court"><?php echo get_cat_name(14);?></a>
-						</li>
-						<li>
-						  <a href="#eviction"><?php echo get_cat_name(15);?></a>
-						</li>
-						<li>
-						  <a href="#hp-actions"><?php echo get_cat_name(165);?></a>
-						</li>
-						<li>
-						  <a href="#collecting-rent"><?php echo get_cat_name(166);?></a>
-						</li>
-				  </ul>
-			  </div>
-        </div>
+
+			<!-- Top Section of each category -->
+			<div class="sm-m-b-6">
+				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
+				<a href="<?php echo $link ?>">
+					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
+				</a>
+				<div class="lead xs-m-b-1"><?php echo $description ?></div>
+
+			<?php
+			//echo '<li><a href=" '. $link.' "><h3>' . $title . '</h3></a>' .$description.'</li>';
+			// Check to see if the item has children under it
+			if (!empty($ft_item['children'])) {
+				$ft_item_count = 0; ?>
+
+				<div class="row md-m-b-3">
+
+				<?php
+				foreach ($ft_item['children'] as $ft_child) {
+					$sub_id = (int)$ft_child['ID'];
+					$sub_title = $ft_child['title'];
+					$sub_type = $ft_child['type'];
+					if ($sub_type == 'category') {
+						$sub_link = get_term_link($sub_id);
+						$sub_tip_num = get_category($sub_id)->count;
+						$sub_description = term_description($sub_id);
+						$card_class = 'card-stack';
+					} elseif ($sub_type == 'post') {
+							$sub_link = $ft_child['url'];
+							// getting the post excerpt
+							$the_post = get_post($sub_id);
+							setup_postdata($the_post);
+							if ($the_post->post_excerpt) {
+									$sub_description = $the_post->post_excerpt;
+							} else {
+									$sub_description = get_the_excerpt();
+							}
+
+							$card_class = 'card';
+					}
+
+					if ($ft_item_count == 2 ) {  $ft_item_count = 0; ?>
+
+					</div><div class="row md-m-b-3">
+						<div class="col-sm-6">
+							<?php include('templates/card.php') ?>
+						</div>
+
+					<?php	} else { ?>
+
+					<div class="col-sm-6">
+						<?php include('templates/card.php') ?>
+					</div>
+
+					<?php
+					//echo '<li><a href=" '. $sub_link.' ">' . $sub_title . '</a><small>' .$sub_description.'</small></li>';
+					} $ft_item_count++;
+				} ?>
+
+			</div><!-- .row -->
+		</div><!-- div with margin bottom -->
+			<?php
+				} else {
+					echo '**Something is wrong here**';
+				}
+			} ?>
+
+		</div><!-- col-md-8 -->
+
+		<div class="col-md-3 col-md-offset-1">
+			<div id="scroll-nav" role="navigation">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="400">
+					<?php echo $output_array['scrollspy']; ?>
+				</ul>
+			</div>
+		</div>
+
 	</div>
 </div>
 

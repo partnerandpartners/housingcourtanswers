@@ -7,6 +7,18 @@ function getOffset(elmnt) {
   console.log(offsetTop + offsetLeft);
 }
 
+$( document ).ready(function() {
+  var headerHeight = $(".full").outerHeight();
+  console.log(headerHeight);
+  $( window ).scroll(function() {
+    if (($(window).scrollTop() > headerHeight)) {
+      $("header").addClass("bg");
+    } else {
+      $("header").removeClass("bg");
+    }
+  });
+});
+
 $( window ).scroll(function() {
-console.log($(window).scrollTop());
+ console.log($(window).scrollTop());
 });

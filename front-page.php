@@ -11,14 +11,16 @@ if( have_posts() ) {
 	}
 }
 ?>
-
-<div class="front-page-section statement">
+<div class="full">
 	<div class="container">
-	    <div class="row">
-		    <div class="col-sm-12">
-		    	<h1 class="statement"><?php the_content(); ?></h3>
-		    </div>
-	    </div>
+		<div class="row">
+			<?php get_search_form(); ?>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="statement"><?php the_content(); ?></h2>
+			</div>
+		</div>
 	</div>
 </div>
 

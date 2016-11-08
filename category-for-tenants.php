@@ -22,7 +22,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 // print "</pre>";
 ?>
 
-<div class="container-fluid full bg-green">
+<div class="container-fluid full bg green">
 	<div class="container">
 		<div class="row">
 			<?php get_search_form(); ?>
@@ -134,7 +134,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="400">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="600">
 					<?php echo $output_array['scrollspy']; ?>
 				</ul>
 			</div>

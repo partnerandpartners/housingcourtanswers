@@ -21,14 +21,18 @@
   }
 }
 
-.bg-green {
-  background-color: $bg-green;
-}
-
-.bg-white {
+.bg {
   background-color: #fff;
+  &.green {
+    background-color: $bg-green;
+  }
+  &.pink {
+    background-color: $bg-pink;
+  }
+  &.white {
+    background-color: #fff;
+  }
 }
-
 .solid {
   border: $border-width solid $body-color;
 }
