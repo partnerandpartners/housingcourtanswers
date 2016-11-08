@@ -9,111 +9,143 @@
  * @since 		Starkers 4.0
  */
 ?>
-<?php get_header();?>
+<?php get_header();
+// Get the current page category and assign it to global variables
+// $GLOBALS['current_category'] = get_category( get_query_var( 'cat' ) );
+// $GLOBALS['current_category_id'] = $current_category->cat_ID;
 
+$ft_items = wp_get_menu_array('For Advocates');
+$output_array = array('main' => '', 'scrollspy' => '' );
+//$for_tenants_menu = wp_get_nav_menu_items('For Tenants');
+// print "<pre style='font-size: 10px;'>";
+// print_r($for_tenants_menu);
+// print "</pre>";
+?>
 
-<?php if ( have_posts() ): ?>
-
-
-<div class="container">
-	<div class="row lg-bottom sm-top">
-		<div class="col-md-7">
-			<h1 class="category-title"><?php echo single_cat_title( '', false ); ?></h1>
-			<h5 class="category-description"><?php echo category_description(); ?></h5>
+<div class="container-fluid full bg pink">
+	<div class="container">
+		<div class="row">
+			<?php get_search_form(); ?>
 		</div>
-		<div class="col-md-4 col-md-offset-1 sm-top">
-			<!-- <div class="hotline-callout"> -->
-				<span class="hotline-small-title">Housing Court Answers Hotline</span>
-				</br>9 am to 5 pm
-				</br>Tuesday — Thursday
-				</br><a class="btn btn-default hotline-btn" role="button" href="">Call (212) 962-4795</a>
-			<!-- </div> -->
-		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+					<div class="header-image-left" style="">
+						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-left.png" />
+						<img class="clouds" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
+						<img class="clouds" id="cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
+						<img class="clouds" id="cloud-right" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
+
+					</div>
+					<?php if ( have_posts() ): ?>
+					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
+					<div class="main-lead"><?php echo category_description(); ?></div>
+					<?php endif; ?>
+			</div>
+			<div class="col-md-5">
+				<div class="header-image-right" style="">
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png" />
+					<img class="img-responsive right-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-right.png" />
+				</div>
+			</div>
+	</div>
 	</div>
 </div>
 
+<div id="main-content-container" class="container" >
+	<div class="row">
+		<div class="col-md-8">
+			<?php
+			// Loop over each item in the For Tenants Menu
+			foreach ($ft_items as $ft_item ) {
+					$id = (int)$ft_item['ID']; // Get the item ID
+					$title = $ft_item['title']; // Get the item title
+					$type = $ft_item['type'];
+					$link = get_term_link($id);
+					$slug = get_term($id)->slug; // Get the item link
+					$tip_num = get_category($id)->count; // Get the amount of posts
+					$description = term_description($id); // Get the description
+					$output_array['scrollspy'] .= '<li><a href="#' . $slug . '">' . $title . '</a></li>';
+			?>
 
-<div class="container">
-   <div class="row">
-      <div class="col-sm-9" role="main">
-      			<span class="anchor" id="events-for-advocates"></span>
-			   <div class="category-page-section highlight">
-			    <?php 
-				$args = array('cat'=>'4', 'posts_per_page'=>3, 'post_type'=>'event', 'order'=>'DESC');
-				$query = new WP_Query($args);
-				?>
-				<h3 class="section-title">Events for Advocates</h3>
-				<h6 class="section-description">Lorem Ipsum</h6>
-				<hr/>
-					<?php while($query->have_posts()): $query->the_post();?>
-					<?php $postid = get_the_ID(); ?>
-					         <header>
-								<h5 class="small-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-								<div class="news-event-meta">
-									<span class="small-header">When</span>
-									<div class="event-data">
-										<?php the_field( 'exact_date'); ?>
-									</div>
-									<span class="small-header">Where</span>
-									<div class="event-data">
-										<?php the_field( 'address'); ?>
-									</div>
-								</div>
-							</header>
-							<div class="xs-top">
-								<?php the_excerpt(); ?>
-							</div>
-				    <?php endwhile;?>
-				   <a href="" class="btn btn-lg" role="button">More Housing Court Events</a>
-			    </div>
-		<?php while ( have_posts() ) : the_post(); ?>
-				<span class="anchor" id="<?php echo( basename(get_permalink()) ); ?>"></span>
-				<div class="category-page-section highlight">
-				<article>
-					<h3 class="section-title"><?php the_title(); ?></h3>
-					<div class="post-content"><?php the_content(); ?></div>
-				</article>
-				</div>
-		<?php endwhile; ?>
-	   </div>
-	   <div id="scroll-spy" class="col-md-3" role="complementary">
-		   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="432" data-offset-bottom="906">
-		   <div id="nav">
-			   <ul class="sub-nav nav hidden-xs hidden-sm">
-			   	<span class="small-header">Advocate Topics</span>
-			   		<li>
-					  <a href="#events-for-advocates">Events for Advocates</a>
-					</li>
-		   		<?php while ( have_posts() ) : the_post(); ?>
-					<li>
-					  <a href="#<?php echo( basename(get_permalink()) ); ?>"><?php the_title(); ?></a>
-					</li>
-		   		<?php endwhile; ?>
-		       </ul>
-		   </div>
-   </nav>
-</div>
-   </div>
-</div>
-		<?php else: ?>
-<div class="top-section">
-  <div class="container">
-   <div class="row">
-	   <div class="col-md-7">
-			<h1 class="category-title"><?php echo single_cat_title( '', false ); ?></h1>
-			<h5 class="category-description"><?php echo category_description(); ?></h5>
+			<!-- Top Section of each category -->
+			<div class="sm-m-b-6">
+				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
+				<a href="<?php echo $link ?>">
+					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
+				</a>
+				<div class="lead xs-m-b-1"><?php echo $description ?></div>
+
+			<?php
+			//echo '<li><a href=" '. $link.' "><h3>' . $title . '</h3></a>' .$description.'</li>';
+			// Check to see if the item has children under it
+			if (!empty($ft_item['children'])) {
+				$ft_item_count = 0; ?>
+
+				<div class="row md-m-b-3">
+
+				<?php
+				foreach ($ft_item['children'] as $ft_child) {
+					$sub_id = (int)$ft_child['ID'];
+					$sub_title = $ft_child['title'];
+					$sub_type = $ft_child['type'];
+					if ($sub_type == 'category') {
+						$sub_link = get_term_link($sub_id);
+						$sub_tip_num = get_category($sub_id)->count;
+						$sub_description = term_description($sub_id);
+						$card_class = 'card-stack';
+					} elseif ($sub_type == 'post') {
+							$sub_link = $ft_child['url'];
+							// getting the post excerpt
+							$the_post = get_post($sub_id);
+							setup_postdata($the_post);
+							if ($the_post->post_excerpt) {
+									$sub_description = $the_post->post_excerpt;
+							} else {
+									$sub_description = get_the_excerpt();
+							}
+
+							$card_class = 'card';
+					}
+
+					if ($ft_item_count == 2 ) {  $ft_item_count = 0; ?>
+
+					</div><div class="row md-m-b-3">
+						<div class="col-sm-6">
+							<?php include('templates/card.php') ?>
+						</div>
+
+					<?php	} else { ?>
+
+					<div class="col-sm-6">
+						<?php include('templates/card.php') ?>
+					</div>
+
+					<?php
+					//echo '<li><a href=" '. $sub_link.' ">' . $sub_title . '</a><small>' .$sub_description.'</small></li>';
+					} $ft_item_count++;
+				} ?>
+
+			</div><!-- .row -->
+		</div><!-- div with margin bottom -->
+			<?php
+				} else {
+					echo '**Something is wrong here**';
+				}
+			} ?>
+
+		</div><!-- col-md-8 -->
+
+		<div class="col-md-3 col-md-offset-1">
+			<div id="scroll-nav" role="navigation">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="400">
+					<?php echo $output_array['scrollspy']; ?>
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-4 col-md-offset-1 sm-top">
-			<!-- <div class="hotline-callout"> -->
-				<span class="hotline-small-title">Housing Court Answers Hotline</span>
-				</br>9 am to 5 pm
-				</br>Tuesday — Thursday
-				</br><a class="btn btn-default hotline-btn" role="button" href="">Call (212) 962-4795</a>
-			<!-- </div> -->
-		</div>
-    </div>
-  </div>
+
+	</div>
 </div>
-		<?php endif; ?>
 
 <?php get_footer();?>
