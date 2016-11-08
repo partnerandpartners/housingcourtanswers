@@ -1,4 +1,10 @@
 // ****** SEARCH ******
+#search-box-wrapper {
+  position: absolute;
+  width: 100%;
+  margin-top: 6em;
+}
+
 .search-section {
   #search-input {
     width: 100%;

@@ -14,9 +14,6 @@ if( have_posts() ) {
 <div class="full">
 	<div class="container">
 		<div class="row">
-			<?php get_search_form(); ?>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h2 class="statement"><?php the_content(); ?></h2>
 			</div>

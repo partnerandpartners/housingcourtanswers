@@ -24,7 +24,7 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
 
   if( $is_parent ) {
     $output_array['top_section'] .= '<h1 class="category-title">' . $category->name . '</h1>';
-    $output_array['top_section'] .= '<h5 class="category-description">' . $category->description . '</h5>';
+    $output_array['top_section'] .= '<p class="category-description">' . $category->description . '</p>';
   } else {
     $current_section .= '<h3 class="section-title">' . $category->name . '</h3>';
     $current_section .= '<h6 class="section-description">' . $category->description . '</h6><hr/>';
@@ -33,12 +33,13 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
   ob_start();
 
   if( $category_posts_query->have_posts() ) {
+    $item_count = 0;
     if( !$is_parent ) {
       $output_array['scrollspy'] .= '<li><a href="#' . $category->slug . '"> ' . $category->name . '</a></li>';
     }
 
     echo '<span class="anchor" id="' . $category->slug . '"></span>';
-    echo '<div class="highlight category-page-section">';
+    echo '<div class="category-page-section"><div class="row">';
 
     echo $current_section;
 
@@ -46,16 +47,28 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
       $category_posts_query->the_post();
 
       $link_title = ' title="Permalink to '.esc_attr(get_the_title()).'" ';
+      $sub_title = esc_attr(get_the_title());
+      $sub_link = esc_attr(get_the_permalink());
+      $sub_description = get_the_excerpt();
+      $card_class = 'card';
+
+      if ($item_count == 2 ) {  $item_count = 0;
       ?>
 
-      <article>
-        <h5 class="sub-title"><a href="<?php the_permalink(); ?>" rel="bookmark" <?php echo $link_title; ?>><?php the_title(); ?></a></h5>
-        <div class="post-content"><?php the_content(); ?></div>
-      </article>
+      </div><div class="row">
+      <div class="col-md-6">
+        <?php include('templates/card.php') ?>
+      </div>
 
-      <?php
+      <?php } else { ?>
+        <div class="col-md-6">
+          <?php include('templates/card.php') ?>
+        </div>
+
+      <?php } $item_count++;
+
     }
-    echo '</div>';
+    echo '</div></div>';
   }
 
   $output_array['main'] .= ob_get_clean();
@@ -81,33 +94,24 @@ $output_array = housing_court_print_category_posts_tree( $current_category_id, t
 
 ?>
 
-<div class="top-section">
-  <div class="container">
-    <div class="row md-bottom">
-      <div class="col-xs-12 col-sm-7">
-        <?php echo $output_array['top_section']; ?>
-      </div>
-      <div id="hotline-callout" class="col-xs-12 col-sm-4 col-sm-offset-1">
-        <span class="hotline-small-title">Housing Court Answers Hotline</span>
-        </br>9 am to 5 pm
-        </br>Tuesday — Thursday
-        </br><a class="btn btn-default hotline-btn" role="button" href="">Call (212) 962-4795</a>
-      </div>
+<div class="top-section container">
+  <div class="row md-bottom">
+    <div class="col-xs-12 col-md-8">
+      <?php echo $output_array['top_section']; ?>
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-9">
+    <div class="col-xs-12 col-md-8">
       <?php echo $output_array['main']; ?>
     </div>
-    <div id="scroll-spy" class="col-xs-12 col-md-3">
+    <div id="scroll-spy" class="col-xs-12 col-md-3 col-md-offset-1">
       <?php if( !empty( get_term_children( $current_category_id, 'category' ) ) ): ?>
       <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="432" data-offset-bottom="906">
-        <div id="nav">
+        <div id="scroll-nav" role="navigation">
           <ul class="sub-nav nav hidden-xs hidden-sm">
-          	<span class="small-header">Related Topics</span>
             <?php echo $output_array['scrollspy']; ?>
           </ul>
         </div>

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="container sm-top">
+<div class="container top-section sm-top">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		
+
 	<article <?php post_class(); ?>>
 
 		<span class="link-small-header">
@@ -39,32 +39,32 @@
 				<?php the_tags( '<span class="small-header">Glossary Terms</span><br/>', ' ', '' ); ?>
 			</div>
 		</div>
-	</article>	
+	</article>
 </div>
 
 <div class="next-prev-container md-top">
 	<div class="container">
 		<div class="row sm-bottom">
 			<div class="col-sm-4 mobile-sm-bottom">
-				<div class="text-left xs-bottom"><span class="link-small-header"><?php 
-				
+				<div class="text-left xs-bottom"><span class="link-small-header"><?php
+
 				$previous_post = get_previous_post();
 				if( $previous_post ) {
 				echo housing_court_get_deepest_category_link( $previous_post->ID, 'Previous In ' );
 				}
-				
+
 				?></span></div>
 				<div class="text-left"><span class="next-previous">&larr; <?php previous_post_link('%link', '%title', TRUE, ''); ?></span></div>
 			</div>
-			
+
 			<div class="col-sm-4 col-sm-offset-4">
-				<div class="text-right xs-bottom"><span class="link-small-header"><?php 
-				
+				<div class="text-right xs-bottom"><span class="link-small-header"><?php
+
 				$next_post = get_next_post();
 				if( $next_post ) {
 				echo housing_court_get_deepest_category_link( $next_post->ID, 'Next in ' );
 				}
-				
+
 				?></span></div>
 				<div class="text-right"><span class="next-previous"><?php next_post_link('%link', '%title', TRUE, ''); ?> &rarr;</span></div>
 			</div>

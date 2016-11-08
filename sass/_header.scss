@@ -28,7 +28,7 @@ header {
     &:hover {
       opacity: 1;
     }
-    &.current-menu-item {
+    &.current-menu-item, &.current-category-ancestor, &.current-post-ancestor {
       opacity: 1;
     }
   }
@@ -48,7 +48,7 @@ header {
   &:last-of-type {
     margin-right: 0px;
   }
-  &.current-menu-item {
+  &.current-menu-item, &.current-category-ancestor, &.current-post-ancestor {
     border-bottom: solid 3px;
     opacity: 1;
     &:hover {
@@ -56,19 +56,12 @@ header {
         border-bottom: solid 0px;
     }
   }
-
 }
 
-.full {
-	padding-top: 7em;
+.full, .top-section {
+	padding-top: 11em;
 	margin-bottom: 4em;
   overflow: hidden;
-}
-
-.home {
-  .full {
-    overflow: visible;
-  }
 }
 
 .header-image-left, .header-image-right { position: relative; img { position: absolute;z-index: 1; } }

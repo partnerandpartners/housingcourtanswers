@@ -102,3 +102,10 @@
 			</header>
 		<?php } ?>
 		<section class="site-content" id="site-content">
+			<div id="search-box-wrapper">
+				<div class="container">
+					<div class="row">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
+			</div>

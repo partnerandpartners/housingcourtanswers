@@ -25,11 +25,6 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 <div class="container-fluid full bg pink">
 	<div class="container">
 		<div class="row">
-			<?php get_search_form(); ?>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
 			<div class="col-md-7">
 					<div class="header-image-left" style="">
 						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-left.png" />
