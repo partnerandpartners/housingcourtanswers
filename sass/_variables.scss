@@ -165,10 +165,31 @@ $grid-gutter-width:          1.875em !default; // 30px
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3260b6");
 
-$font-family-sans-serif:     "Century Gothic", Verdana, sans-serif;
-$font-family-serif:          "Times New Roman", serif;
-$font-family-sans-serif-bold: "Century Gothic", Verdana, sans-serif;
+
+@font-face {font-family: 'GrotesqueMT-Bold';src: url('../fonts/3260B6_0_0.eot');src: url('../fonts/3260B6_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3260B6_0_0.woff2') format('woff2'),url('../fonts/3260B6_0_0.woff') format('woff'),url('../fonts/3260B6_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'GrotesqueMT-Italic';src: url('../fonts/3260B6_1_0.eot');src: url('../fonts/3260B6_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3260B6_1_0.woff2') format('woff2'),url('../fonts/3260B6_1_0.woff') format('woff'),url('../fonts/3260B6_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'GrotesqueMT';src: url('../fonts/3260B6_2_0.eot');src: url('../fonts/3260B6_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3260B6_2_0.woff2') format('woff2'),url('../fonts/3260B6_2_0.woff') format('woff'),url('../fonts/3260B6_2_0.ttf') format('truetype');}
+
+
+
+@font-face {
+    font-family: 'HCA Bold';
+    src:url('../fonts/HCA-Gothic-Bold.woff2') format('woff2'),
+        url('../fonts/HCA-Gothic-Bold.woff') format('woff'),
+        url('../fonts/HCA-Gothic-Bold.ttf') format('truetype');
+}
+
+$font-family-sans-serif:     'HCA Bold', Verdana, sans-serif;
+$font-family-serif:          'GrotesqueMT', serif;
+$font-family-serif-bold:     'GrotesqueMT-Bold', serif;
+$font-family-sans-serif-bold: 'HCA Bold', Verdana, sans-serif;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:           $font-family-sans-serif;
 
