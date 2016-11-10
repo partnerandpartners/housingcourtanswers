@@ -1,25 +1,19 @@
-#footer {
+footer {
   // @extend .p-y-6;
-  background: $gray-lighter;
 }
 
-.footer-bar {
-  border: 5px solid #000;
-  border-top: 0;
-  padding: 10px;
-  height: 4rem;
-  display: block;
-  margin: 10px;
-  position: relative;
-  .left {
-    float: left;
-    position: absolute;
-    bottom: 5px;
-  }
-  .right {
-    float: right;
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
+.help-resources {
+  padding: 40px 40px 40px 40px;
+}
+
+.call-us {
+  padding: 40px 40px 40px 40px;
+}
+
+.donate {
+  padding: 40px 40px 40px 40px;
+}
+
+.mailing {
+  padding: 40px 40px 40px 40px;
 }
