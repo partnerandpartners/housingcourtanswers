@@ -108,7 +108,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 					<?php	} else { ?>
 
-					<div class="col-sm-6 xs-m-b-0 md-m-b-0">
+					<div class="col-sm-6 xs-m-b-2 md-m-b-0">
 						<?php include('templates/card.php') ?>
 					</div>
 
