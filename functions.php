@@ -3,6 +3,9 @@
 // Rest api stuff for autocomplete
 require_once( 'external/housing-court-rest-api.php' );
 
+// Register custom bootstrap walker
+require_once( 'external/wp_bootstrap_navwalker.php');
+
 function housing_enqueue() {
 	wp_enqueue_style( 'hca-styles', get_stylesheet_directory_uri() . '/css/style.css' );
 }
@@ -42,6 +45,12 @@ function hca_print_tag_list() {
 		// register_nav_menu( 'fortenants', 'For Tenants Menu' );
 	}
 	add_action( 'after_setup_theme', 'housingcourtanswers_register_nav_menus' );
+
+	class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+		function start_lvl(&$output, $depth = 0, $args = Array() ) {
+			$indent = str_repeat("\t", $depth);
+			$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+		} }
 
 	/**
 	*

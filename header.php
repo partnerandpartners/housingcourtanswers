@@ -47,20 +47,19 @@
 						</button>
 						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
 					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
-						<?php
-							if( has_nav_menu( 'main' ) ) {
-								wp_nav_menu( array(
-									'theme_location' => 'main',
-									'container' => false,
-									'depth' => -1,
-									'menu_class' => 'nav navbar-nav',
-									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-								) );
-							}
-						?>
-					</nav><!-- /.navbar-collapse -->
+					<?php
+					 wp_nav_menu( array(
+							 'menu'              => 'Main Menu',
+							 'theme_location'    => 'main',
+							 'depth'             => 2,
+							 'container'         => 'div',
+							 'container_class'   => 'collapse navbar-collapse navbar-right',
+			 'container_id'      => 'bs-example-navbar-collapse-1',
+							 'menu_class'        => 'nav navbar-nav',
+							 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							 'walker'            => new wp_bootstrap_navwalker())
+					 );
+			 ?>
 				</div><!-- /.container -->
 			</header>
 			<!-- search page navigation -->
@@ -84,20 +83,19 @@
 						</button>
 						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
 					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<nav id="hca-navbar" class="collapse navbar-collapse navbar-right">
-						<?php
-							if( has_nav_menu( 'main' ) ) {
-								wp_nav_menu( array(
-									'theme_location' => 'main',
-									'container' => false,
-									'depth' => -1,
-									'menu_class' => 'nav navbar-nav',
-									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-								) );
-							}
-						?>
-					</nav><!-- /.navbar-collapse -->
+					<?php
+					 wp_nav_menu( array(
+							 'menu'              => 'Main Menu',
+							 'theme_location'    => 'main',
+							 'depth'             => 2,
+							 'container'         => 'div',
+							 'container_class'   => 'collapse navbar-collapse navbar-right',
+			 'container_id'      => 'bs-example-navbar-collapse-1',
+							 'menu_class'        => 'nav navbar-nav',
+							 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							 'walker'            => new wp_bootstrap_navwalker())
+					 );
+			 ?>
 				</div><!-- /.container -->
 			</header>
 		<?php } ?>

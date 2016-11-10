@@ -17,7 +17,10 @@ $( document ).ready(function() {
       $("header").removeClass("bg");
     }
   });
+  //$("li.dropdown:first-child").addClass("dropdown-toggle");
 });
+
+
 
 $( window ).scroll(function() {
  console.log($(window).scrollTop());
