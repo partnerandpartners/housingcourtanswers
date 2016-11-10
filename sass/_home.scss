@@ -1,0 +1,14 @@
+.home-btn-txt {
+  position: relative;
+}
+.home-btn-txt::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 1%;
+  vertical-align: middle;
+}
+.home-btn-txt h4 {
+  display: inline-block;
+  vertical-align: middle;
+}

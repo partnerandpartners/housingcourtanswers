@@ -36,12 +36,25 @@ if( have_posts() ) {
 				?>
 				<a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg">I'm a Tenant</a>
 			</div>
-			<div class="col-md-4 text-center">
+			<div class="col-md-4">
 				<?php
 			    $category_id = get_cat_ID( 'For Landlords' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg">I'm a Landlord</a>
+				<a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg">
+					<div class="home-btn-wrapper">
+						<div class="row row-eq-height">
+							<div class="col-xs-6">
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0001_landlord.png" style="" />
+							</div>
+							<div class="col-xs-6">
+								<div class="home-btn-txt text-uppercase">
+									<h4>I'm a Landlord</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
 			<div class="col-md-4 text-center">
 				<?php

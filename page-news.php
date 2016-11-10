@@ -15,7 +15,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="container">
+    <div class="container full">
 		<div class="row md-bottom">
 		   <div class="col-md-8 col-md-offset-2 text-center">
 		      <h1 class="category-title"><?php the_title(); ?></h1>
@@ -23,11 +23,11 @@
 		   </div>
 		</div>
 	</div>
-	
+
 <?php endwhile; ?>
 
 <?php endif; ?>
-	
+
 	<div class="container">
 		<div class="row md-bottom">
 		<?php
@@ -45,7 +45,7 @@
 					}
 				}
 			}
-	
+
 		?>
 		</div>
 	</div>

@@ -65,7 +65,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 			?>
 
 			<!-- Top Section of each category -->
-			<div class="sm-m-b-6">
+			<div class="xs-m-b-6">
 				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
 				<a href="<?php echo $link ?>">
 					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
@@ -102,13 +102,13 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 					if ($ft_item_count == 2 ) {  $ft_item_count = 0; ?>
 
 					</div><div class="row md-m-b-3">
-						<div class="col-sm-6">
+						<div class="col-sm-6 xs-m-b-2 md-m-b-0">
 							<?php include('templates/card.php') ?>
 						</div>
 
 					<?php	} else { ?>
 
-					<div class="col-sm-6">
+					<div class="col-sm-6 xs-m-b-0 md-m-b-0">
 						<?php include('templates/card.php') ?>
 					</div>
 

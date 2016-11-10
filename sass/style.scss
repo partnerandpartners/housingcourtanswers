@@ -103,7 +103,7 @@
 
 
 .card {
-	margin-left: 1em;
+	//margin-left: 1em;
 }
 
 .card-stack {
@@ -118,14 +118,20 @@
   	top: $font-size-base;
   	left: $font-size-base;
   }
-  &:hover, &:active {
-    top: $font-size-base * 0.6;
-    left: $font-size-base * 0.6;
-    cursor: pointer;
-    &:before {
-    	top:$font-size-base * 0.4;
-    	left:$font-size-base * 0.4;
-    }
+}
+
+.card-wrapper {
+	&:hover, &:active {
+		cursor: pointer;
+		.card-stack {
+	    top: $font-size-base * 0.6;
+	    left: $font-size-base * 0.6;
+	    cursor: pointer;
+	    &:before {
+	    	top:$font-size-base * 0.4;
+	    	left:$font-size-base * 0.4;
+	    }
+		}
   }
 }
 
