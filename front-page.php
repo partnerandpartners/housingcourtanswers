@@ -21,47 +21,68 @@ if( have_posts() ) {
 	</div>
 </div>
 
-<div class="front-page-section popular-search">
+<div class="front-page-section popular-search xs-m-b-6">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h6 class="text-uppercase">Who are you?</h6>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 text-center">
+			<div class="col-md-4">
 				<?php
 			    $category_id = get_cat_ID( 'For Tenants' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg">I'm a Tenant</a>
-			</div>
-			<div class="col-md-4">
-				<?php
-			    $category_id = get_cat_ID( 'For Landlords' );
-					$category_link = get_category_link( $category_id );
-				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg">
+				<a href="<?php echo esc_url( $category_link ); ?>" class="">
 					<div class="home-btn-wrapper">
-						<div class="row row-eq-height">
+						<div class="row is-table-row middle">
 							<div class="col-xs-6">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0001_landlord.png" style="" />
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0000_tenant.png" style="" />
 							</div>
 							<div class="col-xs-6">
-								<div class="home-btn-txt text-uppercase">
-									<h4>I'm a Landlord</h4>
+								<div class="text-uppercase">
+									<h4>I'm a<br/>Tenant</h4>
 								</div>
 							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4 text-center">
+			<div class="col-md-4">
 				<?php
-			    $category_id = get_cat_ID( 'For Advocates' );
+			    $category_id = get_cat_ID( 'For Landlords' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="btn btn-lg">I'm an Advocate</a>
+				<a href="<?php echo esc_url( $category_link ); ?>" class="">
+					<div class="home-btn-wrapper">
+						<div class="row is-table-row middle">
+							<div class="col-xs-6">
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0001_landlord.png" style="" />
+							</div>
+							<div class="col-xs-6">
+								<div class="text-uppercase">
+									<h4>I'm a<br/>Landlord</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4">
+				<?php
+			    $category_id = get_cat_ID( 'For Tenants' );
+					$category_link = get_category_link( $category_id );
+				?>
+				<a href="<?php echo esc_url( $category_link ); ?>" class="">
+					<div class="home-btn-wrapper">
+						<div class="row is-table-row middle">
+							<div class="col-xs-6">
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0002_advocate.png" style="" />
+							</div>
+							<div class="col-xs-6">
+								<div class="text-uppercase">
+									<h4>I'm an<br/>Advocate</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -71,7 +92,7 @@ if( have_posts() ) {
 	<div class="container">
 		<div class="row">
 		    <div class="col-md-12">
-		    <div class="row">
+		    <div class="row xs-m-b-1">
 					<div class="col-xs-6">
 						<h6 class="text-uppercase">Helpful Topics</span>
 					</div>
@@ -80,10 +101,8 @@ if( have_posts() ) {
 					</div>
 					<hr\>
 				</div>
-        <?php
-
+				<?php
         $front_page_suggestions = housing_court_get_front_page_suggestions();
-
         if( array_key_exists('categories', $front_page_suggestions) && !empty( $front_page_suggestions['categories'] ) ) {
           foreach( $front_page_suggestions['categories'] as $category ) {
             $grandparent_category = $category['grandparent_category'];
@@ -95,11 +114,11 @@ if( have_posts() ) {
                 <?php
 
                 if( $grandparent_category !== false ) {
-                  echo '<span class="no-link-small-header">'.$grandparent_category['name'].'</span>';
+                  //echo '<span class="no-link-small-header">'.$grandparent_category['name'].'</span>';
                 }
 
                 ?>
-                <h5 class="sub-title"><a href="<?php echo $category['permalink']; ?>"><?php echo $category['name']; ?></a><span class="medium-tip-count"><?php echo $category['count']; ?> Tips</span></h5>
+                <h5 class="sub-title"><a href="<?php echo $category['permalink']; ?>"><?php echo $category['name']; ?></a><span class="badge"><?php echo $category['count']; ?> Tips</span></h5>
                 </div>
              </div>
 

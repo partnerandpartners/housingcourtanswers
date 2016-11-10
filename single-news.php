@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="container sm-top">
+<div class="container full sm-top">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		
+
 	<article <?php post_class(); ?>>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -39,7 +39,7 @@
 				<?php the_tags( '<span class="small-header">Glossary Terms</span><br/>', ' ', '' ); ?>
 			</div>
 		</div>
-	</article>	
+	</article>
 </div>
 
 <div class="container md-top">

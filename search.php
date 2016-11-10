@@ -80,7 +80,7 @@ if( !empty($search_query) ) {
     'taxonomy' => 'category'
   ));
 
-  
+
 
   if( $categories ) {
 
@@ -108,7 +108,7 @@ if( !empty($search_query) ) {
     'taxonomy' => 'post_tag'
   ));
 
-  
+
 
   if( $tags ) {
     ob_start();
@@ -125,7 +125,7 @@ if ( !empty($search_query) ):
 
   ?>
 
-  <div class="container">
+  <div class="full container">
 
 
     <div class="row">
@@ -148,7 +148,7 @@ if ( !empty($search_query) ):
 	        <a href="<?php echo get_page_link( get_page_by_title('Glossary') ); ?>">View All Terms &rarr;</a>
       		</div>
         </div>
-        
+
         <div class="row">
         	<div class="col-xs-12">
         	<?php echo $tags_ouput; ?>
@@ -163,7 +163,7 @@ if ( !empty($search_query) ):
       <div class="col-xs-12">
         <h1 class="category-title">For Tenants</h1>
 
-        <?php 
+        <?php
 
         $for_tenants_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'post', -1, get_cat_id('For Tenants') );
 
@@ -178,7 +178,7 @@ if ( !empty($search_query) ):
     <div class="row">
       <div class="col-xs-12">
         <h1 class="category-title">For Landlords</h1>
-        <?php 
+        <?php
 
         $for_landlords_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'post', -1, get_cat_id('For Landlords') );
 
@@ -192,7 +192,7 @@ if ( !empty($search_query) ):
     <div class="row">
       <div class="col-xs-12">
         <h3>Events</h3>
-        <?php 
+        <?php
 
         $events_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'event', -1 );
 
@@ -205,7 +205,7 @@ if ( !empty($search_query) ):
     <div class="row">
       <div class="col-xs-12">
         <h3>News & Campaigns</h3>
-        <?php 
+        <?php
 
         $news_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'news', -1 );
 

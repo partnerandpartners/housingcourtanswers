@@ -66,6 +66,11 @@
   }
 }
 
+.secondary-type {
+  font-family: $font-family-serif;
+  font-weight: normal;
+}
+
 // Boxes
 .boxes {
   display: -webkit-flex;
@@ -111,4 +116,32 @@ ol.inline {
 table.unstyled {
   border-collapse: collapse;
   width: 100%;
+}
+
+.is-table-row {
+  display: table;
+}
+
+.is-table-row [class*="col-"] {
+   float: none;
+   display: table-cell;
+   vertical-align: top;
+}
+
+.is-table-row {
+  &.top {
+    [class*="col-"] {
+       float: none;
+       display: table-cell;
+       vertical-align: top;
+    }
+  }
+  &.middle {
+    [class*="col-"] {
+       float: none;
+       display: table-cell;
+       vertical-align: middle;
+       border: none;
+    }
+  }
 }

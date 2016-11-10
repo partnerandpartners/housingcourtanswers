@@ -5,7 +5,7 @@
 					<form method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 						<label for="s" class="sr-only">Search</label>
 						<div class="input-group">
-							<input type="search" id="search-input" class="search-field mousetrap" placeholder="<?php echo esc_attr_x( 'Search Terms, Topics & Tips', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search', 'label' ) ?>" autocomplete="off" /><span class="input-group-btn"><button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button></span>
+							<input type="search" id="search-input" class="search-field mousetrap" placeholder="<?php echo esc_attr_x( 'Search Terms, Topics & Tips', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search', 'label' ) ?>" autocomplete="off" /><span class="input-group-btn"><button type="submit" class="search-button"></button></span>
 						</div> <!-- .input-group -->
 
 						<div id="autocomplete">

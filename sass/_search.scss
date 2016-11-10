@@ -5,6 +5,20 @@
   margin-top: 6em;
 }
 
+.input-group-btn {
+  position: absolute;
+    right: 15px;
+    top: 15px;
+    button.search-button {
+      background-image: url("../img/hca-search-icon.png");
+      -webkit-appearance: none;
+      border: none;
+      height: 28px;
+      width: 28px;
+      background-size: 100%;
+    }
+}
+
 .search-section {
   #search-input {
     width: 100%;
