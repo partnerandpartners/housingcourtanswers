@@ -79,16 +79,10 @@
 			$fields =  array(
 
   'author' =>
-    '<p class="comment-form-author md-m-t-2"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
-    ( $req ? '<span class="required">*</span>' : '' ) .
-    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-    '" size="30"' . $aria_req . ' /></p>',
+    '<p class="comment-form-author md-m-t-2"><label for="author">' . __( 'Name', 'domainreference' ) . '<span class="required">*</span></label> ' .'<input id="author" name="author" type="text" value="' . '" size="30"' . ' /></p>',
 
   'email' =>
-    '<p class="comment-form-email md-m-t-2"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
-    ( $req ? '<span class="required">*</span>' : '' ) .
-    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-    '" size="30"' . $aria_req . ' /></p>',
+    '<p class="comment-form-email md-m-t-2"><label for="email">' . __( 'Email', 'domainreference' ) . '<span class="required">*</span></label> ' . '<input id="email" name="email" type="text" value="'  . '" size="30"' . ' /></p>',
 
   'url' =>  '',
 );

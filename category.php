@@ -55,13 +55,13 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
       if ($item_count == 2 ) {  $item_count = 0;
       ?>
 
-      </div><div class="row">
-      <div class="col-md-6">
+    </div><div class="row">
+      <div class="col-md-6 xs-m-b-2">
         <?php include('templates/card.php') ?>
       </div>
 
       <?php } else { ?>
-        <div class="col-md-6">
+        <div class="col-md-6 xs-m-b-2">
           <?php include('templates/card.php') ?>
         </div>
 
