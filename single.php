@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<div class="container top-section sm-top">
+<div class="container top-section">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class(); ?>>
+	<article <?php post_class("md-m-t-3"); ?>>
 
 		<span class="link-small-header">
 			<?php
@@ -30,11 +30,11 @@
 		</span>
 		<h1 class="article-title"><?php the_title(); ?></h1>
 		<div class="row xs-top">
-			<div class="col-sm-9">
+			<div class="col-sm-9 md-m-t-2">
 				<div class="entry-content"><?php the_content(); ?></div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row md-m-t-3">
 			<div class="col-md-12" role="main">
 				<?php the_tags( '<span class="small-header">Glossary Terms</span><br/>', ' ', '' ); ?>
 			</div>
@@ -44,25 +44,25 @@
 
 <div class="next-prev-container md-top">
 	<div class="container">
-		<div class="row sm-bottom">
-			<div class="col-sm-4 mobile-sm-bottom">
-				<div class="text-left xs-bottom"><span class="link-small-header"><?php
+		<div class="row md-m-b-3">
+			<div class="col-sm-6 xs-m-b-3">
+				<div class="text-left md-m-b-1"><span class="link-small-header"><?php
 
 				$previous_post = get_previous_post();
 				if( $previous_post ) {
-				echo housing_court_get_deepest_category_link( $previous_post->ID, 'Previous In ' );
+				echo housing_court_get_deepest_category_link( $previous_post->ID, 'Previous in | ' );
 				}
 
 				?></span></div>
 				<div class="text-left"><span class="next-previous">&larr; <?php previous_post_link('%link', '%title', TRUE, ''); ?></span></div>
 			</div>
 
-			<div class="col-sm-4 col-sm-offset-4">
-				<div class="text-right xs-bottom"><span class="link-small-header"><?php
+			<div class="col-sm-6">
+				<div class="text-right md-m-b-1"><span class="link-small-header"><?php
 
 				$next_post = get_next_post();
 				if( $next_post ) {
-				echo housing_court_get_deepest_category_link( $next_post->ID, 'Next in ' );
+				echo housing_court_get_deepest_category_link( $next_post->ID, 'Next in | ' );
 				}
 
 				?></span></div>
@@ -75,7 +75,36 @@
 <div class="container md-top">
 	<div class="row">
 		<div class="col-sm-12">
-			<?php comments_template(); ?>
+			<?php
+			$fields =  array(
+
+  'author' =>
+    '<p class="comment-form-author md-m-t-2"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
+    ( $req ? '<span class="required">*</span>' : '' ) .
+    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+    '" size="30"' . $aria_req . ' /></p>',
+
+  'email' =>
+    '<p class="comment-form-email md-m-t-2"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
+    ( $req ? '<span class="required">*</span>' : '' ) .
+    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '" size="30"' . $aria_req . ' /></p>',
+
+  'url' =>  '',
+);
+			$comments_args = array(
+        // change the title of send button
+        'label_submit'=>'Send Question',
+        // change the title of the reply section
+        'title_reply'=>'Do you have a question?',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        // redefine your own textarea (the comment body)
+        'comment_field' => '<p class="comment-form-comment md-m-t-2"><label for="comment">' . _x( 'Question', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+				'fields' => $fields
+				);
+
+			comment_form($comments_args); ?>
 		</div>
 	</div>
 </div>
