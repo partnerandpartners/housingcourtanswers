@@ -13,17 +13,13 @@
 
 <?php if ( have_posts() ): ?>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-7">
-			<h1 class="single-tag-title"><?php echo single_tag_title( '', false ); ?></h1>
-			<h5 class="category-description"><?php echo tag_description(); ?></h5>
-		</div>
-		<div class="col-md-4 col-md-offset-1">
-				<span class="hotline-small-title">Housing Court Answers Hotline</span>
-				</br>9 am to 5 pm
-				</br>Tuesday — Thursday
-				</br><a class="btn btn-default hotline-btn" role="button" href="">Call (212) 962-4795</a>
+<div class="full">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<h1 class="single-tag-title"><?php echo single_tag_title( '', false ); ?></h1>
+				<h5 class="category-description"><?php echo tag_description(); ?></h5>
+ 	   	</div>
 		</div>
 	</div>
 </div>
@@ -32,7 +28,7 @@
    <div class="row">
       <div class="col-sm-12">
          <hr/>
-         <?php 
+         <?php
          $tag = get_term_by( 'slug', get_query_var('tag'), 'post_tag' );
 
          ?><h3 class="section-title"><span class="tip-count"><?php echo $tag->count; ?> Tips</span> relating to "<?php echo single_tag_title( '', false ); ?>"</h3>
@@ -55,14 +51,16 @@
 </div>
 <?php else: ?>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-8">
-			<h1 class="single-tag-title"><?php echo single_tag_title( '', false ); ?></h1>
-			<h5 class="category-description"><?php echo tag_description(); ?></h5>
+	<div class="full">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<h1 class="single-tag-title"><?php echo single_tag_title( '', false ); ?></h1>
+					<h5 class="category-description"><?php echo tag_description(); ?></h5>
+	 	   	</div>
+			</div>
 		</div>
 	</div>
-</div>
 
 <div class="container">
    <div class="row">
@@ -80,7 +78,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="first-table-row"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &uarr;</a></div></div>
+					<div class="first-table-row" data-spy="affix" data-offset="300"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &uarr;</a></div></div>
 				</div>
 			</div>
 		</div>
@@ -95,7 +93,7 @@
 			$i = 0;
 			$terms = get_terms( 'post_tag', $args );
 
-			
+
 
 			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 			    $count = count( $terms );
@@ -119,13 +117,13 @@
 			        echo '<div class="mobile-sm-bottom"><a rel="tag" href="' . get_tag_link( $term ) . '">' . $term->name . '</a></div>';
 			        echo '<div class="definition">'.$term->description .'</div>';
 			        $i++;
-			        
+
 			        if($i==1){
 						echo('</div>');//new row at 3rd post.
 						$i = 0;
-				    }  
+				    }
 			    }
-			}			
+			}
 		?>
 		</div>
 		</div>

@@ -15,7 +15,7 @@
 // Grid
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
-// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 // @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
@@ -133,4 +133,90 @@
 	font-family: $font-family-serif;
 	font-size: $font-size-xl;
 	font-weight: normal;
+}
+
+.first-table-row {
+	text-transform: uppercase;
+	display: table;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	& > div {
+    padding: 15px 0 10px 0;
+    display: table-cell;
+    vertical-align: middle;
+	}
+	& > div:first-of-type {
+    width: 30%;
+	}
+}
+
+.letter-table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  //background: $light-blue !important;
+  padding: 15px 0 15px 0;
+  border-bottom: 3px solid $brand-primary;
+}
+
+.letter-table h3 {
+  margin-top: 30px;
+}
+
+.term-table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  //background: $background-blue !important;
+  border-bottom: 1px dotted $brand-primary;
+  & > div {
+    padding: 15px 0 15px 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  & > div:first-of-type {
+    width: 30%;
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+    & > div {
+      display: block;
+    }
+    & > div:first-of-type {
+    width: 100%;
+    padding-bottom: 0px;
+    }
+  }
+}
+
+a[rel="tag"]{
+  font-family: $font-family-sans-serif-bold;
+	font-size: $font-size-base;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	margin-right: 0.75em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	display: inline-block;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 2px solid $hca-bright-green;
+	//background-color: $white;
+	color: $hca-bright-green;
+	&:hover,
+	&:active,
+	&:focus {
+	  background-color: $hca-bright-green;
+		color: #fff;
+    box-shadow: none;
+    border: 2px solid $hca-bright-green;
+		cursor: pointer;
+	}
 }
