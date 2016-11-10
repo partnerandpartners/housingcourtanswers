@@ -73,7 +73,6 @@ h6, .h6 {
   font-size: $font-size-h6;
   font-weight: normal;
   margin: 0 0 0 0;
-  letter-spacing: 0.0825em;
 }
 
 .lead {
@@ -121,7 +120,12 @@ a.more-link {
       margin-top: 0;
     }
   }
+}
 
+.small-header {
+  text-transform: uppercase;
+  opacity: .2;
+  letter-spacing: 0.05em;
 }
 
 .caption {
