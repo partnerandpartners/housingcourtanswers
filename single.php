@@ -4,41 +4,37 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class("md-m-t-3"); ?>>
+	<article <?php post_class("solid md-p-y-3 xs-p-a-1 md-m-t-3"); ?>>
 
-		<span class="link-small-header">
-			<?php
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
 
-			$taxonomy = 'category';
+				<div class="post-breadcrumb md-m-b-2">
+					<?php		$taxonomy = 'category';
 
-			// get the term IDs assigned to post.
-			$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
-			// separator between links
-			$separator = '&nbsp;&nbsp;|&nbsp;&nbsp;';
+					// get the term IDs assigned to post.
+					$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+					// separator between links
+					$separator = ' > ';
 
-			if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
+					if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 
-				$term_ids = implode( ',' , $post_terms );
-				$terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids );
-				$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+						$term_ids = implode( ',' , $post_terms );
+						$terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
+						//$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
 
-				// display post categories
-				echo  $terms;
-			}
-
-			?>
-		</span>
-		<h1 class="article-title"><?php the_title(); ?></h1>
-		<div class="row xs-top">
-			<div class="col-sm-9 md-m-t-2">
-				<div class="entry-content"><?php the_content(); ?></div>
-			</div>
+						// display post categories
+						echo  $terms;
+					} ?> </div>
+				<h1 class="article-title"><?php the_title(); ?></h1>
+				<div class="md-m-t-2">
+					<div class="entry-content"><?php the_content(); ?></div>
+				</div>
+				<div class="md-m-t-2" role="main">
+					<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
+				</div>
 		</div>
-		<div class="row md-m-t-3">
-			<div class="col-md-12" role="main">
-				<?php the_tags( '<span class="small-header">Glossary Terms</span><br/>', ' ', '' ); ?>
-			</div>
-		</div>
+	</div>
 	</article>
 </div>
 
@@ -74,7 +70,7 @@
 
 <div class="container md-top">
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-8 col-md-offset-2">
 			<?php
 			$fields =  array(
 
@@ -90,11 +86,11 @@
         // change the title of send button
         'label_submit'=>'Send Question',
         // change the title of the reply section
-        'title_reply'=>'Do you have a question?',
+        'title_reply'=>'Do you have a question about this answer?',
         // remove "Text or HTML to be displayed after the set of comment fields"
         'comment_notes_after' => '',
         // redefine your own textarea (the comment body)
-        'comment_field' => '<p class="comment-form-comment md-m-t-2"><label for="comment">' . _x( 'Question', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+        'comment_field' => '<p class="comment-form-comment md-m-t-2"><label for="comment">' . _x( 'Question', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
 				'fields' => $fields
 				);
 

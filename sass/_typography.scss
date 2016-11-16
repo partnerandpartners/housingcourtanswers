@@ -43,6 +43,7 @@ h1,h2,h3,h4,h5,h6,
 
 h1, .h1 {
   font-size: $font-size-h1;
+  line-height: 1;
   margin: 0 0 0 0;
 }
 
@@ -153,3 +154,10 @@ address {
 .text-lowercase      { text-transform: lowercase; }
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
+
+
+.entry-content {
+	font-family: $font-family-serif;
+	font-size: $font-size-base * 1.4;
+	font-weight: normal;
+}

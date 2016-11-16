@@ -16,7 +16,8 @@ body {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight:  normal;
+  font-family: $font-family-serif-bold;
   font-style: normal;
   font-stretch: normal;
 }

@@ -93,41 +93,40 @@ $output_array = array( 'top_section' => '', 'main' => '', 'scrollspy' => '' );
 $output_array = housing_court_print_category_posts_tree( $current_category_id, true, $output_array );
 
 ?>
-
 <div class="top-section container">
-  <div class="row md-bottom">
-    <div class="col-xs-12 col-md-8">
-      <?php echo $output_array['top_section']; ?>
+    <div class="row md-bottom">
+      <div class="col-xs-12 col-md-8">
+        <?php echo $output_array['top_section']; ?>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8">
-      <?php echo $output_array['main']; ?>
-    </div>
-    <div id="scroll-spy" class="col-xs-12 col-md-3 col-md-offset-1">
-      <?php if( !empty( get_term_children( $current_category_id, 'category' ) ) ): ?>
-      <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="432" data-offset-bottom="906">
-        <div id="scroll-nav" role="navigation">
-          <ul class="sub-nav nav hidden-xs hidden-sm">
-            <?php echo $output_array['scrollspy']; ?>
-          </ul>
-        </div>
-      </nav>
-      <?php endif; ?>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <?php echo $output_array['main']; ?>
+      </div>
+      <div id="scroll-spy" class="col-xs-12 col-md-3 col-md-offset-1">
+        <?php if( !empty( get_term_children( $current_category_id, 'category' ) ) ): ?>
+        <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="432" data-offset-bottom="906">
+          <div id="scroll-nav" role="navigation">
+            <ul class="sub-nav nav hidden-xs hidden-sm">
+              <?php echo $output_array['scrollspy']; ?>
+            </ul>
+          </div>
+        </nav>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container md-top">
-	<div class="row">
-		<div class="col-sm-12">
-			<?php comments_template(); ?>
-		</div>
-	</div>
-</div>
+  <div class="container md-top">
+  	<div class="row">
+  		<div class="col-sm-12">
+  			<?php comments_template(); ?>
+  		</div>
+  	</div>
+  </div>
 
 
 <?php get_footer(); ?>
