@@ -39,7 +39,7 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
     }
 
     echo '<span class="anchor" id="' . $category->slug . '"></span>';
-    echo '<div class="category-page-section"><div class="row">';
+    echo '<div class="category-page-section"><div class="row md-m-b-3">';
 
     echo $current_section;
 
@@ -52,16 +52,16 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
       $sub_description = get_the_excerpt();
       $card_class = 'card';
 
-      if ($item_count == 2 ) {  $item_count = 0;
+      if ($item_count == 3 ) {  $item_count = 0;
       ?>
 
-    </div><div class="row">
-      <div class="col-md-6 xs-m-b-2">
+    </div><div class="row md-m-b-3">
+      <div class="col-md-4 xs-m-b-2">
         <?php include('templates/card.php') ?>
       </div>
 
       <?php } else { ?>
-        <div class="col-md-6 xs-m-b-2">
+        <div class="col-md-4 xs-m-b-3">
           <?php include('templates/card.php') ?>
         </div>
 
@@ -94,8 +94,8 @@ $output_array = housing_court_print_category_posts_tree( $current_category_id, t
 
 ?>
 <div class="top-section container">
-    <div class="row md-bottom">
-      <div class="col-xs-12 col-md-8">
+    <div class="row md-p-t-2">
+      <div class="col-xs-12 col-md-12">
         <?php echo $output_array['top_section']; ?>
       </div>
     </div>
@@ -103,7 +103,7 @@ $output_array = housing_court_print_category_posts_tree( $current_category_id, t
 
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-8">
+      <div class="col-xs-12 col-md-12">
         <?php echo $output_array['main']; ?>
       </div>
       <div id="scroll-spy" class="col-xs-12 col-md-3 col-md-offset-1">
