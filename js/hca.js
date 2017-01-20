@@ -9,7 +9,14 @@ function getOffset(elmnt) {
 
 $( document ).ready(function() {
   var headerHeight = $(".full").outerHeight();
-  var glossaryOffset = $('#glossary-labels').offset().top;
+  if ($('#glossary-labels').length) {
+      var glossaryOffset = $('#glossary-labels').offset().top;
+
+        $('#glossary-labels').affix({
+          offset: (glossaryOffset-60)
+        });
+  }
+
   console.log(headerHeight);
   $( window ).scroll(function() {
     if (($(window).scrollTop() > headerHeight)) {
@@ -20,9 +27,6 @@ $( document ).ready(function() {
   });
   //$("li.dropdown:first-child").addClass("dropdown-toggle");
 
-  $('#glossary-labels').affix({
-    offset: (glossaryOffset-60)
-  });
 
 
 });
