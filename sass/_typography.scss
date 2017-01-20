@@ -62,7 +62,7 @@ h4, .h4 {
   margin: 0 0 0 0;
 }
 
-h4.card-title {
+h4.card-title, h5.card-title {
   margin-bottom: .5em;
 }
 
@@ -92,7 +92,7 @@ a.more-link {
   font-size: $font-size-base;
   color: $hca-blue;
   letter-spacing: .05em;
-  line-height: 1.4;
+  line-height: 2.25;
 }
 
 .detail {

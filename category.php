@@ -27,7 +27,7 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
     $output_array['top_section'] .= '<p class="category-description">' . $category->description . '</p>';
   } else {
     $current_section .= '<h3 class="section-title">' . $category->name . '</h3>';
-    $current_section .= '<h6 class="section-description">' . $category->description . '</h6><hr/>';
+    $current_section .= '<h6 class="section-description">' . $category->description . '</h6>';
   }
 
   ob_start();
@@ -106,17 +106,17 @@ $output_array = housing_court_print_category_posts_tree( $current_category_id, t
       <div class="col-xs-12 col-md-12">
         <?php echo $output_array['main']; ?>
       </div>
-      <div id="scroll-spy" class="col-xs-12 col-md-3 col-md-offset-1">
+      <!-- <div id="scroll-spy" class="col-xs-12 col-md-3 col-md-offset-1">
         <?php if( !empty( get_term_children( $current_category_id, 'category' ) ) ): ?>
         <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="432" data-offset-bottom="906">
           <div id="scroll-nav" role="navigation">
             <ul class="sub-nav nav hidden-xs hidden-sm">
-              <?php echo $output_array['scrollspy']; ?>
+              <?php //echo $output_array['scrollspy']; ?>
             </ul>
           </div>
         </nav>
         <?php endif; ?>
-      </div>
+      </div> -->
     </div>
   </div>
 
