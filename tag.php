@@ -11,7 +11,10 @@
 ?>
 <?php get_header();?>
 
-<?php if ( have_posts() ): ?>
+<?php if ( have_posts() ):?>
+
+<?php $rowCounter = 0; ?>
+
 
 <div class="full">
 	<div class="container">
@@ -26,12 +29,12 @@
 
 <div class="container">
    <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 xs-m-b-3">
          <hr/>
          <?php
          $tag = get_term_by( 'slug', get_query_var('tag'), 'post_tag' );
 
-         ?><h3 class="section-title"><span class="tip-count"><?php echo $tag->count; ?> Tips</span> relating to "<?php echo single_tag_title( '', false ); ?>"</h3>
+         ?><h5 class="tag-count-text"><span class="badge"><?php echo $tag->count; ?> Tips</span> relating to "<?php echo single_tag_title( '', false ); ?>"</h5>
       </div>
    </div>
 </div>
@@ -39,12 +42,25 @@
 
 <div class="container">
    <div class="row">
-      <div class="col-sm-10" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
-				<article>
-					<h5 class="small-title"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
-					<div class="post-content"><?php the_content(); ?></div>
-				</article>
+				<div class="col-sm-4 xs-m-b-3">
+					<a href="<?php the_permalink(); ?>">
+					  <div class="card-wrapper">
+					    <div class="card">
+					        <h5><?php the_title (); ?></h5>
+					        <p><?php the_excerpt (); ?></p>
+					          <a class="more-link text-uppercase" href="<?php the_permalink(); ?>">Read More</a>
+					    </div>
+					  </div>
+					</a>
+				</div>
+				<?php 
+					$rowCounter++;
+					if($rowCounter==3){
+						echo('</div><div class="row">');//new row at 3rd post.
+						$rowCounter = 0;
+					}
+				?>
 		<?php endwhile; ?>
 	   </div>
    </div>
@@ -64,9 +80,9 @@
 
 <div class="container">
    <div class="row">
-      <div class="col-sm-12" role="main">
+      <div class="col-sm-12 xs-m-b-3" role="main">
       	<hr/>
-	  	<h3 class="section-title"><span class="tip-count">No tips</span> to display in "<?php echo single_tag_title( '', false ); ?>"</h3>
+	  	<h5 class="tag-count-text"><span class="badge">No tips</span> to display for "<?php echo single_tag_title( '', false ); ?>"</h5>
 	  </div>
    </div>
 </div>
@@ -78,7 +94,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="first-table-row" data-spy="affix" data-offset="300"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &uarr;</a></div></div>
+					<div class="first-table-row" data-spy="affix" data-offset="800"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &uarr;</a></div></div>
 				</div>
 			</div>
 		</div>

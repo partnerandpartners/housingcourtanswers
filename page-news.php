@@ -16,7 +16,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
     <div class="container full">
-		<div class="row md-bottom">
+		<div class="row md-m-b-2">
 		   <div class="col-md-8 col-md-offset-2 text-center">
 		      <h1 class="category-title"><?php the_title(); ?></h1>
 		      <h5 class="category-description"><?php the_content(); ?></h5>
@@ -29,7 +29,7 @@
 <?php endif; ?>
 
 	<div class="container">
-		<div class="row md-bottom">
+		<div class="row">
 		<?php
 			$columns_printed = 0;
 			$num_posts_printed = 0;
@@ -41,7 +41,7 @@
 					$columns_printed++;
 					$num_posts_printed++;
 					if( $columns_printed === 3 && $num_posts_printed != $news_query->found_posts ) {
-						echo '</div><div class="row md-bottom">';
+						echo '</div><div class="row">';
 					}
 				}
 			}
