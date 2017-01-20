@@ -17,7 +17,7 @@
    <div class="top-section">
 	  <div class="container">
 	   <div class="row sm-bottom">
-		   <div class="col-md-8 col-md-offset-2">
+		   <div class="col-md-8 col-md-offset-2 text-center">
 				<h1 class="category-title"><?php the_title(); ?></h1>
 				<div class="entry-content"><?php the_content(); ?></div>
 		   </div>

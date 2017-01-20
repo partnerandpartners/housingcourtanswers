@@ -28,26 +28,31 @@
 <?php endif; ?>
 	
 <div class="container">
-	<div class="row md-bottom">
-		<div class="col-md-12">
-		<hr/>
-		</div>
-		<div class="col-md-6">
-			<div class="category-page-section highlight">
-			<h5 class="sub-title">Housing Court Answers Hotline</h5>
-			<?php the_field('hotline'); ?>
+	<div class="col-md-8 col-md-offset-2">
+		<div class="row xs-m-b-3">
+			<div class="col-md-6">
+				<div class="category-page-section highlight">
+				<h5 class="section-title">Housing Court Answers Hotline</h5>
+				<?php the_field('hotline'); ?>
+				</div>
 			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="category-page-section highlight">
-			<h5 class="sub-title">Need help with back rent?</h5>
-			<?php the_field('back_rent'); ?>
+			<div class="col-md-6">
+				<div class="category-page-section highlight">
+				<h5 class="section-title">Need help with back rent?</h5>
+				<?php the_field('back_rent'); ?>
+				</div>
+			</div>
+			<div class="col-md-12 text-center">
+				<div class="category-page-section highlight">
+				<h5 class="section-title">Hotline Hours of Operation</h5>
+				<?php the_field('hours_of_operation'); ?>
+				</div>
 			</div>
 		</div>
 	</div>
 	
 	<div class="row md-bottom">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-8 col-md-offset-2">
 			<div class="category-page-section highlight">
 			<h5 class="sub-title">Visit Our Information Tables</h5>
 			<?php the_field('information_tables'); ?>
@@ -68,7 +73,7 @@
 					
 					?>
 					
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						
 						<span class="small-header"><?php echo $borough; ?></span>
 						<?php echo $address; ?>
@@ -78,8 +83,8 @@
 					
 					<?php 
 					$rowCounter++;
-					if($rowCounter==3){
-						echo('</div><div class="row sm-bottom">');//new row at 3rd post.
+					if($rowCounter==2){
+						echo('</div><div class="row xs-m-b-2">');//new row at 3rd post.
 						$rowCounter = 0;
 					}
 					?>
