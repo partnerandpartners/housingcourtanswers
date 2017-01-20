@@ -5,5 +5,5 @@
 		<p class="news-subtitle xs-m-b-1"><?php the_field('subtitle'); ?></p>
 	</header>
 	<div class="secondary-type"><?php the_excerpt(); ?></div>
-	<a class="more-link text-uppercase" href="<?php the_field('external_link'); ?>">Read Article</a>
+	<a class="more-link text-uppercase" href="<?php the_field('external_link'); ?>" target="_blank">Read Article</a>
 </article>

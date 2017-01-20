@@ -55,9 +55,9 @@
 			<?php if( have_rows('locations') ): 
 						    $rowCounter = 0;
 			?>
-			<div class="row sm-bottom">
+			<div class="row xs-m-b-3">
 				
-				<div class="col-sm-12 sm-top xs-bottom"><span class="section-header">Table Locations</span></div>
+				<div class="col-sm-12 xs-m-1-3 xs-m-b-2"><span class="section-header">Table Locations</span></div>
 				
 				<?php while( have_rows('locations') ): the_row(); 
 			

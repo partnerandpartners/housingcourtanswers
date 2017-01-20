@@ -147,7 +147,7 @@
 						    $rowCounter = 0;
 						?>
 				    
-						<div class="row xs-m-t-3 xs-m-b-2">
+						<div class="row xs-m-t-6 xs-m-b-2">
 							
 							<div class="col-sm-12 xs-m-b-2"><h5 class="section-header">Borough Assistants</h5></div>
 							
@@ -181,48 +181,44 @@
 						<?php endif; ?>
 				    
 						<div class="row xs-m-t-3 xs-m-b-3">
-							
-							<div class="col-sm-12"><span class="position">NYCHA Coordinator</span></div>
 								
 								<div class="col-sm-6">
 									
 									<h6 class="normal-weight"><?php the_field('nycha_coordinator'); ?></h6>
+									<span class="position">NYCHA Coordinator</span>
 						
 								</div>
 								
 						</div>
 						
 						<div class="row xs-m-b-3">
-							
-							<div class="col-sm-12"><span class="position">NYCHA / Bronx Assistant</span></div>
 								
 								<div class="col-sm-6">
 									
 									<h6 class="normal-weight"><?php the_field('nycha_bronx_assistant'); ?></h6>
+									<span class="position">NYCHA / Bronx Assistant</span>
 						
 								</div>
 								
 						</div>
 						
 						<div class="row xs-m-b-3">
-							
-							<div class="col-sm-12"><span class="position">Navigator Program Coordinator</span></div>
 								
 								<div class="col-sm-6">
 									
 									<h6 class="normal-weight"><?php the_field('navigator_program_coordinator'); ?></h6>
+									<span class="position">Navigator Program Coordinator</span>
 						
 								</div>
 								
 						</div>
 						
 						<div class="row xs-m-b-3">
-							
-							<div class="col-sm-12"><span class="position">Hotline Coordinator</span></div>
 								
 								<div class="col-sm-6">
 									
 									<h6 class="normal-weight"><?php the_field('hotline_coordinator'); ?></h6>
+									<span class="position">Hotline Coordinator</span>
 						
 								</div>
 								
