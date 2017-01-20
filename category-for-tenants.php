@@ -70,7 +70,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 				<a href="<?php echo $link ?>">
 					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
 				</a>
-				<div class="lead xs-m-b-1"><?php echo $description ?></div>
+				<div class="lead xs-m-b-2"><?php echo $description ?></div>
 
 			<?php
 			//echo '<li><a href=" '. $link.' "><h3>' . $title . '</h3></a>' .$description.'</li>';
