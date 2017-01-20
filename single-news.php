@@ -42,14 +42,6 @@
 	</article>
 </div>
 
-<div class="container md-top">
-	<div class="row">
-		<div class="col-sm-12">
-			<?php comments_template(); ?>
-		</div>
-	</div>
-</div>
-
 <?php endwhile; ?>
 
 <?php endif; ?>

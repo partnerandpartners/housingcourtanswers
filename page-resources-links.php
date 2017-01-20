@@ -19,7 +19,7 @@
 	   <div class="row md-bottom">
 		   <div class="col-md-6">
 				<h1 class="category-title"><?php the_title( '', false ); ?></h1>
-				<h5 class="category-description">Online Resources for New York City Tenants and Housing Advocates.</h5>
+				<div class="main-lead">Online Resources for New York City Tenants and Housing Advocates.</div>
 		   </div>
 		   <div id="resource-quote" class="col-md-4 col-md-offset-2 xs-m-t-3">
 				<span class="resource-quote">“Easily New York’s best online resource for New York landlord-tenant case law, statutes, secondary authority, and a great deal more law . . .”</span></br>
@@ -34,7 +34,7 @@
 	
 <div class="container">
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-7">
 		<?php
 			$scroller_var = '';
 			$resource_query = hca_get_resources_query();
@@ -59,10 +59,9 @@
 		?>
 		</div>
 		
-		<div id="scroll-spy" class="col-md-3" role="complementary">
-			<div id="nav">
-			  <ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="372" data-offset-bottom="906">
-			  		<span class="small-header">Resource Sections</span>             
+		<div class="col-md-4 col-md-offset-1 resources-scroll-spy">
+			<div id="scroll-nav" role="navigation">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="444" data-offset-bottom="600">            
 					<?php echo $scroller_var; ?>
 			  </ul>
 			</div>

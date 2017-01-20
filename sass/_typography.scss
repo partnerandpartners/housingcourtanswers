@@ -167,3 +167,15 @@ address {
 	font-size: $font-size-base * 1.4;
 	font-weight: normal;
 }
+
+p.entry-content {
+	font-family: $font-family-serif;
+	font-size: $font-size-base * 1.4;
+	font-weight: normal;
+}
+
+h6.section-description {
+	font-family: $font-family-serif-bold;
+	color: blue;
+	
+}

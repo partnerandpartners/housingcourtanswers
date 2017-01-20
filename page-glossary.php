@@ -35,7 +35,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="first-table-row" data-spy="affix" data-offset="300"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &uarr;</a></div></div>
+			<div class="first-table-row" data-spy="affix" data-offset="300"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &#8679;</a></div></div>
 		</div>
 	</div>
 </div>
