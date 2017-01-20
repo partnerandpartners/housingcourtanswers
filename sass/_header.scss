@@ -6,6 +6,13 @@ header {
   font-weight: bold;
 }
 
+.bg {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
 .navbar-brand {
   float: left;
   padding: 15px 15px;
@@ -73,7 +80,7 @@ header {
   text-transform: uppercase;
   margin-right: 30px;
   &>a {
-    padding: 15px 0px 10px 0;
+    padding: 15px 0px 3px 0;
     &:hover {
         background-color: transparent;
         border-bottom: solid 3px;
