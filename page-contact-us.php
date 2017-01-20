@@ -28,24 +28,20 @@
 <?php endif; ?>
 	
 <div class="container">
+	<div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<div class="row xs-m-b-3">
-			<div class="col-md-6">
-				<div class="category-page-section highlight">
-				<h5 class="section-title">Housing Court Answers Hotline</h5>
-				<?php the_field('hotline'); ?>
+				<div class="col-sm-5">
+					<div class="xs-m-b-3">
+					<h5 class="section-title xs-m-b-1">Housing Court Hotline</h5>
+					<?php the_field('hotline'); ?>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="category-page-section highlight">
-				<h5 class="section-title">Need help with back rent?</h5>
-				<?php the_field('back_rent'); ?>
-				</div>
-			</div>
-			<div class="col-md-12 text-center">
-				<div class="category-page-section highlight">
-				<h5 class="section-title">Hotline Hours of Operation</h5>
-				<?php the_field('hours_of_operation'); ?>
+				<div class="col-sm-7">
+					<div class="assistance">
+					<h5 class="section-title">Hotline Assistance</h5>
+					<?php the_field('back_rent'); ?>
+					</div>
 				</div>
 			</div>
 		</div>

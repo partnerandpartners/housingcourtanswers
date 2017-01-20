@@ -59,9 +59,9 @@
 		?>
 		</div>
 		
-		<div class="col-md-4 col-md-offset-1 resources-scroll-spy">
+		<div class="col-md-4 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="444" data-offset-bottom="600">            
+				<ul class="sub-nav nav hidden-xs hidden-sm resources" data-spy="affix" data-offset-top="444" data-offset-bottom="600">            
 					<?php echo $scroller_var; ?>
 			  </ul>
 			</div>

@@ -28,7 +28,7 @@
 <?php endif; ?>
 	
 <div class="container">
-	<div class="row md-m-b-6">
+	<div class="row md-m-b-3">
 		<div class="col-md-8 col-md-offset-2">
 		<div class="row md-m-b-6">
 			<div class="col-sm-12">
@@ -40,7 +40,7 @@
 			</div>
 		</div>
 		
-		<div class="row md-m-b-6">
+		<div class="row md-m-b-3">
 			<div class="col-sm-12">
 				<span class="anchor" id="history"></span>
 				<div class="category-page-section highlight">
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		
-		<div class="row md-m-b-6">
+		<div class="row md-m-b-3">
 			<div class="col-sm-12">
 				<span class="anchor" id="fighting-for-justice"></span>
 				<div class="category-page-section highlight">
