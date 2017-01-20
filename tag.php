@@ -54,7 +54,7 @@
 					  </div>
 					</a>
 				</div>
-				<?php 
+				<?php
 					$rowCounter++;
 					if($rowCounter==3){
 						echo('</div><div class="row">');//new row at 3rd post.
@@ -89,16 +89,19 @@
 <?php endif; ?>
 
 <div>
-
-	<div class="sticky scroll-bar hidden-xs hidden-sm">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="first-table-row" data-spy="affix" data-offset="800"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &#8679;</a></div></div>
+<div class="glossary-label-wrapper" style="min-height:47px">
+	<div id="glossary-labels" class="container-fluid" style="width: 100%;">
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="first-table-row"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &#8679;</a></div></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 
 		<div class="container glossary-margin-top">

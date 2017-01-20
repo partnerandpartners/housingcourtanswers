@@ -11,13 +11,22 @@ $( document ).ready(function() {
   var headerHeight = $(".full").outerHeight();
   console.log(headerHeight);
   $( window ).scroll(function() {
-    if (($(window).scrollTop() > headerHeight)) {
+    if (($(window).scrollTop() > 5)) {
       $("header").addClass("bg");
     } else {
       $("header").removeClass("bg");
     }
   });
   //$("li.dropdown:first-child").addClass("dropdown-toggle");
+  if ($('#glossary-labels').length) {
+    var glossaryOffset = $('#glossary-labels').offset().top;
+    $('#glossary-labels').affix({
+      offset: (glossaryOffset-50)
+    });
+  }
+
+
+
 });
 
 

@@ -37,6 +37,7 @@
     "mousetrap": "~1.5.3",
     "normalize.css": "^4.2.0",
     "path": "^0.12.7",
+    "stickyfill": "^1.1.1",
     "turbolinks": "^5.0.0",
     "validator": "^5.0.0"
   }

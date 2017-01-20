@@ -31,13 +31,18 @@
 
 <?php endif; ?>
 
-
-<div class="container">
+<div class="glossary-label-wrapper" style="min-height:47px">
+<div id="glossary-labels" class="container-fluid" style="width: 100%;">
 	<div class="row">
-		<div class="col-sm-12">
-			<div class="first-table-row" data-spy="affix" data-offset="300"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &#8679;</a></div></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="first-table-row"><div class="">Court Term</div><div class="">Definition</div><div class="back-to-top"><a href="#">Back to Top &#8679;</a></div></div>
+				</div>
+			</div>
 		</div>
 	</div>
+</div>
 </div>
 
 
