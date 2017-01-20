@@ -20,6 +20,7 @@ gulp.task('copyJS', function () {
     './node_modules/jquery/dist/jquery.js',
     './node_modules/handlebars/dist/handlebars.min.js',
     './node_modules/lazysizes/lazysizes.min.js',
+    // './node_modules/stickyfill/index.js',
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',

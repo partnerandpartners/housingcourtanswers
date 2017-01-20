@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
-<div class="container sm-top">
 
+
+<div class="container top-section">
+<a class="back-link" href="<?php echo home_url(); ?>/events">< Back to All Events</a>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		
+
 	<article <?php post_class(); ?>>
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8">
 			<span class="small-header">
 			<?php
 
@@ -30,26 +32,28 @@
 			?>
 			</span>
 			<h2 class="article-title"><?php the_title(); ?></h2>
-			<h4 class="section-description"><?php the_field("subtitle"); ?></h4>
+			<h5 class="xs-p-b-2"><?php the_field("subtitle"); ?></h5>
 			<div class="news-event-meta">
 				<span class="small-header">When</span>
-				<div class="event-data xs-bottom">
+				<div class="event-data xs-p-b-2">
 					<?php the_field( 'exact_date'); ?>
 				</div>
 				<span class="small-header">Where</span>
-				<div class="event-data sm-bottom">
+				<div class="event-data xs-p-b-2">
 					<?php the_field( 'address'); ?>
 				</div>
 			</div>
 			<div class="entry-content"><?php the_content(); ?></div>
 		</div>
 		</div>
-		<div class="row">
+
+		<div class="row xs-m-t-3">
 			<div class="col-md-12" role="main">
 				<?php the_tags( '<span class="small-header">Glossary Terms</span><br/>', ' ', '' ); ?>
 			</div>
 		</div>
-	</article>	
+	</article>
+
 </div>
 
 <div class="container md-top">
