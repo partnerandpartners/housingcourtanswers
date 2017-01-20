@@ -5,20 +5,20 @@
      <div class="col-sm-6 text-center">
        <div class="help-resources">
 			<h4>Helpful Resources</h4>
-			<p class="md-m-b-2">A list of resources and links to help you.</p>
+			<p class="xs-m-b-2">A list of resources and links to help you.</p>
 			<a href="/resources-links" class="btn btn-lg">Go to Resources & Links</a>
 	   </div>
       </div>
       <div class="col-sm-6 text-center">
 	    <div class="call-us">
 			<h4>I Need a Lawyer</h4>
-			<p class="md-m-b-2">Find legal help from our list of attorneys and firms.</p>
+			<p class="xs-m-b-2">Find legal help from our list of attorneys and firms.</p>
 			<a href="#" class="btn btn-lg">Find Legal Help</a>
 		</div>
       </div>
      </div>
   <div class="row md-m-b-3">
-     <div class="col-md-3">
+     <div class="col-sm-3">
 	 <span class="small-header">Navigation</span>
 		 <div class="footer-nav">
 		 <?php
@@ -35,26 +35,26 @@
 		 ?>
 		</div>
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-3 xs-m-b-2">
      <span class="small-header">Donate</span>
 	      <div class="donate text-center">
-		      <h6 class="normal-weight md-m-b-2">Please support us to support you.</h6>
+		      <h6 class="normal-weight xs-m-b-2">Please support us to support you.</h6>
 		      <a href="#" class="btn btn-default">Donate</a>
 		    </div>
       </div>
-    <div class="col-md-5">
+    <div class="col-sm-6 xs-m-b-2">
      <span class="small-header">Join Our Mailing List</span>
 	    <div class="mailing text-center">
-		       <h6 class="normal-weight md-m-b-2">Get on our mailing list for announcements of our borough meetings and trainings, and spring series.</h6>
+		       <h6 class="normal-weight xs-m-b-2">Get on our mailing list for announcements of our borough meetings and trainings, and spring series.</h6>
 		         <a href="http://eepurl.com/bDaXUD" target="_blank" class="btn btn-default">Sign Up</a>
            </div>
       </div>
   </div>
   <div class="row md-m-b-3">
-    <div class="col-md-6 sm-bottom">
+    <div class="col-md-6 xs-m-b-2">
       <span class="copyright-credit">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
     </div>
-    <div class="col-md-6 sm-bottom">
+    <div class="col-md-6 xs-m-b-2">
 	     <span class="design-credit">Design & Development by <a href="" target="_blank">Partner & Partners</a></span>
     </div>
   </div>

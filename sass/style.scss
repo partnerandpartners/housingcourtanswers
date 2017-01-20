@@ -89,12 +89,81 @@
 	visibility: hidden;
 }
 
+h6.news-title {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+h1.category-title {
+	margin-bottom: 30px;
+}
+
+h1.single-tag-title {
+	margin-bottom: 30px;
+	margin-top: 30px;
+	font-family: $font-family-sans-serif-bold;
+	font-size: $font-size-h4;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	display: inline-block;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 4px solid $hca-bright-green;
+	//background-color: $white;
+	color: $hca-bright-green;
+}
+
 .badge {
 	background-color: $hca-blue;
 	padding: 6px 10px;
 	border-radius: 12px;
 	margin-bottom: .325em;
 }
+
+.quote-credit {
+	margin-top: 10px !important;
+	font-size: 1.15em;
+	margin-top: 19px;
+}
+
+.quote-credit-company {
+	color: $gray-light;
+}
+
+.resource-quote {
+	font-family: $font-family-serif;
+	font-weight: normal;
+	font-size: 1.15em;
+	margin-top: .5em;
+}
+
+h6.staff-name {
+	font-family: $font-family-serif;
+	font-weight: normal;
+	font-size: 1em;
+	margin-bottom: .5em;
+}
+
+.position {
+	color: $gray-light;
+}
+
+h5.category-description {
+	font-family: $font-family-serif;
+	font-weight: normal;
+	font-size: 1.25em;
+}
+
+h5.category-description p {
+	margin-bottom: 15px;
+}
+
+.links-post-content a {color: $brand-primary; font-family: $font-family-sans-serif; border-bottom: 1px solid $gray-light}
+
+.links-post-content p {margin-bottom: 1em; font-family: $font-family-serif; font-weight: normal;}
 
 .card, .card-stack {
 	border: 3px solid #000;
@@ -181,7 +250,7 @@
   max-width: 100%;
   margin: 0 auto;
   //background: $background-blue !important;
-  border-bottom: 1px dotted $brand-primary;
+  border-bottom: 1px dotted $gray-light;
   & > div {
     padding: 15px 0 15px 0;
     display: table-cell;

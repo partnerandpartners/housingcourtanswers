@@ -4,7 +4,7 @@
       <?php if ($card_class == 'card') { ?>
         <h5><?php echo $sub_title ?></h5>
         <p><?php echo $sub_description ?></p>
-          <a class="more-link text-uppercase" href="<?php echo $sub_link ?>">Read Answer</a>
+          <a class="more-link text-uppercase" href="<?php echo $sub_link ?>">Read More</a>
 
       <?php } else { ?>
         <h4 class="card-title"><?php echo $sub_title ?></h4>

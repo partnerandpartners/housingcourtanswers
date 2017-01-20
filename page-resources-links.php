@@ -21,9 +21,9 @@
 				<h1 class="category-title"><?php the_title( '', false ); ?></h1>
 				<h5 class="category-description">Online Resources for New York City Tenants and Housing Advocates.</h5>
 		   </div>
-		   <div id="resource-quote" class="col-md-4 col-md-offset-2">
+		   <div id="resource-quote" class="col-md-4 col-md-offset-2 xs-m-t-3">
 				<span class="resource-quote">“Easily New York’s best online resource for New York landlord-tenant case law, statutes, secondary authority, and a great deal more law . . .”</span></br>
-				<span class="quote-credit">– Gerald Lebovits, N.Y. Real Property Law Journal</span>
+				<div class="quote-credit">Gerald Lebovits,<br/><span class="quote-credit-company">N.Y. Real Property Law Journal</div>
 	            
 		  </div>
 	    </div>
@@ -33,7 +33,7 @@
 <?php endif; ?>
 	
 <div class="container">
-	<div class="row md-bottom">
+	<div class="row">
 		<div class="col-md-9">
 		<?php
 			$scroller_var = '';
@@ -44,7 +44,7 @@
 					$post_slug = basename(get_permalink());
 					$post_title = get_the_title();
 					 ?>
-					<article <?php post_class("lg-bottom"); ?>>
+					<article <?php post_class("md-m-b-6"); ?>>
 						<span class="anchor" id="<?php echo( basename(get_permalink()) ); ?>"></span>
 						<div class="category-page-section highlight">
 						<h3 class="section-title"><?php the_title(); ?></h3>

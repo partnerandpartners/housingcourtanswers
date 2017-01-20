@@ -28,9 +28,9 @@
 <?php endif; ?>
 	
 <div class="container">
-	<div class="row md-bottom">
+	<div class="row md-m-b-6">
 		<div class="col-md-9">
-		<div class="row">
+		<div class="row md-m-b-6">
 			<div class="col-sm-12">
 				<span class="anchor" id="what-we-do"></span>
 				<div class="category-page-section highlight">
@@ -40,7 +40,7 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row md-m-b-6">
 			<div class="col-sm-12">
 				<span class="anchor" id="history"></span>
 				<div class="category-page-section highlight">
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row md-m-b-6">
 			<div class="col-sm-12">
 				<span class="anchor" id="fighting-for-justice"></span>
 				<div class="category-page-section highlight">
@@ -60,21 +60,20 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row md-m-b-6">
 			<div class="col-sm-12">
 				<span class="anchor" id="who-we-are"></span>
 				<div class="category-page-section highlight">
 					<h3 class="section-title">Who We Are</h3>
 					<h6 class="section-description"><?php the_field('who_we_are'); ?></h6>
 					<hr/>
-				
+					
+					<div class="row xs-m-b-2">
 						<?php if( have_rows('staff') ): 
 						    $rowCounter = 0;
 						?>
-				    
-						<div class="row sm-bottom">
 							
-							<div class="col-sm-12"><span class="section-header">Staff</span></div>
+							<div class="col-sm-12 xs-m-t-1 xs-m-b-2"><h5 class="section-header">Staff</h5></div>
 							
 							<?php while( have_rows('staff') ): the_row(); 
 						
@@ -86,32 +85,34 @@
 								
 								<div class="col-sm-6">
 						
-									<h6 class="normal-weight"><?php echo $name; ?></h6>
-								    <span class="small-header"><?php echo $position; ?></span>
+									<h6 class=""><?php echo $name; ?></h6>
+								    <span class="position"><?php echo $position; ?></span>
 						
 								</div>
 								
 								<?php 
 								$rowCounter++;
 								if($rowCounter==2){
-									echo('</div><div class="row sm-bottom">');//new row at 3rd post.
+									echo('</div><div class="row xs-m-b-2">');//new row at 3rd post.
 									$rowCounter = 0;
 								}
 								?>
 						
 							<?php endwhile; ?>
 							
+							<?php endif; ?>
+							
 							</div>
 							
-						<?php endif; ?>
+						
 						
 						<?php if( have_rows('borough_coordinators') ): 
 						    $rowCounter = 0;
 						?>
 				    
-						<div class="row sm-bottom">
+						<div class="row xs-m-b-2">
 							
-							<div class="col-sm-12 md-top xs-bottom"><span class="section-header">Borough Coordinators</span></div>
+							<div class="col-sm-12 xs-m-b-2"><h5 class="section-header">Borough Coordinators</h5></div>
 							
 							<?php while( have_rows('borough_coordinators') ): the_row(); 
 						
@@ -124,14 +125,14 @@
 								<div class="col-sm-4">
 									
 									<h6 class="normal-weight"><?php echo $name; ?></h6>
-									<span class="small-header"><?php echo $borough; ?></span>
+									<span class="position"><?php echo $borough; ?></span>
 						
 								</div>
 								
 								<?php 
 								$rowCounter++;
 								if($rowCounter==3){
-									echo('</div><div class="row sm-bottom">');//new row at 3rd post.
+									echo('</div><div class="row xs-m-b-2">');//new row at 3rd post.
 									$rowCounter = 0;
 								}
 								?>
@@ -146,29 +147,29 @@
 						    $rowCounter = 0;
 						?>
 				    
-						<div class="row sm-bottom">
+						<div class="row xs-m-b-2">
 							
-							<div class="col-sm-12 md-top xs-bottom"><span class="section-header">Borough Assistants</span></div>
+							<div class="col-sm-12 xs-m-b-2"><h5 class="section-header">Borough Assistants</h5></div>
 							
 							<?php while( have_rows('borough_assistants') ): the_row(); 
 						
 								// vars
 								$name = get_sub_field('name');
-								$borough = get_sub_field('borough');
+								$borough = get_sub_field('borough_name');
 								
 								?>
 								
 								<div class="col-sm-4">
 									
 									<h6 class="normal-weight"><?php echo $name; ?></h6>
-									<span class="small-header"><?php echo $borough; ?></span>
+									<span class="position"><?php echo $borough; ?></span>
 						
 								</div>
 								
 								<?php 
 								$rowCounter++;
 								if($rowCounter==3){
-									echo('</div><div class="row sm-bottom">');//new row at 3rd post.
+									echo('</div><div class="row">');//new row at 3rd post.
 									$rowCounter = 0;
 								}
 								?>
@@ -179,9 +180,9 @@
 							
 						<?php endif; ?>
 				    
-						<div class="row md-top sm-bottom">
+						<div class="row xs-m-t-3 xs-m-b-3">
 							
-							<div class="col-sm-12"><span class="section-header">Nycha Coordinator</span></div>
+							<div class="col-sm-12"><span class="position">Nycha Coordinator</span></div>
 								
 								<div class="col-sm-6">
 									
@@ -191,9 +192,9 @@
 								
 						</div>
 						
-						<div class="row sm-bottom">
+						<div class="row xs-m-b-3">
 							
-							<div class="col-sm-12"><span class="section-header">NYCHA / Bronx Assistant</span></div>
+							<div class="col-sm-12"><span class="position">NYCHA / Bronx Assistant</span></div>
 								
 								<div class="col-sm-6">
 									
@@ -203,9 +204,9 @@
 								
 						</div>
 						
-						<div class="row sm-bottom">
+						<div class="row xs-m-b-3">
 							
-							<div class="col-sm-12"><span class="section-header">Navigator Program Coordinator</span></div>
+							<div class="col-sm-12"><span class="position">Navigator Program Coordinator</span></div>
 								
 								<div class="col-sm-6">
 									
@@ -217,7 +218,7 @@
 						
 						<div class="row sm-bottom">
 							
-							<div class="col-sm-12"><span class="section-header">Hotline Coordinator</span></div>
+							<div class="col-sm-12"><span class="position">Hotline Coordinator</span></div>
 								
 								<div class="col-sm-6">
 									
@@ -233,7 +234,7 @@
 				    
 						<div class="row sm-bottom">
 							
-							<div class="col-sm-12 md-top xs-bottom"><span class="section-header">Board of Directors Executive Committee</span></div>
+							<div class="col-sm-12 md-top xs-bottom"><h5 class="section-header">Board of Directors Executive Committee</h5></div>
 							
 							<?php while( have_rows('executive_committee') ): the_row(); 
 						
@@ -247,7 +248,7 @@
 								<div class="col-md-6">
 									
 									<h6 class="normal-weight"><?php echo $name; ?></h6>
-									<span class="small-header"><?php echo $memberposition; ?></span><br/>
+									<span class="position"><?php echo $memberposition; ?></span><br/>
 									<?php echo $organization; ?>
 						
 								</div>
@@ -272,7 +273,7 @@
 				    
 						<div class="row sm-bottom">
 							
-							<div class="col-sm-12 md-top xs-bottom"><span class="section-header">Board of Directors General Members</span></div>
+							<div class="col-sm-12 md-top xs-bottom"><h5 class="section-header">Board of Directors General Members</h5></div>
 							
 							<?php while( have_rows('general_members') ): the_row(); 
 						
