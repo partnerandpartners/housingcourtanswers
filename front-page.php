@@ -12,96 +12,46 @@ if( have_posts() ) {
 }
 ?>
 
-<div class="container-fluid full bg green">
+<div class="container-fluid full bg blue">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-7">
-					<div class="header-image-left" style="">
-						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-left.png" />
-						<img class="clouds" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
-						<img class="clouds" id="cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
-						<img class="clouds" id="cloud-right" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
-
+			<div class="col-sm-12">
+					<div class="homepage-clouds" style="">
+						<img class="clouds" id="home-cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
+						<img class="clouds" id="home-cloud-left-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
+						<img class="clouds" id="home-cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
+						<img class="clouds" id="home-cloud-right" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
+						<img class="clouds" id="home-cloud-right-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
 					</div>
-					<?php if ( have_posts() ): ?>
-					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
-					<div class="main-lead"><?php echo category_description(); ?></div>
-					<?php endif; ?>
 			</div>
-			<div class="col-md-5">
-				<div class="header-image-right" style="">
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png" />
-					<img class="img-responsive right-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-right.png" />
-				</div>
-			</div>
-	</div>
-	</div>
-</div>
-
-<div class="front-page-section popular-search xs-m-b-6">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5">
+			<div class="col-sm-4 text-center">
 				<?php
-			    $category_id = get_cat_ID( 'For Tenants' );
+					$category_id = get_cat_ID( 'For Tenants' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="">
-					<div class="home-btn-wrapper">
-						<div class="row is-table-row middle">
-							<div class="col-xs-12">
-								<div class="text-uppercase">
-									<h4>I'm a Tenant</h4>
-								</div>
-							</div>
-							<div class="col-xs-12">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0000_tenant.png" style="" />
-							</div>
-						</div>
-					</div>
-				</a>
+				<h4 class="text-uppercase">I'm a Tenant</h4>
+				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
 			</div>
-			<div class="col-md-5">
+			<div class="col-sm-4 text-center">
 				<?php
 			    $category_id = get_cat_ID( 'For Landlords' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="">
-					<div class="home-btn-wrapper">
-						<div class="row is-table-row middle">
-							<div class="col-xs-12">
-								<div class="text-uppercase">
-									<h4>I'm a Landlord</h4>
-								</div>
-							</div>
-							<div class="col-xs-12">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0001_landlord.png" style="" />
-							</div>
-						</div>
-					</div>
-				</a>
+				<h4 class="text-uppercase">I'm a Landlord</h4>
+				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
 			</div>
-			<div class="col-md-2">
+			<div class="col-sm-3 col-sm-offset-1 text-center">
 				<?php
-			    $category_id = get_cat_ID( 'For Tenants' );
+			    $category_id = get_cat_ID( 'For Advocates' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="">
-					<div class="home-btn-wrapper">
-						<div class="row is-table-row middle">
-							<div class="col-xs-12">
-								<div class="text-uppercase">
-									<h4>I'm an Advocate</h4>
-								</div>
-							</div>
-							<div class="col-xs-12">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0002_advocate.png" style="" />
-							</div>
-						</div>
-					</div>
-				</a>
+				<h4 class="text-uppercase">I'm an<br/> Advocate</h4>
+				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-home-image.png" />
 			</div>
-		</div>
+	</div>
 	</div>
 </div>
 

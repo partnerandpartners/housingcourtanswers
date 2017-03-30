@@ -12,9 +12,9 @@ $( document ).ready(function() {
   console.log(headerHeight);
   $( window ).scroll(function() {
     if (($(window).scrollTop() > 5)) {
-      $("header").addClass("bg");
+      $("header").addClass("bg-scrolled");
     } else {
-      $("header").removeClass("bg");
+      $("header").removeClass("bg-scrolled");
     }
   });
   //$("li.dropdown:first-child").addClass("dropdown-toggle");
