@@ -4,35 +4,35 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class("solid md-p-y-3 xs-p-a-1 md-m-t-3"); ?>>
+	<article <?php post_class("solid md-p-y-3 xs-p-a-1"); ?>>
 
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-
-				<div class="post-breadcrumb md-m-b-2">
+				<h1 class="article-title"><?php the_title(); ?></h1>
+				<div class="md-m-t-2">
+					<div class="entry-content"><?php the_content(); ?></div>
+				</div>
+				<div class="md-m-t-2 md-m-b-2" role="main">
+					<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
+				</div>
+				<div class="post-breadcrumb">
+				<span class="small-header">Related Topics</span><br/>
 					<?php		$taxonomy = 'category';
 
 					// get the term IDs assigned to post.
 					$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
 					// separator between links
-					$separator = ' > ';
+					$separator = ' <br/> ';
 
 					if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 
 						$term_ids = implode( ',' , $post_terms );
-						$terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
+						$terms = wp_list_categories( 'title_li=&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
 						//$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
 
 						// display post categories
 						echo  $terms;
 					} ?> </div>
-				<h1 class="article-title"><?php the_title(); ?></h1>
-				<div class="md-m-t-2">
-					<div class="entry-content"><?php the_content(); ?></div>
-				</div>
-				<div class="md-m-t-2" role="main">
-					<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
-				</div>
 		</div>
 	</div>
 	</article>
@@ -40,29 +40,39 @@
 
 <div class="next-prev-container md-top">
 	<div class="container">
-		<div class="row md-m-b-3">
-			<div class="col-sm-6 xs-m-b-3">
-				<div class="text-left md-m-b-1"><span class="link-small-header"><?php
-
+		<div class="row md-m-b-6">
+			<div class="col-sm-4">
+				
+				<!--
+				<div class="text-left md-m-b-1"><span class="link-small-header">
+				<?php
 				$previous_post = get_previous_post();
 				if( $previous_post ) {
 				echo housing_court_get_deepest_category_link( $previous_post->ID, 'Previous in | ' );
 				}
-
-				?></span></div>
-				<div class="text-left"><span class="next-previous">&larr; <?php previous_post_link('%link', '%title', TRUE, ''); ?></span></div>
+				?>
+				</span>
+				</div>-->
+				
+				<div class="solid text-left" style="padding:15px;"><span class="small-header">Previous Tip</span><br/><span class="next-previous"><?php next_post_link('%link', '%title', TRUE, ''); ?></span></div>
 			</div>
 
-			<div class="col-sm-6">
-				<div class="text-right md-m-b-1"><span class="link-small-header"><?php
-
+			<div class="col-sm-4 col-sm-offset-4">
+				
+				<!--
+				<div class="text-right md-m-b-1">
+				<span class="link-small-header">
+				<?php
 				$next_post = get_next_post();
 				if( $next_post ) {
 				echo housing_court_get_deepest_category_link( $next_post->ID, 'Next in | ' );
 				}
-
-				?></span></div>
-				<div class="text-right"><span class="next-previous"><?php next_post_link('%link', '%title', TRUE, ''); ?> &rarr;</span></div>
+				?>
+				</span>
+				</div>
+				-->
+				
+				<div class="solid text-left" style="padding:15px;"><span class="small-header">Next Tip</span><br/><span class="next-previous"><?php previous_post_link('%link', '%title', TRUE, ''); ?></span></div>
 			</div>
 		</div>
 	</div>
