@@ -36,7 +36,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 			</div>
 			<div class="col-md-5">
 				<div class="header-image-right" style="">
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-advocates-bg-pigeon-books.png" />
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-advocates-main-image.png" />
 				</div>
 			</div>
 	</div>

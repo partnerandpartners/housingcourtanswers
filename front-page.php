@@ -31,7 +31,7 @@ if( have_posts() ) {
 				?>
 				<h4 class="text-uppercase">I'm a Tenant</h4>
 				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
 			</div>
 			<div class="col-sm-4 text-center">
 				<?php
@@ -40,7 +40,7 @@ if( have_posts() ) {
 				?>
 				<h4 class="text-uppercase">I'm a Landlord</h4>
 				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
 			</div>
 			<div class="col-sm-3 col-sm-offset-1 text-center">
 				<?php
@@ -104,15 +104,13 @@ if( have_posts() ) {
 	</div>
 </div>
 
-<div class="full">
-	<div class="container">
+	<div class="container-fluid full bg yellow">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2 class="statement"><?php the_content(); ?></h2>
 			</div>
 		</div>
 	</div>
-</div>
 
 
 <div class="front-page-section upcoming-events">

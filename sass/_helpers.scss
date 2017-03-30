@@ -22,13 +22,12 @@
 }
 
 .bg-scrolled {
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.1);
 }
 
 .bg {
-  background-color: #fff;
-  //box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.1);
+  background-color: $white;
   &.green {
     background-color: $bg-green;
   }
@@ -39,9 +38,13 @@
     background-color: $light-blue;
   }
   &.white {
-    background-color: #fff;
+    background-color: $white;
+  }
+  &.yellow {
+    background-color: $hca-yellow;
   }
 }
+
 .solid {
   border: $border-width solid $body-color;
 }

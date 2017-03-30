@@ -24,17 +24,17 @@
 		   <div id="resource-quote" class="col-md-4 col-md-offset-2 xs-m-t-3">
 				<span class="resource-quote">“Easily New York’s best online resource for New York landlord-tenant case law, statutes, secondary authority, and a great deal more law . . .”</span></br>
 				<div class="quote-credit">Gerald Lebovits,<br/><span class="quote-credit-company">N.Y. Real Property Law Journal</div>
-	            
+
 		  </div>
 	    </div>
 	  </div>
 	</div>
 <?php endwhile; ?>
 <?php endif; ?>
-	
+
 <div class="container">
 	<div class="row">
-		<div class="col-md-7">
+		<div class="col-md-8">
 		<?php
 			$scroller_var = '';
 			$resource_query = hca_get_resources_query();
@@ -55,13 +55,13 @@
 					<?php $scroller_var .= '<li><a href="#'. $post_slug . '">'. $post_title . '</a></li>';	?>
 	   <?php	}
 			}
-	
+
 		?>
 		</div>
-		
-		<div class="col-md-4 col-md-offset-1">
+
+		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm resources" data-spy="affix" data-offset-top="444" data-offset-bottom="600">            
+				<ul class="sub-nav nav hidden-xs hidden-sm resources" data-spy="affix" data-offset-top="444" data-offset-bottom="600">
 					<?php echo $scroller_var; ?>
 			  </ul>
 			</div>

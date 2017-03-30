@@ -61,6 +61,14 @@ header {
     background-color: $hca-blue;
 }
 
+.dropdown-menu li a {
+  color: $brand-primary;
+}
+
+.navbar-nav li .dropdown-menu {
+  margin-top: 12px;
+}
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
