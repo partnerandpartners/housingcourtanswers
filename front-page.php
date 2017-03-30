@@ -11,20 +11,37 @@ if( have_posts() ) {
 	}
 }
 ?>
-<div class="full">
+
+<div class="container-fluid full bg green">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="statement"><?php the_content(); ?></h2>
+			<div class="col-md-7">
+					<div class="header-image-left" style="">
+						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-left.png" />
+						<img class="clouds" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
+						<img class="clouds" id="cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
+						<img class="clouds" id="cloud-right" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
+
+					</div>
+					<?php if ( have_posts() ): ?>
+					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
+					<div class="main-lead"><?php echo category_description(); ?></div>
+					<?php endif; ?>
 			</div>
-		</div>
+			<div class="col-md-5">
+				<div class="header-image-right" style="">
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png" />
+					<img class="img-responsive right-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-right.png" />
+				</div>
+			</div>
+	</div>
 	</div>
 </div>
 
 <div class="front-page-section popular-search xs-m-b-6">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-5">
 				<?php
 			    $category_id = get_cat_ID( 'For Tenants' );
 					$category_link = get_category_link( $category_id );
@@ -32,19 +49,19 @@ if( have_posts() ) {
 				<a href="<?php echo esc_url( $category_link ); ?>" class="">
 					<div class="home-btn-wrapper">
 						<div class="row is-table-row middle">
-							<div class="col-xs-6">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0000_tenant.png" style="" />
-							</div>
-							<div class="col-xs-6">
+							<div class="col-xs-12">
 								<div class="text-uppercase">
-									<h4>I'm a<br/>Tenant</h4>
+									<h4>I'm a Tenant</h4>
 								</div>
+							</div>
+							<div class="col-xs-12">
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0000_tenant.png" style="" />
 							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-5">
 				<?php
 			    $category_id = get_cat_ID( 'For Landlords' );
 					$category_link = get_category_link( $category_id );
@@ -52,19 +69,19 @@ if( have_posts() ) {
 				<a href="<?php echo esc_url( $category_link ); ?>" class="">
 					<div class="home-btn-wrapper">
 						<div class="row is-table-row middle">
-							<div class="col-xs-6">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0001_landlord.png" style="" />
-							</div>
-							<div class="col-xs-6">
+							<div class="col-xs-12">
 								<div class="text-uppercase">
-									<h4>I'm a<br/>Landlord</h4>
+									<h4>I'm a Landlord</h4>
 								</div>
+							</div>
+							<div class="col-xs-12">
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0001_landlord.png" style="" />
 							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-2">
 				<?php
 			    $category_id = get_cat_ID( 'For Tenants' );
 					$category_link = get_category_link( $category_id );
@@ -72,13 +89,13 @@ if( have_posts() ) {
 				<a href="<?php echo esc_url( $category_link ); ?>" class="">
 					<div class="home-btn-wrapper">
 						<div class="row is-table-row middle">
-							<div class="col-xs-6">
-								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0002_advocate.png" style="" />
-							</div>
-							<div class="col-xs-6">
+							<div class="col-xs-12">
 								<div class="text-uppercase">
-									<h4>I'm an<br/>Advocate</h4>
+									<h4>I'm an Advocate</h4>
 								</div>
+							</div>
+							<div class="col-xs-12">
+								<img class="home-btn" src="<?php echo get_template_directory_uri(); ?>/img/hca-home-btn_0002_advocate.png" style="" />
 							</div>
 						</div>
 					</div>
@@ -106,7 +123,6 @@ if( have_posts() ) {
         if( array_key_exists('categories', $front_page_suggestions) && !empty( $front_page_suggestions['categories'] ) ) {
           foreach( $front_page_suggestions['categories'] as $category ) {
             $grandparent_category = $category['grandparent_category'];
-
             ?>
 
             <div class="row">
@@ -118,7 +134,13 @@ if( have_posts() ) {
                 }
 
                 ?>
-                <h5 class="sub-title"><a href="<?php echo $category['permalink']; ?>"><?php echo $category['name']; ?></a><span class="badge"><?php echo $category['count']; ?> Tips</span></h5>
+                	<a href="<?php echo $category['permalink']; ?>">
+					<div class="card-stack xs-m-b-3">
+                 	<h5 class="sub-title"><?php echo $category['name']; ?></h5>
+                 	<?php echo $category['description']; ?>
+                 	<a class="more-link text-uppercase" href="<?php echo $category['permalink']; ?>">Learn More</a>
+                 	</div>
+                 	</a>
                 </div>
              </div>
 
@@ -129,6 +151,16 @@ if( have_posts() ) {
         ?>
 		    </div>
 	    </div>
+	</div>
+</div>
+
+<div class="full">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="statement"><?php the_content(); ?></h2>
+			</div>
+		</div>
 	</div>
 </div>
 
