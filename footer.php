@@ -39,7 +39,7 @@
      <span class="small-header">Donate</span>
 	      <div class="donate text-center">
 		      <h6 class="normal-weight xs-m-b-2">Please support us to support you.</h6>
-		      <a href="#" class="btn btn-default">Donate</a>
+		      <a href="https://www.paypal.com/donate/?token=bHXrbVetDM6hk-6n4QTLdBbyU75qsf7BH90Tds-SXnW-XstbzQI_T20VPMCHVfoJH1SDRG" class="btn btn-default" target="_blank">Donate</a>
 		    </div>
       </div>
     <div class="col-sm-6 xs-m-b-2">
