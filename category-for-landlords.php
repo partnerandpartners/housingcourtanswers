@@ -67,6 +67,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 			<!-- Top Section of each category -->
 			<div class="xs-m-b-6">
 				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
+				<hr/>
 				<a href="<?php echo $link ?>">
 					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
 				</a>
@@ -134,7 +135,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="400">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="640" data-offset-bottom="650">
 					<?php echo $output_array['scrollspy']; ?>
 					<div class="back-to-topp"><a href="#"><br/>Back to Top &#8679;</a></div>
 				</ul>

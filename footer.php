@@ -6,7 +6,7 @@
        <div class="help-resources">
 			<h4>Helpful Resources</h4>
 			<p class="xs-m-b-2">A list of resources and links to help you.</p>
-			<a href="/resources-links" class="btn btn-lg">Go to Resources & Links</a>
+			<a href="<?php echo get_page_link(56); ?>" class="btn btn-lg">Go to Resources & Links</a>
 	   </div>
       </div>
       <div class="col-sm-6 text-center">

@@ -102,8 +102,6 @@ if( have_posts() ) {
 			</div>
 	</div>
 
-	<p><?php echo $rowCounter; ?></p>
-
 	<div class="front-page-section popular-search">
 		<div class="container">
 				<div class="row">
