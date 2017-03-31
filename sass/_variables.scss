@@ -209,9 +209,9 @@ $font-size-xl:            floor(($font-size-base * 1.15)); // ~18px
 $font-size-sm:            ceil(($font-size-base * .825));
 $font-size-xs:            ceil(($font-size-base * .75));
 
-$font-size-h1:            floor(($font-size-base * 5.3)); // ~80px
-$font-size-h2:            floor(($font-size-base * 3.4667)); // ~452px
-$font-size-h3:            ceil(($font-size-base * 3)); // ~45px
+$font-size-h1:            floor(($font-size-base * 4)); // ~80px
+$font-size-h2:            floor(($font-size-base * 3.2)); // ~45px
+$font-size-h3:            ceil(($font-size-base * 2.667)); // ~40px
 $font-size-h4:            ceil(($font-size-base * 2)); // ~30px
 $font-size-h5:            ceil(($font-size-base * 1.5)); // ~21px
 $font-size-h6:            ceil(($font-size-base * 1.25)); // ~18px

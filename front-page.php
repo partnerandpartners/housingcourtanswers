@@ -24,87 +24,116 @@ if( have_posts() ) {
 						<img class="clouds" id="home-cloud-right-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-right.png" />
 					</div>
 			</div>
-			<div class="col-sm-4 text-center">
 				<?php
 					$category_id = get_cat_ID( 'For Tenants' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<h4 class="text-uppercase">I'm a Tenant</h4>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
-			</div>
-			<div class="col-sm-4 text-center">
+				<a href="<?php echo esc_url( $category_link ); ?>">
+					<div class="col-sm-4 text-center">
+						<h4 class="text-uppercase">I'm a Tenant</h4>
+						<span class="more-link text-uppercase">FIND ANSWERS</span>
+						<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
+					</div>
+				</a>
+
 				<?php
 			    $category_id = get_cat_ID( 'For Landlords' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<h4 class="text-uppercase">I'm a Landlord</h4>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
-			</div>
-			<div class="col-sm-3 col-sm-offset-1 text-center">
+				<a href="<?php echo esc_url( $category_link ); ?>">
+					<div class="col-sm-4 text-center">
+						<h4 class="text-uppercase">I'm a Landlord</h4>
+						<span class="more-link text-uppercase">FIND ANSWERS</span>
+						<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
+					</div>
+				</a>
 				<?php
 			    $category_id = get_cat_ID( 'For Advocates' );
 					$category_link = get_category_link( $category_id );
 				?>
-				<h4 class="text-uppercase">I'm an<br/> Advocate</h4>
-				<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-home-image.png" />
-			</div>
+				<a href="<?php echo esc_url( $category_link ); ?>">
+					<div class="col-sm-3 col-sm-offset-1 text-center">
+						<h4 class="text-uppercase">I'm an Advocate</h4>
+						<span class="more-link text-uppercase">FIND ANSWERS</span>
+						<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-home-image.png" />
+					</div>
+				</a>
 	</div>
 	</div>
 </div>
 
 <div class="front-page-section popular-search">
 	<div class="container">
-		<div class="row">
-		    <div class="col-md-12">
-		    <div class="row xs-m-b-1">
+			<div class="row">
 					<div class="col-xs-6">
-						<h6 class="text-uppercase">Helpful Topics</span>
+						<h6 class="text-uppercase">Popular Topics</span>
 					</div>
 					<div class="col-xs-6 text-right">
-						<span class="text-uppercase">View All Topics &rarr;</span>
+						<span class="text-uppercase">ALL</span>
 					</div>
-					<hr\>
-				</div>
-				<?php
-        $front_page_suggestions = housing_court_get_front_page_suggestions();
-        if( array_key_exists('categories', $front_page_suggestions) && !empty( $front_page_suggestions['categories'] ) ) {
-          foreach( $front_page_suggestions['categories'] as $category ) {
-            $grandparent_category = $category['grandparent_category'];
-            ?>
-
-            <div class="row">
-                <div class="col-xs-12">
-                <?php
-
-                if( $grandparent_category !== false ) {
-                  //echo '<span class="no-link-small-header">'.$grandparent_category['name'].'</span>';
-                }
-
-                ?>
-                	<a href="<?php echo $category['permalink']; ?>">
-					<div class="card-stack xs-m-b-3">
-                 	<h5 class="sub-title"><?php echo $category['name']; ?></h5>
-                 	<?php echo $category['description']; ?>
-                 	<a class="more-link text-uppercase" href="<?php echo $category['permalink']; ?>">Learn More</a>
-                 	</div>
-                 	</a>
-                </div>
-             </div>
-
+			</div>
+			<div class="row">
+			<?php
+			$front_page_suggestions = housing_court_get_front_page_suggestions();
+			if( array_key_exists('categories', $front_page_suggestions) && !empty( $front_page_suggestions['categories'] ) ) {
+			foreach( $front_page_suggestions['categories'] as $category ) {
+			$grandparent_category = $category['grandparent_category'];
+			$rowCounter = 0;
+			?>
+		    <div class="col-xs-4">
+		    	<a href="<?php echo $category['permalink']; ?>">
+						<div class="card-stack xs-m-b-3">
+								<?php
+								if( $grandparent_category !== false ) {
+									//echo '<span class="no-link-small-header">'.$grandparent_category['name'].'</span>';
+								}
+								?>
+		            <h5 class="sub-title"><?php echo $category['name']; ?></h5>
+		            <?php echo $category['description']; ?>
+		            <a class="more-link text-uppercase" href="<?php echo $category['permalink']; ?>">Learn More</a>
+		        </div>
+		      </a>
+		    </div>
+	    </div>
             <?php
           }
         }
-
-        ?>
-		    </div>
-	    </div>
+        $rowCounter++;
+				if($rowCounter==3){
+					echo('</div><div class="row">');//new row at 3rd post.
+					$rowCounter = 0;
+				}
+				?>
+			</div>
 	</div>
-</div>
 
-	<div class="container-fluid full bg yellow">
+	<div class="front-page-section popular-search">
+		<div class="container">
+				<div class="row">
+						<div class="col-xs-6">
+							<h6 class="text-uppercase">From the Glossary</span>
+						</div>
+						<div class="col-xs-6 text-right">
+							<span class="text-uppercase">ALL</span>
+						</div>
+				</div>
+				<?php
+				$front_page_suggestions = housing_court_get_front_page_suggestions();
+				if( array_key_exists('tag', $front_page_suggestions) && !empty( $front_page_suggestions['tag'] ) ) {
+				foreach( $front_page_suggestions['tag'] as $tag ) {
+				$item_count = 0;
+				?>
+				<div class="row">
+			    	<a rel="tag" href="<?php echo $tag['permalink']; ?>">
+			      </a>
+		    </div>
+	            <?php
+	          }
+	        } ?>
+				</div>
+		</div>
+
+	<div class="container-fluid full bg yellow xs-m-b-3">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2 class="statement"><?php the_content(); ?></h2>
@@ -119,7 +148,7 @@ if( have_posts() ) {
 			$events_query = hca_get_upcoming_events_home_query();
 			if( $events_query->have_posts() ) {
 		?>
-			<div class="row">
+			<div class="row xs-m-b-2">
 				<div class="col-sm-12 text-center">
 					<h6 class="text-uppercase">Upcoming Events</h6>
 				</div>
@@ -134,7 +163,7 @@ if( have_posts() ) {
 	</div>
 </div>
 
-<div class="front-page-section featured-event">
+<div class="front-page-section featured-event md-m-y-3 xs-m-y-2">
 	<div class="container">
 		<div class="row">
 			<?php $query = new WP_Query( array( 'category_name' => 'featured', 'posts_per_page' => 1 ) ); ?>

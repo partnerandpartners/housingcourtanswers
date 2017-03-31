@@ -154,8 +154,8 @@
 
 .anchor {
 	display: block;
-	height: 70px;
-	margin-top: -70px;
+	height: 50px;
+	margin-top: -50px;
 	visibility: hidden;
 }
 
@@ -191,6 +191,11 @@ h1.single-tag-title {
 	padding: 6px 10px;
 	border-radius: 12px;
 	margin-bottom: .325em;
+}
+
+ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .quote-credit {
@@ -302,6 +307,28 @@ h5.category-description p {
   }
 }
 
+a[rel="prev"] {
+	&:hover, &:active {
+		cursor: pointer;
+		div.solid {
+	    color: white;
+	    background-color: black;
+	    cursor: pointer;
+		}
+  }
+}
+
+a[rel="next"] {
+	&:hover, &:active {
+		cursor: pointer;
+		div.solid {
+	    color: white;
+	    background-color: black;
+	    cursor: pointer;
+		}
+  }
+}
+
 .first-table-row {
 	text-transform: uppercase;
 	display: table;
@@ -325,6 +352,10 @@ h5.category-description p {
 	&:hover {
 		opacity: 1;
 	}
+}
+
+hr {
+	border-top: 6px solid #eee;
 }
 
 .letter-table {

@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,h6,
 
 h1, .h1 {
   font-size: $font-size-h1;
-  line-height: 1;
+  line-height: 1.15;
   margin: 0 0 0 0;
 }
 
@@ -132,6 +132,12 @@ a.more-link {
 .small-header {
   text-transform: uppercase;
   opacity: .2;
+  letter-spacing: 0.05em;
+}
+
+.next-previous-header {
+  text-transform: uppercase;
+  color: #ccc;
   letter-spacing: 0.05em;
 }
 

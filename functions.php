@@ -101,7 +101,7 @@ function hca_print_tag_list() {
 
 
 	function custom_excerpt_length( $length ) {
-		return 32;
+		return 20;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -567,6 +567,7 @@ function housing_court_get_front_page_suggestions() {
     $categories_response[] = array(
       'name' => $category->name,
       'count' => $category->count,
+			'description' => $category->description,
       'permalink' => get_term_link( $category_id, 'category' ),
       'grandparent_category' => $grandparent_category
     );

@@ -12,27 +12,27 @@
 				<div class="md-m-t-2">
 					<div class="entry-content"><?php the_content(); ?></div>
 				</div>
-				<div class="md-m-t-2 md-m-b-2" role="main">
-					<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
-				</div>
-				<div class="post-breadcrumb">
-				<span class="small-header">Related Topics</span><br/>
+				<div class="post-breadcrumb md-m-t-2">
+				<span class="small-header">Topics</span>
 					<?php		$taxonomy = 'category';
 
 					// get the term IDs assigned to post.
 					$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
 					// separator between links
-					$separator = ' <br/> ';
+					$separator = '';
 
 					if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 
 						$term_ids = implode( ',' , $post_terms );
 						$terms = wp_list_categories( 'title_li=&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
-						//$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+						$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
 
 						// display post categories
 						echo  $terms;
 					} ?> </div>
+				<div class="md-m-t-2 md-m-b-2" role="main">
+					<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
+				</div>
 		</div>
 	</div>
 	</article>
@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="row md-m-b-6">
 			<div class="col-sm-4">
-				
+
 				<!--
 				<div class="text-left md-m-b-1"><span class="link-small-header">
 				<?php
@@ -53,12 +53,12 @@
 				?>
 				</span>
 				</div>-->
-				
-				<div class="solid text-left" style="padding:15px;"><span class="small-header">Previous Tip</span><br/><span class="next-previous"><?php next_post_link('%link', '%title', TRUE, ''); ?></span></div>
+
+				<?php next_post_link('%link', '<div class="solid text-left" style="padding:15px;"><span class="next-previous-header">Previous Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
 
 			<div class="col-sm-4 col-sm-offset-4">
-				
+
 				<!--
 				<div class="text-right md-m-b-1">
 				<span class="link-small-header">
@@ -71,8 +71,8 @@
 				</span>
 				</div>
 				-->
-				
-				<div class="solid text-left" style="padding:15px;"><span class="small-header">Next Tip</span><br/><span class="next-previous"><?php previous_post_link('%link', '%title', TRUE, ''); ?></span></div>
+
+				<?php previous_post_link('%link', '<div class="solid text-left" style="padding:15px;"><span class="next-previous-header">Next Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
 		</div>
 	</div>

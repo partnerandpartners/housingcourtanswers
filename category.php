@@ -24,10 +24,10 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
 
   if( $is_parent ) {
     $output_array['top_section'] .= '<h1 class="category-title">' . $category->name . '</h1>';
-    $output_array['top_section'] .= '<p class="category-description">' . $category->description . '</p>';
+    $output_array['top_section'] .= '<div class="main-lead">' . $category->description . '</p></div>';
   } else {
     $current_section .= '<h3 class="section-title">' . $category->name . '</h3>';
-    $current_section .= '<h6 class="section-description">' . $category->description . '</h6>';
+    $current_section .= '<div class="lead"><p>' . $category->description . '</p></div>';
   }
 
   ob_start();
@@ -38,10 +38,12 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
       $output_array['scrollspy'] .= '<li><a href="#' . $category->slug . '"> ' . $category->name . '</a></li>';
     }
 
-    echo '<span class="anchor" id="' . $category->slug . '"></span>';
-    echo '<div class="category-page-section"><div class="row md-m-b-3">';
+    echo '<span class="anchor" id="' . $category->slug . '"></span><hr/>';
+    echo '<div class="category-page-section"><div class="row md-m-b-3"><div class="col-xs-12">';
 
     echo $current_section;
+
+    echo '</div></div><div class="row md-m-b-2">';
 
     while( $category_posts_query->have_posts() ) {
       $category_posts_query->the_post();
@@ -55,13 +57,13 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
       if ($item_count == 3 ) {  $item_count = 0;
       ?>
 
-    </div><div class="row md-m-b-3">
+    </div><div class="row md-m-b-2">
       <div class="col-md-4 xs-m-b-2">
         <?php include('templates/card.php') ?>
       </div>
 
       <?php } else { ?>
-        <div class="col-md-4 xs-m-b-3">
+        <div class="col-md-4 xs-m-b-2">
           <?php include('templates/card.php') ?>
         </div>
 
@@ -95,7 +97,7 @@ $output_array = housing_court_print_category_posts_tree( $current_category_id, t
 ?>
 <div class="top-section container">
     <div class="row md-p-t-2">
-      <div class="col-xs-12 col-md-12">
+      <div class="col-xs-12">
         <?php echo $output_array['top_section']; ?>
       </div>
     </div>
