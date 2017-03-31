@@ -123,6 +123,11 @@ body {
   overflow: hidden;
 }
 
+.section-full {
+	padding-top: 6em;
+  padding-bottom: 6em;
+}
+
 .header-image-left, .header-image-right { position: relative; img { position: absolute;z-index: 1; } }
 
 @keyframes cloudies {

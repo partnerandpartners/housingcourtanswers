@@ -74,11 +74,11 @@ if( have_posts() ) {
 			</div>
 			<div class="row">
 			<?php
+			$rowCounter = 0;
 			$front_page_suggestions = housing_court_get_front_page_suggestions();
 			if( array_key_exists('categories', $front_page_suggestions) && !empty( $front_page_suggestions['categories'] ) ) {
 			foreach( $front_page_suggestions['categories'] as $category ) {
 			$grandparent_category = $category['grandparent_category'];
-			$rowCounter = 0;
 			?>
 		    <div class="card-wrapper col-xs-4">
 		    	<a href="<?php echo $category['permalink']; ?>">
@@ -90,17 +90,19 @@ if( have_posts() ) {
 		      </a>
 		    </div>
             <?php
-						$rowCounter++;
-          }
-        }
-				if($rowCounter==3){
-					echo('</div><div class="row">');//new row at 3rd post.
-					$rowCounter = 0;
+           $rowCounter++;
+					 if($rowCounter==3){
+ 					echo('</div><div class="row">');//new row at 3rd post.
+ 					$rowCounter = 0;
+				    }
+					}
 				}
 				?>
 				</div>
 			</div>
 	</div>
+
+	<p><?php echo $rowCounter; ?></p>
 
 	<div class="front-page-section popular-search">
 		<div class="container">
@@ -112,26 +114,31 @@ if( have_posts() ) {
 							<span class="text-uppercase">ALL</span>
 						</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-12">
-							<?php
-							$front_page_suggestions = housing_court_get_front_page_suggestions();
-							if( array_key_exists('tags', $front_page_suggestions) && !empty( $front_page_suggestions['tags'] ) ) {
-							foreach( $front_page_suggestions['tags'] as $tag ) {
-							?>
-							    	<a rel="tag" href="<?php echo $tag['permalink']; ?>"><?php echo $tag['name']; ?></a>
-					            <?php
-					          }
-					        } ?>
+					<div class="row">
+								<div class="col-xs-12">
+								<?php
+								$front_page_suggestions = housing_court_get_front_page_suggestions();
+								if( array_key_exists('tags', $front_page_suggestions) && !empty( $front_page_suggestions['tags'] ) ) {
+								foreach( $front_page_suggestions['tags'] as $tag ) {
+								?>
+								    	<a rel="tag" href="<?php echo $tag['permalink']; ?>"><?php echo $tag['name']; ?></a>
+						            <?php
+						          }
+						        } ?>
 								</div>
 						</div>
 				</div>
 		</div>
 
-	<div class="container-fluid full bg yellow xs-m-b-3">
-		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="statement"><?php the_content(); ?></h2>
+	<div class="container-fluid section-full bg yellow xs-m-b-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<?php the_content(); ?>
+				</div>
+				<div class="col-sm-6">
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
+				</div>
 			</div>
 		</div>
 	</div>
