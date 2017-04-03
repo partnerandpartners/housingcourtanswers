@@ -47,8 +47,9 @@
 					get_template_part('templates/event');
 					$columns_printed++;
 					$num_posts_printed++;
-					if( $columns_printed === 3 && $num_posts_printed != $events_query->found_posts ) {
+					if( $columns_printed == 3 && $num_posts_printed != $events_query->found_posts ) {
 						echo '</div><div class="row md-bottom">';
+            $columns_printed = 0;
 					}
 				}
 			}
@@ -80,6 +81,7 @@
 					$num_posts_printed++;
 					if( $columns_printed === 3 && $num_posts_printed != $events_query->found_posts ) {
 						echo '</div><div class="row md-bottom">';
+            $columns_printed = 0;
 					}
 				}
 			}

@@ -101,7 +101,7 @@ function hca_print_tag_list() {
 
 
 	function custom_excerpt_length( $length ) {
-		return 20;
+		return 32;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

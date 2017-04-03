@@ -130,17 +130,17 @@ body {
 
 .header-image-left, .header-image-right { position: relative; img { position: absolute;z-index: 1; } }
 
-@keyframes cloudies {
-  0% {
-    margin-left: 0;
-  }
+// @keyframes cloudies {
+//   0% {
+//     margin-left: 0;
+//   }
+//
+//   100% {
+//     margin-left: -120px;
+//   }
+// }
 
-  100% {
-    margin-left: -120px;
-  }
-}
-
-$cloudies-time: 45s;
+//$cloudies-time: 45s;
 
 .header-image-left {
   height: 165px;
@@ -153,31 +153,31 @@ $cloudies-time: 45s;
       left: 165px;
       width: 100px;
       top:10px;
-      animation-duration: $cloudies-time;
-      animation-name: cloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $cloudies-time;
+      // animation-name: cloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     &#cloud-center{
       left: 345px;
       width: 170px;
       top:0;
-      animation-duration: $cloudies-time;
-      animation-name: cloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $cloudies-time;
+      // animation-name: cloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     &#cloud-right{
       left: 520px;
       width: 100px;
       top:45px;
-      animation-duration: $cloudies-time;
-      animation-name: cloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $cloudies-time;
+      // animation-name: cloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     width: 100%;
     height: auto;
@@ -188,17 +188,17 @@ $cloudies-time: 45s;
 .homepage-clouds { position: relative; img { position: absolute;z-index: 1; } }
 
 
-@keyframes homecloudies {
-  0% {
-    margin-left: 0;
-  }
+// @keyframes homecloudies {
+//   0% {
+//     margin-left: 0;
+//   }
+//
+//   100% {
+//     margin-left: -120px;
+//   }
+// }
 
-  100% {
-    margin-left: -120px;
-  }
-}
-
-$home-cloudies-time: 45s;
+// $home-cloudies-time: 45s;
 
 
 .homepage-clouds {
@@ -211,51 +211,51 @@ $home-cloudies-time: 45s;
       left: 0px;
       width: 140px;
       top:-20px;
-      animation-duration: $home-cloudies-time;
-      animation-name: homecloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $home-cloudies-time;
+      // animation-name: homecloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     &#home-cloud-left-center{
       left: 320px;
       width: 90px;
       top:-158px;
-      animation-duration: $home-cloudies-time;
-      animation-name: homecloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $home-cloudies-time;
+      // animation-name: homecloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     &#home-cloud-center{
       left: 520px;
       width: 170px;
       top:-55px;
-      animation-duration: $home-cloudies-time;
-      animation-name: homecloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $home-cloudies-time;
+      // animation-name: homecloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     &#home-cloud-right-center{
       left: 800px;
       width: 150px;
       top:0px;
-      animation-duration: $home-cloudies-time;
-      animation-name: homecloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $home-cloudies-time;
+      // animation-name: homecloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     &#home-cloud-right{
       left: 1055px;
       width: 100px;
       top:-158px;
-      animation-duration: $home-cloudies-time;
-      animation-name: homecloudies;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: linear;
+      // animation-duration: $home-cloudies-time;
+      // animation-name: homecloudies;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
+      // animation-timing-function: linear;
     }
     width: 100%;
     height: auto;

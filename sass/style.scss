@@ -162,6 +162,13 @@
 h6.news-title {
 	font-size: 22px;
 	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+h6.event-title {
+	font-size: 32px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 h1.category-title {
@@ -191,6 +198,15 @@ h1.single-tag-title {
 	padding: 6px 10px;
 	border-radius: 12px;
 	margin-bottom: .325em;
+}
+
+.borough-badge {
+	background-color: $brand-primary;
+	color: $white;
+	font-size: $font-size-sm;
+	padding: 6px 10px;
+	border-radius: 16px;
+	margin-bottom: 5px;
 }
 
 ul {
@@ -433,7 +449,7 @@ a[rel="tag"]{
 }
 
 @media (min-width: 768px) {
-	
+
 }
 
 @media (min-width: 480px) {
