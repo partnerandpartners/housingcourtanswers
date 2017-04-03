@@ -14,13 +14,13 @@
 				      		<div class="row">
 				      			<div class="col-sm-6 xs-top">
 			      					<div class="autocomplete-section">
-					  					<div><span class="small-header" id="topics-results-label">Suggested Topics</span></div>
+					  					<div class="topics-header"><span class="small-header" id="topics-results-label">Suggested Topics</span></div>
 					  					<div id="category-results" class="results-box"></div>
 					  				</div>
 			      				</div>
 			      				<div class="col-sm-6 xs-top">
 			      					<div class="autocomplete-section">
-						            <div><span class="small-header" id="terms-results-label">Suggested Terms</span></div>
+						            <div class="tags-header"><span class="small-header" id="terms-results-label">Suggested Terms</span></div>
 						            <div id="tag-results" class="results-box"></div>
 						          </div>
 			      				</div>
@@ -47,7 +47,7 @@
 			      </div>
 
 			      <script id="autocomplete-template-tags" type="text/x-tmpl"><a rel="tag" href="{%=o.permalink%}">{%=o.name%}</a></script>
-			      <script id="autocomplete-template-categories" type="text/x-tmpl"><div class="cat-result"><span class="topic-link"><a class="search-category-title" href="{%=o.permalink%}">{%=o.name%}</a></span> <span class="count">{%=o.count%} Tips</span></div></script>
+			      <script id="autocomplete-template-categories" type="text/x-tmpl"><div class="cat-result"><span class="topic-link"><a class="search-category-title" href="{%=o.permalink%}">{%=o.name%}</a></span> <span class="badge">{%=o.count%} Tips</span></div></script>
 			      <script id="autocomplete-template-for-tenants" type="text/x-tmpl"><div class="tip-result"><span class="tip-link"><a class="" href="{%=o.permalink%}">{%=o.title%}</a></span></div></script>
 			      <script id="autocomplete-template-for-landlords" type="text/x-tmpl"><div class="tip-result"><span class="tip-link"><a class="" href="{%=o.permalink%}">{%=o.title%}</a></span></div></script>
 					</form>

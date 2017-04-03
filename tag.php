@@ -16,7 +16,7 @@
 <?php $rowCounter = 0; ?>
 
 
-<div class="full">
+<div class="full xs-m-b-2">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center">
@@ -89,7 +89,7 @@
 <?php endif; ?>
 
 <div>
-<div class="glossary-label-wrapper" style="min-height:47px">
+<div class="glossary-label-wrapper hidden-sm hidden-xs" style="min-height:47px">
 	<div id="glossary-labels" class="container-fluid" style="width: 100%;">
 		<div class="row">
 			<div class="container">

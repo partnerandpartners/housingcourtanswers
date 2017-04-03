@@ -2,13 +2,13 @@
 
 
 
-<div class="container top-section">
+<div class="container full">
 <a class="back-link" href="<?php echo home_url(); ?>/events">< Back to All Events</a>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class(); ?>>
+	<article <?php post_class( 'xs-m-t-2' ); ?>>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 col-md-offset-2">
 			<span class="small-header">
 			<?php
 
@@ -54,14 +54,6 @@
 		</div>
 	</article>
 
-</div>
-
-<div class="container md-top">
-	<div class="row">
-		<div class="col-sm-12">
-			<?php comments_template(); ?>
-		</div>
-	</div>
 </div>
 
 <?php endwhile; ?>

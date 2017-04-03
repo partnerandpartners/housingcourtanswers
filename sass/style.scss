@@ -200,6 +200,24 @@ h1.single-tag-title {
 	margin-bottom: .325em;
 }
 
+a.search-category-title {
+	font-size: $font-size-xl;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 3px;
+	&:hover {
+		color: $hca-blue;
+		border-bottom: 2px solid $hca-blue;
+	}
+}
+
+.cat-result {
+	margin-bottom: 8px;
+}
+
+.topics-header {
+	margin-bottom: 8px;
+}
+
 .borough-badge {
 	background-color: $brand-primary;
 	color: $white;
@@ -374,6 +392,10 @@ hr {
 	border-top: 6px solid #eee;
 }
 
+.icon-bar {
+	border: 1px solid $brand-primary;
+}
+
 .letter-table {
   display: table;
   width: 100%;
@@ -444,25 +466,25 @@ a[rel="tag"]{
 	}
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
 
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
 	a[rel="tag"]{
 	  font-family: $font-family-sans-serif-bold;
-		font-size: $font-size-base;
-		padding-top: 1em;
-		padding-bottom: 1em;
-		padding-right: 1em;
-		padding-left: 1em;
-		margin-right: 0.75em;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		font-size: $font-size-small;
+		padding-top: 0.75em;
+		padding-bottom: 0.75em;
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+		margin-right: 0.5em;
+		margin-top: 0.35em;
+		margin-bottom: 0.35em;
 		display: inline-block;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
@@ -476,7 +498,7 @@ a[rel="tag"]{
 		  background-color: $hca-bright-green;
 			color: #fff;
 	    box-shadow: none;
-	    border: 1px solid $hca-bright-green;
+	    border: 2px solid $hca-bright-green;
 			cursor: pointer;
 		}
 	}

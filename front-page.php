@@ -80,7 +80,7 @@ if( have_posts() ) {
 			foreach( $front_page_suggestions['categories'] as $category ) {
 			$grandparent_category = $category['grandparent_category'];
 			?>
-		    <div class="card-wrapper col-xs-4">
+		    <div class="card-wrapper col-md-4">
 		    	<a href="<?php echo $category['permalink']; ?>">
 						<div class="card-stack xs-m-b-3">
 		            <h4 class="sub-title"><?php echo $category['name']; ?></h4>

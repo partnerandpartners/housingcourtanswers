@@ -45,7 +45,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm hidden-xs">Housing Court Answers</span></a>
 					</div>
 					<?php
 					 wp_nav_menu( array(
@@ -54,7 +54,7 @@
 							 'depth'             => 2,
 							 'container'         => 'div',
 							 'container_class'   => 'collapse navbar-collapse navbar-right',
-			 'container_id'      => 'bs-example-navbar-collapse-1',
+			 			 	 'container_id'      => 'hca-navbar',
 							 'menu_class'        => 'nav navbar-nav',
 							 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 							 'walker'            => new wp_bootstrap_navwalker())
@@ -81,7 +81,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm visible-xs-*">Housing Court Answers</span></a>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png" alt="" class="img-responsive"><span class="logo hidden-sm hidden-xs">Housing Court Answers</span></a>
 					</div>
 					<?php
 					 wp_nav_menu( array(
@@ -90,7 +90,7 @@
 							 'depth'             => 2,
 							 'container'         => 'div',
 							 'container_class'   => 'collapse navbar-collapse navbar-right',
-			 'container_id'      => 'bs-example-navbar-collapse-1',
+			 			 	 'container_id'      => 'hca-navbar',
 							 'menu_class'        => 'nav navbar-nav',
 							 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 							 'walker'            => new wp_bootstrap_navwalker())

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <div class="container full">
-
+<a class="back-link" href="<?php echo home_url(); ?>/news">< Back to All News</a>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class( 'md-m-t-2' ); ?>>
+	<article <?php post_class( 'xs-m-t-2' ); ?>>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 			<span class="small-header">
@@ -43,7 +43,6 @@
 </div>
 
 <?php endwhile; ?>
-
 <?php endif; ?>
 
 

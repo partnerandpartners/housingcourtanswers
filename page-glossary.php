@@ -31,7 +31,7 @@
 
 <?php endif; ?>
 
-<div class="glossary-label-wrapper" style="min-height:47px">
+<div class="glossary-label-wrapper hidden-sm hidden-xs" style="min-height:47px">
 <div id="glossary-labels" class="container-fluid" style="width: 100%;">
 	<div class="row">
 		<div class="container">

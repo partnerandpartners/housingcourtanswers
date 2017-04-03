@@ -54,7 +54,7 @@
 				</span>
 				</div> -->
 
-				<?php next_post_link('%link', '<div class="solid text-left" style="padding:15px;"><span class="next-previous-header">Previous Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
+				<?php next_post_link('%link', '<div class="solid text-left xs-m-b-3" style="padding:15px;"><span class="next-previous-header">Previous Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
 
 			<div class="col-sm-4 col-sm-offset-4">
@@ -72,13 +72,13 @@
 				</div> -->
 
 
-				<?php previous_post_link('%link', '<div class="solid text-left" style="padding:15px;"><span class="next-previous-header">Next Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
+				<?php previous_post_link('%link', '<div class="solid text-left xs-m-b-3" style="padding:15px;"><span class="next-previous-header">Next Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container md-top">
+<div class="container xs-m-t-3 xs-m-b-6">
 	<div class="row">
 		<div class="col-sm-8 col-md-offset-2">
 			<?php
