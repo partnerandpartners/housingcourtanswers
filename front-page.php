@@ -104,7 +104,7 @@ if( have_posts() ) {
 
 	<div class="front-page-section popular-search">
 		<div class="container">
-				<div class="row">
+				<div class="row xs-m-b-2">
 						<div class="col-xs-6">
 							<h6 class="text-uppercase">From the Glossary</span>
 						</div>
@@ -128,7 +128,7 @@ if( have_posts() ) {
 				</div>
 		</div>
 
-	<div class="container-fluid section-full bg yellow xs-m-b-3">
+	<div class="container-fluid section-full bg yellow xs-m-y-6">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">

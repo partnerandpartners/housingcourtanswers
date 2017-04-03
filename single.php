@@ -43,8 +43,8 @@
 		<div class="row md-m-b-6">
 			<div class="col-sm-4">
 
-				<!--
-				<div class="text-left md-m-b-1"><span class="link-small-header">
+
+				<!-- <div class="text-left md-m-b-1"><span class="link-small-header">
 				<?php
 				$previous_post = get_previous_post();
 				if( $previous_post ) {
@@ -52,15 +52,15 @@
 				}
 				?>
 				</span>
-				</div>-->
+				</div> -->
 
 				<?php next_post_link('%link', '<div class="solid text-left" style="padding:15px;"><span class="next-previous-header">Previous Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
 
 			<div class="col-sm-4 col-sm-offset-4">
 
-				<!--
-				<div class="text-right md-m-b-1">
+
+				<!-- <div class="text-right md-m-b-1">
 				<span class="link-small-header">
 				<?php
 				$next_post = get_next_post();
@@ -69,8 +69,8 @@
 				}
 				?>
 				</span>
-				</div>
-				-->
+				</div> -->
+
 
 				<?php previous_post_link('%link', '<div class="solid text-left" style="padding:15px;"><span class="next-previous-header">Next Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
