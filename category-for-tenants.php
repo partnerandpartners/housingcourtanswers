@@ -43,7 +43,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png" />
 					<img class="img-responsive right-image hidden-sm hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-right.png" />
 				</div>
-				<div class="header-image-right visible-sm-*" style="">
+				<div class="header-image-right hidden-lg hidden-md hidden-sm visible-sm-*" style="">
 					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png" />
 				</div>
 			</div>
