@@ -35,7 +35,6 @@ if( have_posts() ) {
 						<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
 					</div>
 				</a>
-
 				<?php
 			    $category_id = get_cat_ID( 'For Landlords' );
 					$category_link = get_category_link( $category_id );
