@@ -32,7 +32,7 @@ if( have_posts() ) {
 					<div class="col-sm-4 text-center">
 						<h4 class="text-uppercase">I'm a Tenant</h4>
 						<span class="more-link text-uppercase">FIND ANSWERS</span>
-						<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
+						<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
 					</div>
 				</a>
 				<?php
