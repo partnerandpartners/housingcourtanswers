@@ -35,7 +35,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 					</div>
 					<?php if ( have_posts() ): ?>
 					<h1 class="text-uppercase"><?php echo single_cat_title( '', false ); ?></h1>
-					<div class="main-lead"><?php echo category_description(); ?></div>
+					<div class="large-main-lead"><?php echo category_description(); ?></div>
 					<?php endif; ?>
 			</div>
 			<div class="col-md-5">

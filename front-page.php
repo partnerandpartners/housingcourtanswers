@@ -130,10 +130,10 @@ if( have_posts() ) {
 	<div class="container-fluid section-full bg yellow xs-m-y-6">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-8">
 					<?php the_content(); ?>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
 				</div>
 			</div>

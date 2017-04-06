@@ -85,8 +85,9 @@ h6, .h6 {
 font-weight: normal;
 }
 
-.main-lead, .intro {
+.large-main-lead {
   font-size: ceil(($lead-font-size * 1.3));
+  font-family: $font-family-sans-serif;
 }
 
 a.more-link {

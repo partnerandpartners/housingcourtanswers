@@ -428,6 +428,10 @@ hr {
 	border-top: 6px solid #eee;
 }
 
+body.autocomplete-active .site-content .glossary-label-wrapper {
+  display: none;
+}
+
 .icon-bar {
 	border: 1px solid $brand-primary;
 }
@@ -477,10 +481,10 @@ hr {
 a[rel="tag"]{
   font-family: $font-family-sans-serif-bold;
 	font-size: $font-size-base;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-right: 1em;
-	padding-left: 1em;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-right: 10px;
+	padding-left: 10px;
 	margin-right: 0.75em;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
@@ -514,13 +518,13 @@ a[rel="tag"]{
 	a[rel="tag"]{
 	  font-family: $font-family-sans-serif-bold;
 		font-size: $font-size-small;
-		padding-top: 0.75em;
-		padding-bottom: 0.75em;
-		padding-right: 0.5em;
-		padding-left: 0.5em;
-		margin-right: 0.5em;
-		margin-top: 0.35em;
-		margin-bottom: 0.35em;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		padding-right: 10px;
+		padding-left: 10px;
+		margin-right: 10px;
+		margin-top: 6px;
+		margin-bottom: 6px;
 		display: inline-block;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
@@ -537,5 +541,8 @@ a[rel="tag"]{
 	    border: 2px solid $hca-bright-green;
 			cursor: pointer;
 		}
+	}
+	body {
+  font-size: calc($font-size-base * .75);
 	}
 }
