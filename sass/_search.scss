@@ -66,7 +66,7 @@
 .autocomplete-section {
   margin-bottom: 1em;
   .lower-label {
-    font-size: $font-size-xl;
+    font-size: 22px;
   }
 }
 
@@ -82,11 +82,31 @@
   margin-bottom: 8px;
 }
 
+a.tip-link {
+	font-size: $font-size-base;
+	border-bottom: 2px solid #eee;
+  padding-bottom: 3px;
+  line-height: 1.75;
+	&:hover {
+		color: $hca-blue;
+		border-bottom: 2px solid $hca-blue;
+	}
+}
+
 #autocomplete-overlay.visible {
   display: block;
 }
 
-
+a.search-category-title {
+	font-size: $font-size-xl;
+	border-bottom: 2px solid #eee;
+  padding-bottom: 3px;
+  line-height: 2;
+	&:hover {
+		color: $hca-blue;
+		border-bottom: 2px solid $hca-blue;
+	}
+}
 
 .search-form {
   position: relative;

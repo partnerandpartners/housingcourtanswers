@@ -236,16 +236,6 @@ h1.single-tag-title {
 	margin-bottom: .325em;
 }
 
-a.search-category-title {
-	font-size: $font-size-xl;
-	border-bottom: 2px solid #eee;
-	margin-bottom: 3px;
-	&:hover {
-		color: $hca-blue;
-		border-bottom: 2px solid $hca-blue;
-	}
-}
-
 .cat-result {
 	margin-bottom: 8px;
 }
@@ -424,6 +414,17 @@ a[rel="next"] {
 	}
 }
 
+.post-breadcrumb a {
+	font-size: $font-size-xl;
+	border-bottom: 2px solid #eee;
+  padding-bottom: 3px;
+  line-height: 2;
+	&:hover {
+		color: $hca-blue;
+		border-bottom: 2px solid $hca-blue;
+	}
+}
+
 hr {
 	border-top: 6px solid #eee;
 }
@@ -546,5 +547,8 @@ a[rel="tag"]{
 	  position: absolute;
 	  width: 100%;
 	  margin-top: 65px;
+	}
+	.badge {
+	  display: none;
 	}
 }

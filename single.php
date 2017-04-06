@@ -42,7 +42,7 @@
 <div class="next-prev-container md-top">
 	<div class="container">
 		<div class="row md-m-b-6">
-			<div class="col-sm-4">
+			<div class="col-sm-6 col-md-4">
 
 
 				<!-- <div class="text-left md-m-b-1"><span class="link-small-header">
@@ -58,7 +58,7 @@
 				<?php next_post_link('%link', '<div class="solid text-left xs-m-b-3" style="padding:15px;"><span class="next-previous-header">Previous Tip</span><br/><span class="next-previous">%title</span></div>', TRUE, ''); ?>
 			</div>
 
-			<div class="col-sm-4 col-sm-offset-4">
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
 
 
 				<!-- <div class="text-right md-m-b-1">

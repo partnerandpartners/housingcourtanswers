@@ -145,6 +145,11 @@ a.more-link {
   text-transform: uppercase;
   color: #ccc;
   letter-spacing: 0.05em;
+  line-height: 2;
+}
+
+.next-previous {
+  font-size: $font-size-xl;
 }
 
 .caption {
