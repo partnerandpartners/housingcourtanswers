@@ -62,7 +62,7 @@ if( have_posts() ) {
 </div>
 
 <div class="front-page-section popular-search">
-	<div class="container">
+	<div class="container xs-m-b-3">
 			<div class="row xs-m-b-2">
 					<div class="col-xs-6">
 						<h6 class="text-uppercase">Popular Topics</span>
@@ -134,7 +134,7 @@ if( have_posts() ) {
 					<?php the_content(); ?>
 				</div>
 				<div class="col-sm-4">
-					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/hcalogo-main.png" />
 				</div>
 			</div>
 		</div>
