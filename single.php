@@ -12,27 +12,28 @@
 				<div class="md-m-t-2">
 					<div class="entry-content"><?php the_content(); ?></div>
 				</div>
-				<div class="post-breadcrumb md-m-t-2">
-				<span class="small-header">Topics</span>
+				<div class="post-breadcrumb xs-m-t-2">
+				<span class="small-header">Topics</span><br/>
 					<?php		$taxonomy = 'category';
 
 					// get the term IDs assigned to post.
 					$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
 					// separator between links
-					$separator = '';
+					$separator = '<br/>';
 
 					if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 
 						$term_ids = implode( ',' , $post_terms );
-						$terms = wp_list_categories( 'title_li=&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
-						$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+						$terms = wp_list_categories( 'style=none&show_count=TRUE&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
+						$terms = rtrim( trim( str_replace( '<br/>',  $separator, $terms ) ), $separator );
 
 						// display post categories
 						echo  $terms;
-					} ?> </div>
-				<div class="md-m-t-2 md-m-b-2" role="main">
-					<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
-				</div>
+					} ?>
+					</div>
+					<div class="xs-m-t-2 xs-m-b-2" role="main">
+						<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
+					</div>
 		</div>
 	</div>
 	</article>

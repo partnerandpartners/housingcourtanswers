@@ -205,7 +205,7 @@ $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 $font-size-base:          15px;
 $font-size-md:            ceil(($font-size-base * 1.025)); // ~15px
 $font-size-lg:            ceil(($font-size-base * 1.06)); // ~16px
-$font-size-xl:            floor(($font-size-base * 1.15)); // ~18px
+$font-size-xl:            floor(($font-size-base * 1.25)); // ~18px
 $font-size-sm:            ceil(($font-size-base * .825));
 $font-size-xs:            ceil(($font-size-base * .75));
 

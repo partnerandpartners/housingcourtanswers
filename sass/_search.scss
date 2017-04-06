@@ -28,9 +28,6 @@
     border: solid 3px;
     &:focus {
       outline: none;
-      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        opacity: 0.15;
-      }
     }
   }
 }
@@ -69,8 +66,20 @@
 .autocomplete-section {
   margin-bottom: 1em;
   .lower-label {
-    text-transform: uppercase;
+    font-size: $font-size-xl;
   }
+}
+
+.count {
+  text-transform: uppercase;
+  opacity: .2;
+  letter-spacing: 0.05em;
+  font-size: $font-size-base;
+  margin-bottom: 8px;
+}
+
+.tip-result {
+  margin-bottom: 8px;
 }
 
 #autocomplete-overlay.visible {

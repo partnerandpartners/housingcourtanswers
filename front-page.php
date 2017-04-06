@@ -79,15 +79,15 @@ if( have_posts() ) {
 			foreach( $front_page_suggestions['categories'] as $category ) {
 			$grandparent_category = $category['grandparent_category'];
 			?>
+				<a href="<?php echo $category['permalink']; ?>">
 		    <div class="card-wrapper col-md-4">
-		    	<a href="<?php echo $category['permalink']; ?>">
 						<div class="card-stack xs-m-b-3">
 		            <h4 class="sub-title"><?php echo $category['name']; ?></h4>
 		            <p><?php echo $category['description']; ?></p>
 		            <a class="more-link text-uppercase" href="<?php echo $category['permalink']; ?>">Learn More</a>
 		        </div>
-		      </a>
 		    </div>
+				</a>
             <?php
            $rowCounter++;
 					 if($rowCounter==3){

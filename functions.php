@@ -34,6 +34,13 @@ function hca_print_tag_list() {
 	}
 }
 
+add_filter('wp_list_categories', 'cat_count_span');
+function cat_count_span($links) {
+  $links = str_replace('</a> (', '</a> <span class="badge">', $links);
+  $links = str_replace(')', ' Tips</span>', $links);
+  return $links;
+}
+
 	/**
 	*
 	* Register the navigation menus for the site.

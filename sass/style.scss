@@ -215,7 +215,7 @@ h1.single-tag-title {
 	margin-bottom: 30px;
 	margin-top: 30px;
 	font-family: $font-family-sans-serif-bold;
-	font-size: $font-size-h4;
+	font-size: 24px;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	padding-right: 1em;
@@ -542,7 +542,9 @@ a[rel="tag"]{
 			cursor: pointer;
 		}
 	}
-	body {
-  font-size: calc($font-size-base * .75);
+	#search-box-wrapper {
+	  position: absolute;
+	  width: 100%;
+	  margin-top: 65px;
 	}
 }

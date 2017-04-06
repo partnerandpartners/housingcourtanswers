@@ -138,6 +138,7 @@ a.more-link {
   text-transform: uppercase;
   opacity: .2;
   letter-spacing: 0.05em;
+  font-size: $font-size-base;
 }
 
 .next-previous-header {
@@ -192,4 +193,35 @@ h6.section-description {
 .term-table .definition {
 	font-family: $font-family-serif;
   font-size: $font-size-xl;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+input:focus::-webkit-input-placeholder {
+    opacity: .4;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #ccc;
+}
+input:focus:-moz-placeholder {
+    opacity: .4;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #ccc;
+}
+input:focus::-moz-placeholder {
+    opacity: .4;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #ccc;
+}
+input:focus:-ms-input-placeholder {
+    opacity: .4;
 }
