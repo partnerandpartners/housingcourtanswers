@@ -195,6 +195,12 @@
 	visibility: hidden;
 }
 
+.spacer {
+	display: block;
+	height: 10px;
+	visibility: hidden;
+}
+
 h6.news-title {
 	font-size: 22px;
 	margin-bottom: 10px;
@@ -416,7 +422,7 @@ a[rel="next"] {
 	font-size: $font-size-xl;
 	border-bottom: 2px solid #eee;
   padding-bottom: 3px;
-  line-height: 2;
+  line-height: 1.6;
 	&:hover {
 		color: $hca-blue;
 		border-bottom: 2px solid $hca-blue;

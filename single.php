@@ -19,7 +19,7 @@
 					// get the term IDs assigned to post.
 					$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
 					// separator between links
-					$separator = '<br/>';
+					$separator = '<span class="spacer"></span>';
 
 					if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 
