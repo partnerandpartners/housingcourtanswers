@@ -16,7 +16,7 @@ if( have_posts() ) {
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-					<div class="homepage-clouds" style="">
+					<div class="homepage-clouds hidden-xs" style="">
 						<img class="clouds" id="home-cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
 						<img class="clouds" id="home-cloud-left-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
 						<img class="clouds" id="home-cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
