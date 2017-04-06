@@ -61,8 +61,9 @@
 
 		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm resources" data-spy="affix" data-offset-top="444" data-offset-bottom="600">
+				<ul class="sub-nav nav hidden-xs hidden-sm resources" data-spy="affix" data-offset-top="396" data-offset-bottom="650">
 					<?php echo $scroller_var; ?>
+          <div class="back-to-topp"><a href="#"><br/>Back to Top &#8679;</a></div>
 			  </ul>
 			</div>
         </div>

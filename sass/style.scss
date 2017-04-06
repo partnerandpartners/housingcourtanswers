@@ -142,6 +142,42 @@
 	background-color: transparent !important;
 }
 
+.navbar-toggle {
+	padding: 9px 0px 9px 20px;
+}
+
+.tenant-main-image {
+	position: relative;
+	top: 12px;
+	@media (max-width: 1199px) {
+		position: relative;
+		top: 16px;
+	}
+	@media (max-width: 991px) {
+		position: relative;
+		top: 36px;
+	}
+}
+
+.landlord-main-image {
+	position: relative;
+	top: 12px;
+	@media (max-width: 1199px) {
+		position: relative;
+		top: 16px;
+	}
+}
+
+.advocates-main-image {
+	position: relative;
+	top: 0px;
+	@media (max-width: 991px) {
+		position: relative;
+		top: 15px;
+	}
+}
+
+
 .affix {
 	top: 70px;
 }
