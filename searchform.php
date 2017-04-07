@@ -18,7 +18,7 @@
 					  					<div id="category-results" class="results-box"></div>
 					  				</div>
 			      				</div>
-			      				<div class="col-sm-6 xs-m-t-2">
+			      				<div class="col-sm-6 xs-m-t-2 md-m-t-0">
 			      					<div class="autocomplete-section">
 						            <div class="tags-header"><span class="small-header" id="terms-results-label">Suggested Terms</span></div>
 						            <div id="tag-results" class="results-box"></div>
