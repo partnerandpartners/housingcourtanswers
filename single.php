@@ -25,7 +25,7 @@
 
 						$term_ids = implode( ',' , $post_terms );
 						$terms = wp_list_categories( 'style=none&show_count=TRUE&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids . '&separator=' . $separator );
-						$terms = rtrim( trim( str_replace( '<br/>',  $separator, $terms ) ), $separator );
+						//$terms = rtrim( trim( str_replace( '<br/>',  $separator, $terms ) ), $separator );
 
 						// display post categories
 						echo  $terms;

@@ -38,6 +38,7 @@ function housing_court_get_search_posts( $search_query, $template, $post_type, $
 
     echo '<div class="row md-bottom">';
     $columns_printed = 0;
+    $num_posts_printed = 0;
     $num_matching_posts = $query->found_posts;
 
     while( $query->have_posts() ) {
@@ -45,8 +46,8 @@ function housing_court_get_search_posts( $search_query, $template, $post_type, $
 
       get_template_part( $template );
       $columns_printed++;
-      $num_matching_posts++;
-      if( $columns_printed == 3 && $num_matching_posts != $query->found_posts ) {
+      $num_posts_printed++;
+      if( $columns_printed == 3 && $num_posts_printed != $query->found_posts ) {
         echo '</div><div class="row md-bottom">';
         $columns_printed = 0;
       }
@@ -196,7 +197,7 @@ if ( !empty($search_query) ):
         <div class="small-header"><?php housing_court_print_results_string( $for_tenants_results['num_matching_posts'], 'No Tips Found', '1 Tip Found', '%s Tips Found' ); ?></div>
       </div>
       <div class="col-xs-6 text-right">
-        <a href="<?php echo get_category_link( get_cat_id('For Tenants') ); ?>" class="more-link text-uppercase">Go to Tenants</a>
+        <a href="<?php echo get_category_link( get_cat_id('For Tenants') ); ?>" class="more-link text-uppercase">Go to Page</a>
       </div>
       <div class="col-xs-12">
           <hr/>
@@ -210,41 +211,70 @@ if ( !empty($search_query) ):
     <div class="row xs-m-b-3">
       <div class="col-xs-12">
         <h4>For Landlords</h4>
+      </div>
         <?php
 
         $for_landlords_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'post', -1, get_cat_id('For Landlords') );
 
         ?>
-        <div class="small-header"><?php housing_court_print_results_string( $for_landlords_results['num_matching_posts'], 'No Tips Found', '1 Tip Found', '%s Tips Found' ); ?></div>
-        <a href="<?php echo get_category_link( get_cat_id('For Landlords') ); ?>" class="text-uppercase">Go to Landlords</a>
+        <div class="col-xs-6">
+          <div class="small-header"><?php housing_court_print_results_string( $for_landlords_results['num_matching_posts'], 'No Tips Found', '1 Tip Found', '%s Tips Found' ); ?></div>
+        </div>
+        <div class="col-xs-6 text-right">
+          <a href="<?php echo get_category_link( get_cat_id('For Landlords') ); ?>" class="more-link text-uppercase">Go to Page</a>
+        </div>
+        <div class="col-xs-12">
+            <hr/>
+        </div>
+        <div class="col-xs-12">
         <?php echo $for_landlords_results['output']; ?>
-      </div>
+        </div>
     </div>
 
     <div class="row xs-m-b-3">
       <div class="col-xs-12">
         <h5>Events</h5>
+      </div>
         <?php
 
         $events_results = housing_court_get_search_posts( $search_query, 'templates/event-search', 'event', -1 );
 
         ?>
-        <div class="small-header"><?php housing_court_print_results_string( $events_results['num_matching_posts'], 'No Events Found', '1 Event Found', '%s Events Found' ); ?></div>
+        <div class="col-xs-6">
+          <div class="small-header"><?php housing_court_print_results_string( $events_results['num_matching_posts'], 'No Events Found', '1 Event Found', '%s Events Found' ); ?></div>
+        </div>
+        <div class="col-xs-6 text-right">
+          <a href="<?php echo get_page_link( get_page_by_title('Events') ); ?>" class="more-link text-uppercase">View All</a>
+        </div>
+        <div class="col-xs-12">
+            <hr/>
+        </div>
+        <div class="col-xs-12">
         <?php echo $events_results['output']; ?>
-      </div>
+        </div>
     </div>
 
     <div class="row xs-m-b-3">
-      <div class="col-xs-12">
-        <h5>News & Campaigns</h5>
+        <div class="col-xs-12">
+          <h5>News & Campaigns</h5>
+        </div>
         <?php
 
         $news_results = housing_court_get_search_posts( $search_query, 'templates/news-search', 'news', -1 );
 
         ?>
-        <div class="small-header"><?php housing_court_print_results_string( $news_results['num_matching_posts'], 'No Posts Found', '1 Post Found', '%s Posts Found' ); ?></div>
+        <div class="col-xs-6">
+          <div class="small-header"><?php housing_court_print_results_string( $news_results['num_matching_posts'], 'No Posts Found', '1 Post Found', '%s Posts Found' ); ?></div>
+        </div>
+        <div class="col-xs-6 text-right">
+          <a href="<?php echo get_page_link( get_page_by_title('Events') ); ?>" class="more-link text-uppercase">View All</a>
+        </div>
+        <div class="col-xs-12">
+            <hr/>
+        </div>
+        <div class="col-xs-12">
         <?php echo $news_results['output']; ?>
-      </div>
+        </div>
     </div>
 
   </div>

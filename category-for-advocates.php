@@ -45,7 +45,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 <div id="main-content-container" class="container" >
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-12">
 			<?php
 			// Loop over each item in the For Tenants Menu
 			foreach ($ft_items as $ft_item ) {
@@ -99,16 +99,16 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 							$card_class = 'card';
 					}
 
-					if ($ft_item_count == 2 ) {  $ft_item_count = 0; ?>
+					if ($ft_item_count == 3 ) {  $ft_item_count = 0; ?>
 
 					</div><div class="row md-m-b-3">
-						<div class="col-sm-6 xs-m-b-2 md-m-b-0">
+						<div class="col-sm-4 xs-m-b-2 md-m-b-0">
 							<?php include('templates/card.php') ?>
 						</div>
 
 					<?php	} else { ?>
 
-					<div class="col-sm-6 xs-m-b-2 md-m-b-0">
+					<div class="col-sm-4 xs-m-b-2 md-m-b-0">
 						<?php include('templates/card.php') ?>
 					</div>
 
@@ -127,13 +127,13 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 		</div><!-- col-md-8 -->
 
-		<div class="col-md-3 col-md-offset-1">
+		<!-- <div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
 				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="635" data-offset-bottom="400">
 					<?php echo $output_array['scrollspy']; ?>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 </div>

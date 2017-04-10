@@ -95,7 +95,7 @@ $output_array = array( 'top_section' => '', 'main' => '', 'scrollspy' => '' );
 $output_array = housing_court_print_category_posts_tree( $current_category_id, true, $output_array );
 
 ?>
-<div class="top-section container">
+<div class="category-title-section container">
     <div class="row md-p-t-2">
       <div class="col-xs-12">
         <?php echo $output_array['top_section']; ?>
@@ -120,14 +120,6 @@ $output_array = housing_court_print_category_posts_tree( $current_category_id, t
         <?php endif; ?>
       </div> -->
     </div>
-  </div>
-
-  <div class="container md-top">
-  	<div class="row">
-  		<div class="col-sm-12">
-  			<?php comments_template(); ?>
-  		</div>
-  	</div>
   </div>
 
 

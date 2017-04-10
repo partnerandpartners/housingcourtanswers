@@ -69,10 +69,8 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 			<!-- Top Section of each category -->
 			<div class="xs-m-b-6">
-				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span><hr/>
-				<a href="<?php echo $link ?>">
-					<h3 id="<?php echo $title ?>"><?php echo $title ?></h3>
-				</a>
+				<span class="anchor" id="<?php echo $slug ?>" data-target="<?php echo $slug ?>"></span>
+				<div class="xs-m-b-1"><a href="<?php echo $link ?>" class="section-link"><?php echo $title ?></a></div>
 				<div class="lead xs-m-b-2"><?php echo $description ?></div>
 
 			<?php
