@@ -58,8 +58,8 @@
 	     <span class="design-credit">Design and Development by <a href="" target="_blank">Partner & Partners</a></span>
     </div>
   </div>
-  <div class="container footer-buildings">
-  </div>
+  <!-- <div class="container footer-buildings">
+  </div> -->
 </footer>
 
 <?php wp_footer(); ?>

@@ -350,6 +350,14 @@ h5.category-description p {
 	font-size: $font-size-xl;
 }
 
+.search-results a.more-link {
+	line-height: 1;
+}
+
+.search-results h5 {
+	margin-bottom: 10px;
+}
+
 .card-stack {
   &:before {
   	content: "";

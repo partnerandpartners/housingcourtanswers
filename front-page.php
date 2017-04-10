@@ -105,10 +105,10 @@ if( have_posts() ) {
 		<div class="container">
 				<div class="row xs-m-b-2">
 						<div class="col-xs-6">
-							<h6 class="text-uppercase">Popular Glossary Terms</span>
+							<h6 class="text-uppercase">Popular Terms</span>
 						</div>
 						<div class="col-xs-6 text-right">
-							<a href="<?php echo home_url(); ?>/glossary" class="all-button">VIEW ALL</a>
+							<a href="<?php echo home_url(); ?>/glossary" class="all-button">GO TO GLOSSARY</a>
 						</div>
 						<div class="col-xs-12">
 							<hr/>
