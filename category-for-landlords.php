@@ -132,7 +132,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 
 		<div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="640" data-offset-bottom="650">
+				<ul class="sub-nav nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="640" data-offset-bottom="725">
 					<?php echo $output_array['scrollspy']; ?>
 					<div class="back-to-topp"><a href="#"><br/>Back to Top &#8679;</a></div>
 				</ul>
