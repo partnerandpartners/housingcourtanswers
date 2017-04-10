@@ -309,12 +309,13 @@ h5.category-description p {
 .links-post-content a {
 	color: $brand-primary;
 	font-family: $font-family-sans-serif;
+	border-bottom: 2px solid #eee;
 	&:hover,
 	&:active,
 	&:focus {
 		color: $hca-blue;
 		cursor: pointer;
-		border-bottom: 1px solid $hca-blue;
+		border-bottom: 2px solid $hca-blue;
 	}
 }
 
@@ -329,7 +330,6 @@ h5.category-description p {
 	padding: 1em 1em 1.5em 1em;
 	position: relative;
 	background-color: #fff;
-	margin-right: 15px;
 	p {
 		font-family: $font-family-serif;
 		font-size: 15px;
@@ -338,8 +338,8 @@ h5.category-description p {
 }
 
 
-.card {
-	//margin-left: 1em;
+.card-stack {
+	margin-right: 15px;
 }
 
 .design-credit {
@@ -356,6 +356,14 @@ h5.category-description p {
 
 .search-results h5 {
 	margin-bottom: 10px;
+}
+
+.search-results h4 {
+	margin-bottom: 10px;
+}
+
+ul#menu-footer {
+	font-size: $font-size-xl;
 }
 
 .card-stack {

@@ -58,11 +58,11 @@
 	<div class="front-page-section popular-search">
 		<div class="container">
 				<div class="row xs-m-b-2">
-						<div class="col-xs-6">
+						<div class="col-xs-7">
 							<h6 class="text-uppercase">Popular Terms</h6>
 						</div>
-						<div class="col-xs-6 text-right">
-							<a href="<?php echo home_url(); ?>/glossary" class="all-button">GO TO GLOSSARY</a>
+						<div class="col-xs-5 text-right">
+							<a href="<?php echo home_url(); ?>/glossary" class="all-button">VIEW ALL</a>
 						</div>
 						<div class="col-xs-12">
 							<hr/>

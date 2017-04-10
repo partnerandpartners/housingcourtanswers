@@ -36,14 +36,24 @@ function housing_court_get_search_posts( $search_query, $template, $post_type, $
 
     ob_start();
 
-
+    echo '<div class="row md-bottom">';
+    $columns_printed = 0;
     $num_matching_posts = $query->found_posts;
 
     while( $query->have_posts() ) {
       $query->the_post();
 
       get_template_part( $template );
+      $columns_printed++;
+      $num_matching_posts++;
+      if( $columns_printed == 3 && $num_matching_posts != $query->found_posts ) {
+        echo '</div><div class="row md-bottom">';
+        $columns_printed = 0;
+      }
+
+
     }
+    echo '</div>';
 
     $output = ob_get_clean();
   }
@@ -132,7 +142,7 @@ if ( !empty($search_query) ):
       <div class="col-xs-12 col-md-6">
         <div class="row">
           <div class="col-xs-12">
-            <h5>Topics</h5>
+            <h4>Topics</h4>
           </div>
           <div class="col-xs-12">
             <div class="small-header"><?php housing_court_print_results_string( $num_matching_categories, 'No Topics Found', '1 Topic Found', '%s Topics Found' ); ?></div>
@@ -149,7 +159,7 @@ if ( !empty($search_query) ):
       <div class="col-xs-12 col-md-6">
       	<div class="row">
       		<div class="col-xs-12">
-	        <h5>Glossary Terms</h5>
+	        <h4>Glossary Terms</h4>
       		</div>
       		<div class="col-xs-6">
 	        	<div class="small-header"><?php housing_court_print_results_string( $num_matching_tags, 'No Terms Found', '1 Term Found', '%s Terms Found' ); ?></div>
@@ -216,7 +226,7 @@ if ( !empty($search_query) ):
         <h5>Events</h5>
         <?php
 
-        $events_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'event', -1 );
+        $events_results = housing_court_get_search_posts( $search_query, 'templates/event-search', 'event', -1 );
 
         ?>
         <div class="small-header"><?php housing_court_print_results_string( $events_results['num_matching_posts'], 'No Events Found', '1 Event Found', '%s Events Found' ); ?></div>
@@ -229,7 +239,7 @@ if ( !empty($search_query) ):
         <h5>News & Campaigns</h5>
         <?php
 
-        $news_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'news', -1 );
+        $news_results = housing_court_get_search_posts( $search_query, 'templates/news-search', 'news', -1 );
 
         ?>
         <div class="small-header"><?php housing_court_print_results_string( $news_results['num_matching_posts'], 'No Posts Found', '1 Post Found', '%s Posts Found' ); ?></div>
@@ -252,10 +262,10 @@ if ( !empty($search_query) ):
 
 elseif( empty($search_query) ) : ?>
     <div class="container full">
-        <div class="row xs-m-b-6">
+        <div class="row">
           <div class="col-sm-12 text-center">
               <h3>No search entered</h3>
-              <h6>Try a search another above or take a look at the popular topics or terms below test</h6>
+              <h6>Try a search above or take a look at the popular topics or terms below test</h6>
           </div>
         </div>
     </div>
@@ -264,7 +274,7 @@ endif; ?>
 
 <div class="front-page-section popular-search">
 	<div class="container xs-m-b-3">
-			<div class="row xs-m-b-2">
+			<div class="row">
 					<div class="col-xs-12">
 						<h6 class="text-uppercase">Popular Topics</span>
 					</div>
@@ -303,13 +313,13 @@ endif; ?>
 	</div>
 
 	<div class="front-page-section popular-search">
-		<div class="container">
-				<div class="row xs-m-b-2">
-            <div class="col-xs-6">
+		<div class="container xs-m-b-6">
+				<div class="row">
+            <div class="col-xs-7">
               <h6 class="text-uppercase">Popular Terms</h6>
             </div>
-            <div class="col-xs-6 text-right">
-              <a href="<?php echo home_url(); ?>/glossary" class="all-button">GO TO GLOSSARY</a>
+            <div class="col-xs-5 text-right">
+              <a href="<?php echo home_url(); ?>/glossary" class="all-button">VIEW ALL</a>
             </div>
             <div class="col-xs-12">
               <hr/>
