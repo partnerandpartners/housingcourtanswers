@@ -7,14 +7,14 @@
 
 .input-group-btn {
   position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 17px;
+    top: 17px;
     button.search-button {
       background-image: url("../img/hca-search-icon.png");
       -webkit-appearance: none;
       border: none;
-      height: 28px;
-      width: 28px;
+      height: 30px;
+      width: 30px;
       background-size: 100%;
     }
 }
@@ -127,4 +127,43 @@ body.autocomplete-active #autocomplete {
   display: block;
   border: 3px solid;
   padding:15px 0px 25px 0px;
+}
+
+
+@media (max-width: 480px) {
+
+  .input-group-btn {
+    position: absolute;
+      right: 12px;
+      top: 12px;
+      button.search-button {
+        background-image: url("../img/hca-search-icon.png");
+        -webkit-appearance: none;
+        border: none;
+        height: 24px;
+        width: 24px;
+        background-size: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+  }
+
+  #autocomplete {
+    top: 65px;
+  }
+
+  .search-section {
+    #search-input {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+      line-height: 1;
+      border: solid 3px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
 }

@@ -151,7 +151,7 @@ if ( !empty($search_query) ):
           <div class="col-xs-12">
             <hr/>
           </div>
-          <div class="col-xs-12">
+          <div class="col-xs-12 xs-m-b-3">
             <?php echo $categories_output; ?>
           </div>
         </div>
@@ -162,10 +162,10 @@ if ( !empty($search_query) ):
       		<div class="col-xs-12">
 	        <h4>Glossary Terms</h4>
       		</div>
-      		<div class="col-xs-6">
+      		<div class="col-xs-7">
 	        	<div class="small-header"><?php housing_court_print_results_string( $num_matching_tags, 'No Terms Found', '1 Term Found', '%s Terms Found' ); ?></div>
       		</div>
-      		<div class="col-xs-6 text-right">
+      		<div class="col-xs-5 text-right">
 	        <a href="<?php echo get_page_link( get_page_by_title('Glossary') ); ?>" class="more-link text-uppercase">View All</a>
       		</div>
           <div class="col-xs-12">
@@ -240,10 +240,10 @@ if ( !empty($search_query) ):
         $events_results = housing_court_get_search_posts( $search_query, 'templates/event-search', 'event', -1 );
 
         ?>
-        <div class="col-xs-6">
+        <div class="col-xs-7">
           <div class="small-header"><?php housing_court_print_results_string( $events_results['num_matching_posts'], 'No Events Found', '1 Event Found', '%s Events Found' ); ?></div>
         </div>
-        <div class="col-xs-6 text-right">
+        <div class="col-xs-5 text-right">
           <a href="<?php echo get_page_link( get_page_by_title('Events') ); ?>" class="more-link text-uppercase">View All</a>
         </div>
         <div class="col-xs-12">
@@ -263,10 +263,10 @@ if ( !empty($search_query) ):
         $news_results = housing_court_get_search_posts( $search_query, 'templates/news-search', 'news', -1 );
 
         ?>
-        <div class="col-xs-6">
+        <div class="col-xs-7">
           <div class="small-header"><?php housing_court_print_results_string( $news_results['num_matching_posts'], 'No Posts Found', '1 Post Found', '%s Posts Found' ); ?></div>
         </div>
-        <div class="col-xs-6 text-right">
+        <div class="col-xs-5 text-right">
           <a href="<?php echo get_page_link( get_page_by_title('Events') ); ?>" class="more-link text-uppercase">View All</a>
         </div>
         <div class="col-xs-12">
