@@ -39,7 +39,7 @@
      <span class="small-header">Donate</span>
 	      <div class="donate text-center">
 		      <h6 class="normal-weight xs-m-b-2">Please support us to support you.</h6>
-		      <a href="https://www.paypal.com/donate/?token=bHXrbVetDM6hk-6n4QTLdBbyU75qsf7BH90Tds-SXnW-XstbzQI_T20VPMCHVfoJH1SDRG" class="btn btn-default" target="_blank">Donate</a>
+		      <a href="#" class="btn btn-default" target="_blank">Donate</a>
 		    </div>
       </div>
     <div class="col-sm-6 xs-m-b-2">
@@ -54,9 +54,11 @@
     <div class="col-md-6 xs-m-b-2">
       <span class="copyright-credit">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
     </div>
-    <div class="col-md-6 xs-m-b-2">
-	     <span class="design-credit">Design & Development by <a href="" target="_blank">Partner & Partners</a></span>
+    <div class="col-md-6 xs-m-b-2 design-credit">
+	     <span class="design-credit">Design and Development by <a href="" target="_blank">Partner & Partners</a></span>
     </div>
+  </div>
+  <div class="container footer-buildings">
   </div>
 </footer>
 

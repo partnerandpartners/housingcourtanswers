@@ -208,7 +208,7 @@ function hca_get_upcoming_events_query() {
 		'meta_compare' => '>=',
 		'meta_value' => $current_timestamp,
 		'orderby' => 'meta_value_num',
-		'order' => 'ASC'
+		'order' => 'DESC'
 	);
 
 	$upcoming_events_query = new WP_Query( $args );

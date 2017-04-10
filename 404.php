@@ -10,13 +10,13 @@
 		<div class="row md-m-b-2">
 		   <div class="col-md-8 col-md-offset-2 text-center">
 		     <h1 class="category-title">Error: 404</h1>
-		     <h5 class="category-description">Sorry, we couldn't find the page you are looking for. You can try a search above or select a helpful topic below</h5>
+		     <h5 class="category-description">Sorry, we couldn't find the page you are looking for. You can try a search above or select a topic or term below</h5>
 		</div>
 	</div>
 </div>
 
 <div class="front-page-section popular-search">
-	<div class="container">
+	<div class="container xs-m-b-3">
 			<div class="row xs-m-b-2">
 					<div class="col-xs-6">
 						<h6 class="text-uppercase">Popular Topics</span>
@@ -33,15 +33,15 @@
 			foreach( $front_page_suggestions['categories'] as $category ) {
 			$grandparent_category = $category['grandparent_category'];
 			?>
-		    <div class="card-wrapper col-xs-4">
-		    	<a href="<?php echo $category['permalink']; ?>">
+				<a href="<?php echo $category['permalink']; ?>">
+		    <div class="card-wrapper col-md-4">
 						<div class="card-stack xs-m-b-3">
 		            <h4 class="sub-title"><?php echo $category['name']; ?></h4>
 		            <p><?php echo $category['description']; ?></p>
 		            <a class="more-link text-uppercase" href="<?php echo $category['permalink']; ?>">Learn More</a>
 		        </div>
-		      </a>
 		    </div>
+				</a>
             <?php
            $rowCounter++;
 					 if($rowCounter==3){
@@ -79,6 +79,7 @@
 								</div>
 						</div>
 				</div>
-		</div>
+</div>
+
 
 <?php get_footer();?>

@@ -342,6 +342,10 @@ h5.category-description p {
 	//margin-left: 1em;
 }
 
+.design-credit {
+	text-align: right;
+}
+
 .card-stack {
   &:before {
   	content: "";
@@ -455,6 +459,14 @@ body.autocomplete-active .site-content .glossary-label-wrapper {
   margin-top: 30px;
 }
 
+.footer-buildings {
+	background-image: url("../img/footer-bg.png");
+	background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: 100% 100%;
+	padding-bottom: 180px;
+}
+
 .term-table {
   display: table;
   width: 100%;
@@ -516,6 +528,9 @@ a[rel="tag"]{
 }
 
 @media (max-width: 768px) {
+	.design-credit {
+		text-align: left;
+	}
 
 }
 

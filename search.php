@@ -88,9 +88,9 @@ if( !empty($search_query) ) {
     foreach( $categories as $category ) {
       $num_matching_categories++;
 
-      $count = ' <span class="count">' . $category->count . ' Tips</span>';
+      $count = ' <span class="badge">' . $category->count . ' Tips</span>';
       if( $category->count === 1 ) {
-        $count = ' <span class="count">'.$category->count.' Tip</span>';
+        $count = ' <span class="badge">'.$category->count.' Tip</span>';
       }
 
       echo '<article><div class="cat-result"><span class="topic-link"><a href="'.get_term_link($category->term_id, 'category').'">' . $category->name . '</a>' . $count . '</span></div></article>';
@@ -128,11 +128,11 @@ if ( !empty($search_query) ):
   <div class="full container">
 
 
-    <div class="row">
+    <div class="row xs-m-b-3">
 
       <div class="col-xs-12 col-md-6">
         <h3>Topics</h3>
-        <div class="text-uppercase"><?php housing_court_print_results_string( $num_matching_categories, 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
+        <div class="small-header"><?php housing_court_print_results_string( $num_matching_categories, 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
         <?php echo $categories_output; ?>
       </div>
 
@@ -142,7 +142,7 @@ if ( !empty($search_query) ):
 	        <h3>Glossary</h3>
       		</div>
       		<div class="col-xs-6">
-	        	<div class="text-uppercase"><?php housing_court_print_results_string( $num_matching_tags, 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
+	        	<div class="small-header"><?php housing_court_print_results_string( $num_matching_tags, 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
       		</div>
       		<div class="col-xs-6 text-right">
 	        <a href="<?php echo get_page_link( get_page_by_title('Glossary') ); ?>">View All Terms &rarr;</a>
@@ -159,37 +159,37 @@ if ( !empty($search_query) ):
     </div>
 
 
-    <div class="row">
+    <div class="row xs-m-b-3">
       <div class="col-xs-12">
-        <h1 class="category-title">For Tenants</h1>
+        <h3>For Tenants</h3>
 
         <?php
 
         $for_tenants_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'post', -1, get_cat_id('For Tenants') );
 
         ?>
-        <div class="text-uppercase"><?php housing_court_print_results_string( $for_tenants_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
+        <div class="small-header"><?php housing_court_print_results_string( $for_tenants_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
         <a href="<?php echo get_category_link( get_cat_id('For Tenants') ); ?>">View All For Tenants &rarr;</a>
         <?php echo $for_tenants_results['output']; ?>
       </div>
     </div>
 
 
-    <div class="row">
+    <div class="row xs-m-b-3">
       <div class="col-xs-12">
-        <h1 class="category-title">For Landlords</h1>
+        <h3>For Landlords</h3>
         <?php
 
         $for_landlords_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'post', -1, get_cat_id('For Landlords') );
 
         ?>
-        <div class="text-uppercase"><?php housing_court_print_results_string( $for_landlords_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
+        <div class="small-header"><?php housing_court_print_results_string( $for_landlords_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
         <a href="<?php echo get_category_link( get_cat_id('For Landlords') ); ?>">View All For Landlords &rarr;</a>
         <?php echo $for_landlords_results['output']; ?>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row xs-m-b-3">
       <div class="col-xs-12">
         <h3>Events</h3>
         <?php
@@ -197,12 +197,12 @@ if ( !empty($search_query) ):
         $events_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'event', -1 );
 
         ?>
-        <div class="text-uppercase"><?php housing_court_print_results_string( $events_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
+        <div class="small-header"><?php housing_court_print_results_string( $events_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
         <?php echo $events_results['output']; ?>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row xs-m-b-3">
       <div class="col-xs-12">
         <h3>News & Campaigns</h3>
         <?php
@@ -210,7 +210,7 @@ if ( !empty($search_query) ):
         $news_results = housing_court_get_search_posts( $search_query, 'templates/search-result', 'news', -1 );
 
         ?>
-        <div class="text-uppercase"><?php housing_court_print_results_string( $news_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
+        <div class="small-header"><?php housing_court_print_results_string( $news_results['num_matching_posts'], 'No Matches Found', '1 Match Found', '%s Matches Found' ); ?></div>
         <?php echo $news_results['output']; ?>
       </div>
     </div>
@@ -219,6 +219,72 @@ if ( !empty($search_query) ):
 
   <?php
 
-endif;
+endif; ?>
 
-get_footer();
+<div class="front-page-section popular-search">
+	<div class="container xs-m-b-3">
+			<div class="row xs-m-b-2">
+					<div class="col-xs-6">
+						<h6 class="text-uppercase">Popular Topics</span>
+					</div>
+					<div class="col-xs-6 text-right">
+						<span class="text-uppercase">ALL</span>
+					</div>
+			</div>
+			<div class="row">
+			<?php
+			$rowCounter = 0;
+			$front_page_suggestions = housing_court_get_front_page_suggestions();
+			if( array_key_exists('categories', $front_page_suggestions) && !empty( $front_page_suggestions['categories'] ) ) {
+			foreach( $front_page_suggestions['categories'] as $category ) {
+			$grandparent_category = $category['grandparent_category'];
+			?>
+				<a href="<?php echo $category['permalink']; ?>">
+		    <div class="card-wrapper col-md-4">
+						<div class="card-stack xs-m-b-3">
+		            <h4 class="sub-title"><?php echo $category['name']; ?></h4>
+		            <p><?php echo $category['description']; ?></p>
+		            <a class="more-link text-uppercase" href="<?php echo $category['permalink']; ?>">Learn More</a>
+		        </div>
+		    </div>
+				</a>
+            <?php
+           $rowCounter++;
+					 if($rowCounter==3){
+ 					echo('</div><div class="row">');//new row at 3rd post.
+ 					$rowCounter = 0;
+				    }
+					}
+				}
+				?>
+				</div>
+			</div>
+	</div>
+
+	<div class="front-page-section popular-search">
+		<div class="container">
+				<div class="row xs-m-b-2">
+						<div class="col-xs-6">
+							<h6 class="text-uppercase">From the Glossary</span>
+						</div>
+						<div class="col-xs-6 text-right">
+							<span class="text-uppercase">ALL</span>
+						</div>
+				</div>
+					<div class="row">
+								<div class="col-xs-12">
+								<?php
+								$front_page_suggestions = housing_court_get_front_page_suggestions();
+								if( array_key_exists('tags', $front_page_suggestions) && !empty( $front_page_suggestions['tags'] ) ) {
+								foreach( $front_page_suggestions['tags'] as $tag ) {
+								?>
+								    	<a rel="tag" href="<?php echo $tag['permalink']; ?>"><?php echo $tag['name']; ?></a>
+						            <?php
+						          }
+						        } ?>
+								</div>
+						</div>
+				</div>
+</div>
+
+<?php get_footer();
