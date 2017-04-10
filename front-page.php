@@ -64,11 +64,11 @@ if( have_posts() ) {
 <div class="front-page-section popular-search">
 	<div class="container xs-m-b-3">
 			<div class="row xs-m-b-2">
-					<div class="col-xs-6">
-						<h6 class="text-uppercase">Popular Topics</span>
+					<div class="col-xs-12">
+						<h6 class="text-uppercase">Popular Topics</h6>
 					</div>
-					<div class="col-xs-6 text-right">
-						<span class="text-uppercase">ALL</span>
+					<div class="col-xs-12">
+						<hr/>
 					</div>
 			</div>
 			<div class="row">
@@ -105,10 +105,13 @@ if( have_posts() ) {
 		<div class="container">
 				<div class="row xs-m-b-2">
 						<div class="col-xs-6">
-							<h6 class="text-uppercase">From the Glossary</span>
+							<h6 class="text-uppercase">Popular Glossary Terms</span>
 						</div>
 						<div class="col-xs-6 text-right">
-							<span class="text-uppercase">ALL</span>
+							<a href="<?php echo home_url(); ?>/glossary" class="all-button">VIEW ALL</a>
+						</div>
+						<div class="col-xs-12">
+							<hr/>
 						</div>
 				</div>
 					<div class="row">

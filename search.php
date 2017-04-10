@@ -93,7 +93,7 @@ if( !empty($search_query) ) {
         $count = ' <span class="badge">'.$category->count.' Tip</span>';
       }
 
-      echo '<article><div class="cat-result"><span class="topic-link"><a href="'.get_term_link($category->term_id, 'category').'">' . $category->name . '</a>' . $count . '</span></div></article>';
+      echo '<article><div class="cat-result"><span class="topic-link"><a href="'.get_term_link($category->term_id, 'category').'" class="search-category-title">' . $category->name . '</a>' . $count . '</span></div></article>';
     }
     $categories_output = ob_get_clean();
 
@@ -222,14 +222,25 @@ if ( !empty($search_query) ):
 endif; ?>
 
 <div class="front-page-section popular-search">
+  <div class="container">
+      <div class="row xs-m-b-6">
+        <div class="col-sm-12 text-center">
+            <h3>Didn't find what you were looking for?</h3>
+            <h6>Try a search another above or take a look at the popular topics or terms below</h6>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="front-page-section popular-search">
 	<div class="container xs-m-b-3">
 			<div class="row xs-m-b-2">
-					<div class="col-xs-6">
+					<div class="col-xs-12">
 						<h6 class="text-uppercase">Popular Topics</span>
 					</div>
-					<div class="col-xs-6 text-right">
-						<span class="text-uppercase">ALL</span>
-					</div>
+          <div class="col-xs-12">
+            <hr/>
+          </div>
 			</div>
 			<div class="row">
 			<?php
@@ -264,12 +275,15 @@ endif; ?>
 	<div class="front-page-section popular-search">
 		<div class="container">
 				<div class="row xs-m-b-2">
-						<div class="col-xs-6">
-							<h6 class="text-uppercase">From the Glossary</span>
-						</div>
-						<div class="col-xs-6 text-right">
-							<span class="text-uppercase">ALL</span>
-						</div>
+            <div class="col-xs-6">
+              <h6 class="text-uppercase">Popular Glossary Terms</h6>
+            </div>
+            <div class="col-xs-6 text-right">
+              <a href="<?php echo home_url(); ?>/glossary" class="all-button"> VIEW ALL</a>
+            </div>
+            <div class="col-xs-12">
+              <hr/>
+            </div>
 				</div>
 					<div class="row">
 								<div class="col-xs-12">
