@@ -30,7 +30,7 @@
        <div class="row md-bottom">
 	      <div class="col-sm-12">
 	         <hr/>
-	         <h3 class="section-title">Upcoming Events</h3>
+	         <h3 class="section-title">Upcoming</h3>
 	      </div>
        </div>
     </div>
@@ -58,11 +58,11 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container xs-m-t-6">
        <div class="row md-bottom">
 	      <div class="col-sm-12">
 	         <hr/>
-	         <h3 class="section-title">Past Events</h3>
+	         <h3 class="section-title">Past</h3>
 	      </div>
        </div>
     </div>

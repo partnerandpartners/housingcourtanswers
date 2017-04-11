@@ -17,76 +17,74 @@
    <div class="top-section">
 	  <div class="container">
 	   <div class="row">
-		   <div class="col-md-8 col-md-offset-2 text-center">
+		   <div class="col-md-7">
 				<h1 class="category-title"><?php the_title(); ?></h1>
-				<h5 class="category-description"><?php the_content(); ?></h5>
+				<div class="main-lead"><?php the_content(); ?></div>
 		   </div>
+       <div class="col-sm-4 col-sm-offset-1">
+         <div class="xs-m-b-3">
+         <h5 class="section-title xs-m-b-1">Housing Court Hotline</h5>
+         <?php the_field('hotline'); ?>
+         </div>
+       </div>
 	    </div>
 	  </div>
 	</div>
 <?php endwhile; ?>
 <?php endif; ?>
-	
+
 <div class="container">
-	<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<div class="row xs-m-b-3">
-				<div class="col-sm-5">
-					<div class="xs-m-b-3">
-					<h5 class="section-title xs-m-b-1">Housing Court Hotline</h5>
-					<?php the_field('hotline'); ?>
-					</div>
-				</div>
-				<div class="col-sm-7">
-					<div class="assistance">
-					<h5 class="section-title">Hotline Assistance</h5>
-					<?php the_field('back_rent'); ?>
-					</div>
-				</div>
+  <div class="row xs-m-b-3">
+	<div class="col-md-12">
+      <hr/>
+      <div class="category-page-section highlight">
+      <h3 class="section-title">Hotline Assistance</h3>
+      <div class="lead xs-m-b-2"><?php the_field('back_rent'); ?></div>
 			</div>
-		</div>
 	</div>
-	
+  </div>
+
 	<div class="row md-bottom">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12">
+      <hr/>
 			<div class="category-page-section highlight">
-			<h5 class="sub-title">Visit Our Information Tables</h5>
-			<?php the_field('information_tables'); ?>
-			
-			<?php if( have_rows('locations') ): 
+			<h3 class="section-title">Visit Our Information Tables</h3>
+			<div class="lead xs-m-b-2"><?php the_field('information_tables'); ?></div>
+
+			<?php if( have_rows('locations') ):
 						    $rowCounter = 0;
 			?>
 			<div class="row xs-m-b-3">
-				
-				<div class="col-sm-12 xs-m-1-3 xs-m-b-2"><span class="section-header">Table Locations</span></div>
-				
-				<?php while( have_rows('locations') ): the_row(); 
-			
+
+				<div class="col-sm-12 xs-m-b-2"><h6 class="text-uppercase">Table Locations</h6></div>
+
+				<?php while( have_rows('locations') ): the_row();
+
 					// vars
 					$borough = get_sub_field('borough');
 					$address = get_sub_field('address');
 					$schedule = get_sub_field('schedule');
-					
+
 					?>
-					
-					<div class="col-sm-6">
-						
+
+					<div class="col-sm-4">
+
 						<span class="small-header"><?php echo $borough; ?></span>
 						<?php echo $address; ?>
 						<?php echo $schedule; ?>
-			
+
 					</div>
-					
-					<?php 
+
+					<?php
 					$rowCounter++;
-					if($rowCounter==2){
+					if($rowCounter==3){
 						echo('</div><div class="row xs-m-b-2">');//new row at 3rd post.
 						$rowCounter = 0;
 					}
 					?>
-			
+
 				<?php endwhile; ?>
-				
+
 				</div>
 			<?php endif; ?>
 			</div>

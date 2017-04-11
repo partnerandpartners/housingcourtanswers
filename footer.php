@@ -13,7 +13,7 @@
 	    <div class="call-us">
 			<h4>I Need a Lawyer</h4>
 			<p class="xs-m-b-2">Find legal help from our list of attorneys and firms.</p>
-			<a href="#" class="btn btn-lg">Find Legal Help</a>
+			<a href="<?php echo home_url(); ?>/resources-links/#lawyers" class="btn btn-lg">Find Legal Help</a>
 		</div>
       </div>
      </div>
@@ -39,7 +39,7 @@
      <span class="small-header">Donate</span>
 	      <div class="donate text-center">
 		      <h6 class="normal-weight xs-m-b-2">Please support us to support you.</h6>
-		      <a href="#" class="btn btn-default" target="_blank">Donate</a>
+		      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KYVF77625YDKL" class="btn btn-default" target="_blank">Donate</a>
 		    </div>
       </div>
     <div class="col-sm-6 xs-m-b-2">
@@ -58,8 +58,8 @@
 	     <span class="design-credit">Design and Development by <a href="" target="_blank">Partner & Partners</a></span>
     </div>
   </div>
-  <!-- <div class="container footer-buildings">
-  </div> -->
+  <div class="container footer-buildings">
+  </div>
 </footer>
 
 <?php wp_footer(); ?>
