@@ -359,9 +359,14 @@ h5.category-description p {
 	text-align: right;
 }
 
-.all-button {
+a.all-button {
 	font-size: $font-size-xl;
 	color: $hca-blue;
+	&:hover,
+	&:active,
+	&:focus {
+		opacity: .7;
+	}
 }
 
 .search-results a.more-link {

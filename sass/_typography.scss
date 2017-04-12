@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
   line-height: $headings-line-height;
   font-family: $headings-font-family;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 h1, .h1 {
@@ -82,7 +82,7 @@ h6, .h6 {
 .lead {
   font-size: $lead-font-size;
   font-family: 'GrotesqueMT', sans-serif;
-font-weight: normal;
+  font-weight: normal;
 }
 
 .large-main-lead {
