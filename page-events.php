@@ -26,68 +26,124 @@
 
 <?php endif; ?>
 
-    <div class="container">
-       <div class="row md-bottom">
-	      <div class="col-sm-12">
-	         <hr/>
-	         <h3 class="section-title">Upcoming</h3>
-	      </div>
-       </div>
+<div class="container xs-m-t-6">
+    <div class="row md-bottom">
+      <div class="col-sm-12">
+         <hr/>
+         <h3 class="section-title">Upcoming</h3>
+      </div>
     </div>
+</div>
 
-	<div class="container">
-		<div class="row md-bottom">
-		<?php
-			$columns_printed = 0;
-			$num_posts_printed = 0;
-			$events_query = hca_get_upcoming_events_query();
-			if( $events_query->have_posts() ) {
-				while( $events_query->have_posts() ){
-					$events_query->the_post();
-					get_template_part('templates/event');
-					$columns_printed++;
-					$num_posts_printed++;
-					if( $columns_printed == 3 && $num_posts_printed != $events_query->found_posts ) {
-						echo '</div><div class="row md-bottom">';
-            $columns_printed = 0;
-					}
-				}
-			}
+<div class="container">
+  <div class="row md-bottom">
+    <?php
+    $current_timestamp = current_time('timestamp');
+    $args = array(
+      'post_type' => array('event'),
+      'posts_per_page' => -1,
+      'order' => 'DESC'
+    );
 
-		?>
-		</div>
-	</div>
+    $upcoming_events_query = new WP_Query( $args );
 
-	<div class="container xs-m-t-6">
-       <div class="row md-bottom">
-	      <div class="col-sm-12">
-	         <hr/>
-	         <h3 class="section-title">Past</h3>
-	      </div>
-       </div>
+    if( $upcoming_events_query->have_posts() ) {
+      while( $upcoming_events_query->have_posts() ){
+        $upcoming_events_query->the_post();
+        $end_date_field = get_field('end_date');
+        if ($end_date_field >= $current_timestamp) {
+
+        ?>
+
+          <article <?php post_class( 'col-md-4 xs-m-b-3 md-m-b-3 xs-m-t-3 md-m-t-3' ); ?>>
+          		<span class="borough-badge"><?php the_category( '&#58; ' ); ?></span>
+          		<h6 class="event-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+          		<div class="secondary-type xs-m-b-1"><?php the_field( 'subtitle'); ?></div>
+          		<div class="news-event-meta">
+          			<span class="small-header">When</span>
+          			<div class="event-data xs-m-b-1">
+          				<?php the_field( 'exact_date'); ?>
+          			</div>
+          			<span class="small-header">Where</span>
+          			<div class="event-data">
+          				<?php the_field( 'address'); ?>
+          			</div>
+
+          			<?php $current_timestamp = current_time('timestamp');
+          			echo ('end date: '); the_field( 'end_date');
+          			echo ('<br/>');
+          			echo ('current time: '); echo $current_timestamp;
+          			?>
+          		</div>
+          </article>
+
+
+        <?php  }
+      }
+    }
+    wp_reset_query();
+    ?>
+  </div>
+</div>
+
+<div class="container xs-m-t-6">
+    <div class="row md-bottom">
+      <div class="col-sm-12">
+         <hr/>
+         <h3 class="section-title">Past</h3>
+      </div>
     </div>
+</div>
 
-	<div class="container">
-		<div class="row md-bottom">
-		<?php
-			$columns_printed = 0;
-			$num_posts_printed = 0;
-			$events_query = hca_get_past_events_query();
-			if( $events_query->have_posts() ) {
-				while( $events_query->have_posts() ){
-					$events_query->the_post();
-					get_template_part('templates/event');
-					$columns_printed++;
-					$num_posts_printed++;
-					if( $columns_printed === 3 && $num_posts_printed != $events_query->found_posts ) {
-						echo '</div><div class="row md-bottom">';
-            $columns_printed = 0;
-					}
-				}
-			}
+<div class="container">
+  <div class="row md-bottom">
+    <?php
+    $current_timestamp = current_time('timestamp');
+    $args = array(
+      'post_type' => array('event'),
+      'posts_per_page' => -1,
+      'order' => 'DESC'
+    );
 
-		?>
-		</div>
-	</div>
+    $upcoming_events_query = new WP_Query( $args );
+
+    if( $upcoming_events_query->have_posts() ) {
+      while( $upcoming_events_query->have_posts() ){
+        $upcoming_events_query->the_post();
+        $end_date_field = get_field('end_date');
+        if ($end_date_field < $current_timestamp) {
+
+        ?>
+
+          <article <?php post_class( 'col-md-4 xs-m-b-3 md-m-b-3 xs-m-t-3 md-m-t-3' ); ?>>
+          		<span class="borough-badge"><?php the_category( '&#58; ' ); ?></span>
+          		<h6 class="event-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+          		<div class="secondary-type xs-m-b-1"><?php the_field( 'subtitle'); ?></div>
+          		<div class="news-event-meta">
+          			<span class="small-header">When</span>
+          			<div class="event-data xs-m-b-1">
+          				<?php the_field( 'exact_date'); ?>
+          			</div>
+          			<span class="small-header">Where</span>
+          			<div class="event-data">
+          				<?php the_field( 'address'); ?>
+          			</div>
+
+          			<?php $current_timestamp = current_time('timestamp');
+          			echo ('end date: '); the_field( 'end_date');
+          			echo ('<br/>');
+          			echo ('current time: '); echo $current_timestamp;
+          			?>
+          		</div>
+          </article>
+
+
+        <?php  }
+      }
+    }
+    wp_reset_query();
+    ?>
+  </div>
+</div>
 
 <?php get_footer();?>

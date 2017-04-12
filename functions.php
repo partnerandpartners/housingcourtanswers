@@ -204,10 +204,10 @@ function hca_get_upcoming_events_query() {
 	$args = array(
 		'post_type' => array('event'),
 		'posts_per_page' => -1,
-		'meta_key' => 'end_date',
-		'meta_compare' => '>=',
 		'meta_value' => $current_timestamp,
 		'orderby' => 'meta_value_num',
+		'meta_key' => 'end_date',
+		'meta_compare' => '>=',
 		'order' => 'DESC'
 	);
 
@@ -218,14 +218,15 @@ function hca_get_upcoming_events_query() {
 
 function hca_get_upcoming_events_home_query() {
 	$current_timestamp = current_time('timestamp');
+	$end_date_field = get_field('end_date');
 
 	$args = array(
 		'post_type' => array('event'),
 		'posts_per_page' => 3,
-		'meta_key' => 'end_date',
-		'meta_compare' => '>=',
 		'meta_value' => $current_timestamp,
 		'orderby' => 'meta_value_num',
+		'meta_key' => $end_date_field,
+		'meta_compare' => '>',
 		'order' => 'DESC'
 	);
 
@@ -236,14 +237,15 @@ function hca_get_upcoming_events_home_query() {
 
 function hca_get_past_events_query() {
 	$current_timestamp = current_time('timestamp');
+	$end_date_field = get_field('end_date');
 
 	$args = array(
 		'post_type' => array('event'),
 		'posts_per_page' => -1,
-		'meta_key' => 'end_date',
-		'meta_compare' => '<',
 		'meta_value' => $current_timestamp,
 		'orderby' => 'meta_value_num',
+		'meta_key' => $end_date_field,
+		'meta_compare' => '<',
 		'order' => 'DESC'
 	);
 
@@ -252,8 +254,7 @@ function hca_get_past_events_query() {
 	return $past_events_query;
 }
 
-		function hca_get_news_query() {
-	$current_timestamp = time();
+function hca_get_news_query() {
 
 	$args = array(
 		'post_type' => array('news'),
@@ -266,8 +267,7 @@ function hca_get_past_events_query() {
 	return $news_query;
 		}
 
-		function hca_get_recent_news_query() {
-	$current_timestamp = time();
+function hca_get_recent_news_query() {
 
 	$args = array(
 		'post_type' => array('news'),

@@ -103,7 +103,7 @@ if( have_posts() ) {
 
 	<div class="front-page-section popular-search">
 		<div class="container">
-				<div class="row xs-m-b-2">
+				<div class="row">
 						<div class="col-xs-7">
 							<h6 class="text-uppercase">Popular Terms</span>
 						</div>
@@ -150,11 +150,17 @@ if( have_posts() ) {
 			$events_query = hca_get_upcoming_events_home_query();
 			if( $events_query->have_posts() ) {
 		?>
-			<div class="row xs-m-b-2">
-				<div class="col-sm-12 text-center">
-					<h6 class="text-uppercase">Upcoming Events</h6>
+		<div class="row">
+				<div class="col-xs-7">
+					<h6 class="text-uppercase">Upcoming Events</span>
 				</div>
-			</div>
+				<div class="col-xs-5 text-right">
+					<a href="<?php echo home_url(); ?>/events" class="all-button">VIEW ALL</a>
+				</div>
+				<div class="col-xs-12">
+					<hr/>
+				</div>
+		</div>
 			<div class="row">
 				<?php while( $events_query->have_posts() ){
 							$events_query->the_post();

@@ -1,7 +1,7 @@
 </section>
 <footer>
  <div class="container md-m-t-6">
-   <div class="row md-m-b-3">
+   <div class="row md-m-b-2">
      <div class="col-sm-6 text-center">
        <div class="help-resources">
 			<h4>Helpful Resources</h4>
@@ -17,7 +17,7 @@
 		</div>
       </div>
      </div>
-  <div class="row md-m-b-3">
+  <div class="row md-m-b-2">
      <div class="col-sm-3">
 	 <span class="small-header">Navigation</span>
 		 <div class="footer-nav">
@@ -50,7 +50,7 @@
            </div>
       </div>
   </div>
-  <div class="row md-m-b-3">
+  <div class="row">
     <div class="col-md-6 xs-m-b-2">
       <span class="copyright-credit">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
     </div>

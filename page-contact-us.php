@@ -39,7 +39,7 @@
       <hr/>
       <div class="category-page-section highlight">
       <h3 class="section-title">Hotline Assistance</h3>
-      <div class="lead xs-m-b-2"><?php the_field('back_rent'); ?></div>
+      <div class="lead xs-m-b-2"><?php the_field('hotline_assistance'); ?></div>
 			</div>
 	</div>
   </div>
@@ -56,22 +56,30 @@
 			?>
 			<div class="row xs-m-b-3">
 
-				<div class="col-sm-12 xs-m-b-2"><h6 class="text-uppercase">Table Locations</h6></div>
+				<div class="col-sm-12 xs-m-b-2">
+          <h6 class="text-uppercase">Table Locations</h6>
+          <hr/>
+        </div>
 
 				<?php while( have_rows('locations') ): the_row();
-
 					// vars
 					$borough = get_sub_field('borough');
 					$address = get_sub_field('address');
+          $addresslink = get_sub_field('address_link');
+          $locationinbuilding = get_sub_field('location_in_building');
 					$schedule = get_sub_field('schedule');
-
+					$schedulenotes = get_sub_field('schedule_notes');
 					?>
 
 					<div class="col-sm-4">
 
-						<span class="small-header"><?php echo $borough; ?></span>
-						<?php echo $address; ?>
-						<?php echo $schedule; ?>
+						<h5 class="table-borough"><?php echo $borough; ?></h5>
+						<div class="address">
+              <a href="<?php echo $addresslink; ?>" class="address-link"><?php echo $address; ?></a>
+              <?php echo $locationinbuilding; ?>
+            </div>
+						<div class="table-schedule"><?php echo $schedule; ?></div>
+            <div class="table-schedule-notes"><?php echo $schedulenotes; ?></div>
 
 					</div>
 
