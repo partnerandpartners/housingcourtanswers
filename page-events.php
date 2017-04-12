@@ -36,7 +36,7 @@
 </div>
 
 <div class="container">
-  <div class="row md-bottom">
+  <div class="row">
     <?php
     $current_timestamp = current_time('timestamp');
     $args = array(
@@ -46,7 +46,7 @@
     );
 
     $upcoming_events_query = new WP_Query( $args );
-
+    $rowCounter = 0;
     if( $upcoming_events_query->have_posts() ) {
       while( $upcoming_events_query->have_posts() ){
         $upcoming_events_query->the_post();
@@ -68,17 +68,16 @@
           			<div class="event-data">
           				<?php the_field( 'address'); ?>
           			</div>
-
-          			<?php $current_timestamp = current_time('timestamp');
-          			echo ('end date: '); the_field( 'end_date');
-          			echo ('<br/>');
-          			echo ('current time: '); echo $current_timestamp;
-          			?>
           		</div>
           </article>
 
-
-        <?php  }
+        <?php
+        $rowCounter++;
+        if($rowCounter==3){
+          echo('</div><div class="row">');//new row at 3rd post.
+          $rowCounter = 0;
+          }
+        }
       }
     }
     wp_reset_query();
@@ -96,7 +95,7 @@
 </div>
 
 <div class="container">
-  <div class="row md-bottom">
+  <div class="row">
     <?php
     $current_timestamp = current_time('timestamp');
     $args = array(
@@ -106,6 +105,7 @@
     );
 
     $upcoming_events_query = new WP_Query( $args );
+    $rowCounter = 0;
 
     if( $upcoming_events_query->have_posts() ) {
       while( $upcoming_events_query->have_posts() ){
@@ -128,17 +128,17 @@
           			<div class="event-data">
           				<?php the_field( 'address'); ?>
           			</div>
-
-          			<?php $current_timestamp = current_time('timestamp');
-          			echo ('end date: '); the_field( 'end_date');
-          			echo ('<br/>');
-          			echo ('current time: '); echo $current_timestamp;
-          			?>
           		</div>
           </article>
 
 
-        <?php  }
+        <?php
+        $rowCounter++;
+        if($rowCounter==3){
+          echo('</div><div class="row">');//new row at 3rd post.
+          $rowCounter = 0;
+          }
+        }
       }
     }
     wp_reset_query();
