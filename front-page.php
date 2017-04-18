@@ -144,32 +144,71 @@ if( have_posts() ) {
 	</div>
 
 
-<div class="front-page-section upcoming-events">
-	<div class="container">
-		<?php
-			$events_query = hca_get_upcoming_events_home_query();
-			if( $events_query->have_posts() ) {
-		?>
-		<div class="row">
-				<div class="col-xs-7">
-					<h6 class="text-uppercase">Upcoming Events</span>
-				</div>
-				<div class="col-xs-5 text-right">
-					<a href="<?php echo home_url(); ?>/events" class="all-button">VIEW ALL</a>
-				</div>
-				<div class="col-xs-12">
-					<hr/>
-				</div>
-		</div>
-			<div class="row">
-				<?php while( $events_query->have_posts() ){
-							$events_query->the_post();
-							get_template_part('templates/event');
-						} ?>
+<div class="container xs-m-t-6">
+	<div class="row">
+			<div class="col-xs-8">
+				<h6 class="text-uppercase">Upcoming Events</span>
 			</div>
-			<?php	}	?>
+			<div class="col-xs-4 text-right">
+				<a href="<?php echo home_url(); ?>/events" class="all-button">VIEW ALL</a>
+			</div>
+			<div class="col-xs-12">
+				<hr/>
+			</div>
 	</div>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <?php
+    $current_timestamp = current_time('timestamp');
+    $args = array(
+      'post_type' => array('event'),
+      'posts_per_page' => 3,
+      'order' => 'DESC'
+    );
+
+    $upcoming_events_query = new WP_Query( $args );
+    $rowCounter = 0;
+    if( $upcoming_events_query->have_posts() ) {
+      while( $upcoming_events_query->have_posts() ){
+        $upcoming_events_query->the_post();
+        $end_date_field = get_field('end_date');
+        if ($end_date_field >= $current_timestamp) {
+
+        ?>
+
+          <article <?php post_class( 'col-md-4 xs-m-b-3 md-m-b-3 xs-m-t-3 md-m-t-3' ); ?>>
+          		<span class="borough-badge"><?php the_category( '&#58; ' ); ?></span>
+          		<h6 class="event-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+          		<div class="secondary-type xs-m-b-1"><?php the_field( 'subtitle'); ?></div>
+          		<div class="news-event-meta">
+          			<span class="small-header">When</span>
+          			<div class="event-data xs-m-b-1">
+          				<?php the_field( 'exact_date'); ?>
+          			</div>
+          			<span class="small-header">Where</span>
+          			<div class="event-data">
+          				<?php the_field( 'address'); ?>
+          			</div>
+          		</div>
+          </article>
+
+        <?php
+        $rowCounter++;
+        if($rowCounter==3){
+          echo('</div><div class="row">');//new row at 3rd post.
+          $rowCounter = 0;
+          }
+        }
+      }
+    }
+    wp_reset_query();
+    ?>
+  </div>
+</div>
+
 
 <div class="front-page-section featured-event md-m-y-3 xs-m-y-2">
 	<div class="container">
@@ -194,10 +233,16 @@ if( have_posts() ) {
 	<div class="container">
 		<?php	$news_query = hca_get_recent_news_query();
 			if( $news_query->have_posts() ) { ?>
-			<div class="row md-m-b-2 xs-m-b-2">
-				<div class="col-sm-12">
-					<h6 class="text-uppercase">News &amp; Campaigns</h6>
-				</div>
+			<div class="row">
+					<div class="col-xs-8">
+						<h6 class="text-uppercase">News & Campaigns</span>
+					</div>
+					<div class="col-xs-4 text-right">
+						<a href="<?php echo home_url(); ?>/news" class="all-button">VIEW ALL</a>
+					</div>
+					<div class="col-xs-12">
+						<hr/>
+					</div>
 			</div>
 			<div class="row">
 				<?php while( $news_query->have_posts() ) {

@@ -11,11 +11,5 @@
 			<div class="event-data">
 				<?php the_field( 'address'); ?>
 			</div>
-
-			<?php $current_timestamp = current_time('timestamp');
-			echo ('end date: '); the_field( 'end_date');
-			echo ('<br/>');
-			echo ('current time: '); echo $current_timestamp;
-			?>
 		</div>
 </article>
