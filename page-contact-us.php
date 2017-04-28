@@ -71,7 +71,7 @@
 					$schedulenotes = get_sub_field('schedule_notes');
 					?>
 
-					<div class="col-sm-4">
+					<div class="col-sm-4 xs-m-t-2">
 
 						<h5 class="table-borough"><?php echo $borough; ?></h5>
 						<div class="address">
