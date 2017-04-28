@@ -21,7 +21,7 @@
 				<h1 class="category-title"><?php the_title(); ?></h1>
 				<div class="main-lead"><?php the_content(); ?></div>
 		   </div>
-       <div class="col-sm-4 col-sm-offset-1">
+       <div class="col-sm-4 xs-m-t-3 col-sm-offset-1">
          <div class="xs-m-b-3">
          <h5 class="section-title xs-m-b-1">Housing Court Hotline</h5>
          <?php the_field('hotline'); ?>
