@@ -54,7 +54,7 @@
 			<?php if( have_rows('locations') ):
 						    $rowCounter = 0;
 			?>
-			<div class="row xs-m-b-3">
+			<div class="row">
 
 				<div class="col-sm-12 xs-m-b-2">
           <h6 class="text-uppercase">Table Locations</h6>
