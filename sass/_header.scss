@@ -96,11 +96,13 @@ body {
   font-size: $font-size-md;
   text-transform: uppercase;
   margin-right: 30px;
+  	&:hover {
+  	border-bottom: solid 3px;
+  }
   &>a {
     padding: 15px 0px 3px 0;
     &:hover {
         background-color: transparent;
-        border-bottom: solid 3px;
         outline: none;
     }
   }
@@ -108,11 +110,10 @@ body {
     margin-right: 0px;
   }
   &.current-menu-item, &.current-category-ancestor, &.current-post-ancestor, &.current-menu-ancestor {
-    border-bottom: solid 3px;
+    border-bottom: 3px solid #000;
     opacity: 1;
     &:hover {
         background-color: transparent;
-        border-bottom: transparent;
     }
   }
 }

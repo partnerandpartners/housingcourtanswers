@@ -617,7 +617,7 @@ a[rel="tag"]{
 	}
 
 	.main-lead {
-    font-size: 18px;
+    font-size: 20px;
 	}
 
 	.lead {
@@ -628,6 +628,25 @@ a[rel="tag"]{
 	    background-color: transparent;
 			color: $brand-primary;
 	}
+	
+	.navbar-nav>li {
+		&>a {
+		&:hover {
+        border-bottom: none;
+        outline: none;
+		}
+	}
+  	&:last-of-type {
+  	}
+  	&.current-menu-item, &.current-category-ancestor, &.current-post-ancestor, &.current-menu-ancestor {
+    border-bottom: none;
+    opacity: 1;
+    &:hover {
+        background-color: transparent;
+    }
+  }
+}
+
 
 	.current-menu-ancestor .dropdown-menu {
 		background-color: transparent;
