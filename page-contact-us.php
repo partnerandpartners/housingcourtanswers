@@ -86,7 +86,7 @@
 					<?php
 					$rowCounter++;
 					if($rowCounter==3){
-						echo('</div><div class="row xs-m-b-2">');//new row at 3rd post.
+						echo('</div><div class="row">');//new row at 3rd post.
 						$rowCounter = 0;
 					}
 					?>
