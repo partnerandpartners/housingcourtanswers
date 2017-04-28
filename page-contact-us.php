@@ -44,7 +44,7 @@
 	</div>
   </div>
 
-	<div class="row md-bottom">
+	<div class="row xs-m-b-3">
 		<div class="col-md-12">
       <hr/>
 			<div class="category-page-section highlight">
@@ -56,7 +56,7 @@
 			?>
 			<div class="row">
 
-				<div class="col-sm-12 xs-m-b-2">
+				<div class="col-sm-12">
           <h6 class="text-uppercase">Table Locations</h6>
           <hr/>
         </div>
@@ -71,7 +71,7 @@
 					$schedulenotes = get_sub_field('schedule_notes');
 					?>
 
-					<div class="col-sm-4 xs-m-t-2">
+					<div class="col-sm-4 xs-m-t-3">
 
 						<h5 class="table-borough"><?php echo $borough; ?></h5>
 						<div class="address">
