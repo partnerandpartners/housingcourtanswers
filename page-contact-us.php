@@ -39,7 +39,7 @@
       <hr/>
       <div class="category-page-section highlight">
       <h3 class="section-title">Hotline Assistance</h3>
-      <div class="lead xs-m-b-2"><?php the_field('hotline_assistance'); ?></div>
+      <div class="lead links-post-content xs-m-b-2"><?php the_field('hotline_assistance'); ?></div>
 			</div>
 	</div>
   </div>
@@ -49,7 +49,7 @@
       <hr/>
 			<div class="category-page-section highlight">
 			<h3 class="section-title">Visit Our Information Tables</h3>
-			<div class="lead xs-m-b-2"><?php the_field('information_tables'); ?></div>
+			<div class="lead links-post-content xs-m-b-2"><?php the_field('information_tables'); ?></div>
 
 			<?php if( have_rows('locations') ):
 						    $rowCounter = 0;
