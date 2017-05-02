@@ -169,7 +169,7 @@ $cloudies-time: 45s;
     &#cloud-center{
       left: 345px;
       width: 170px;
-      top:0;
+      top:-20px;
       animation-duration: $cloudies-time;
       animation-name: cloudies;
       animation-iteration-count: infinite;
@@ -179,7 +179,7 @@ $cloudies-time: 45s;
     &#cloud-right{
       left: 520px;
       width: 100px;
-      top:45px;
+      top:-25px;
       animation-duration: $cloudies-time;
       animation-name: cloudies;
       animation-iteration-count: infinite;

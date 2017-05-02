@@ -25,7 +25,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 <div class="container-fluid full bg green">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-7 md-m-b-3">
 					<div class="header-image-left hidden-sm hidden-xs" style="">
 						<img class="img-responsive hidden-sm hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-left.png" />
 						<img class="clouds hidden-sm hidden-xs" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />

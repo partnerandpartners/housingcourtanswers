@@ -17,8 +17,8 @@
 		</div>
       </div>
      </div>
-  <div class="row md-m-b-2">
-     <div class="col-sm-3">
+  <div class="row">
+     <div class="col-sm-3 xs-m-b-2">
 	 <span class="small-header">Navigation</span>
 		 <div class="footer-nav">
 		 <?php
@@ -55,7 +55,7 @@
       <span class="copyright-credit">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
     </div>
     <div class="col-md-6 xs-m-b-2 design-credit">
-	     <span class="design-credit">Design and Development by <a href="" target="_blank">Partner & Partners</a></span>
+	     <span class="design-credit">Design and Development by <a class="tip-link" href="" target="_blank">Partner & Partners</a></span>
     </div>
   </div>
   <div class="container footer-buildings">

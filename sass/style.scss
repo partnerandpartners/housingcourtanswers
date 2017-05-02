@@ -436,6 +436,17 @@ a[rel="next"] {
   }
 }
 
+ul#menu-footer li a {
+    font-size: 18px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 3px;
+    line-height: 2;
+		&:hover {
+			color: $hca-blue;
+			border-bottom: 2px solid $hca-blue;
+		}
+}
+
 .first-table-row {
 	text-transform: uppercase;
 	display: table;
@@ -628,7 +639,7 @@ a[rel="tag"]{
 	    background-color: transparent;
 			color: $brand-primary;
 	}
-	
+
 	.navbar-nav>li {
 		&>a {
 		&:hover {
@@ -705,5 +716,26 @@ a[rel="tag"]{
 	}
 	.badge {
 	  display: none;
+	}
+	.full, .top-section {
+		padding-top: 10em;
+	}
+	.category-title-section {
+		padding-top: 10em;
+	}
+	.header-image-right {
+	  height: 400px !important;
+	  img.main-image {
+	    width: 100% !important;
+	    height: auto !important;
+	    top: 55px !important;
+	    left: 0px !important;
+	  }
+	}
+	.navbar-nav>li:hover {
+    border-bottom: none !important;
+	}
+	.entry-content {
+    font-size: 18px;
 	}
 }
