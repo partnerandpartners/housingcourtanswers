@@ -436,17 +436,6 @@ a[rel="next"] {
   }
 }
 
-ul#menu-footer li a {
-    font-size: 18px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 3px;
-    line-height: 2;
-		&:hover {
-			color: $hca-blue;
-			border-bottom: 2px solid $hca-blue;
-		}
-}
-
 .first-table-row {
 	text-transform: uppercase;
 	display: table;
