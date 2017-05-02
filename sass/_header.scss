@@ -159,7 +159,7 @@ $cloudies-time: 45s;
     &#cloud-left{
       left: 165px;
       width: 100px;
-      top:10px;
+      top:-10px;
       animation-duration: $cloudies-time;
       animation-name: cloudies;
       animation-iteration-count: infinite;
