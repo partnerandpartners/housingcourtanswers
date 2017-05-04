@@ -82,7 +82,7 @@
    <div class="row">
       <div class="col-sm-12 xs-m-b-3" role="main">
       	<hr/>
-	  	<h5 class="tag-count-text"><span class="badge">No tips</span> to display for "<?php echo single_tag_title( '', false ); ?>"</h5>
+	  	<h5 class="tag-count-text"><span class="large-badge">No tips</span> to display for "<?php echo single_tag_title( '', false ); ?>"</h5>
 	  </div>
    </div>
 </div>
