@@ -15,7 +15,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="full">
+<div class="full glossary">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center">
