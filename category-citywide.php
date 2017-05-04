@@ -14,14 +14,16 @@
 <?php if ( have_posts() ): ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-    <div class="container full">
-		<div class="row md-bottom">
-		   <div class="col-md-8 col-md-offset-2 text-center">
-		      <h1 class="category-title"><?php the_title(); ?></h1>
-		      <h5 class="category-description"><?php the_content(); ?></h5>
-		   </div>
-		</div>
-	</div>
+    <div class="full">
+      <div class="container">
+    		<div class="row md-bottom">
+    		   <div class="col-md-8 col-md-offset-2 text-center">
+    		      <span class="large-borough-badge"><?php echo single_cat_title( '', false ); ?></span>
+    		      <h5 class="category-description"><?php echo category_description(); ?></h5>
+    		   </div>
+    		</div>
+    	</div>
+    </div>
 <?php endwhile; ?>
 
 <?php endif; ?>
@@ -41,6 +43,7 @@
     $current_timestamp = current_time('timestamp');
     $args = array(
       'post_type' => array('event'),
+      'category_name' => 'Citywide',
       'posts_per_page' => -1,
       'order' => 'DESC'
     );
@@ -100,6 +103,7 @@
     $current_timestamp = current_time('timestamp');
     $args = array(
       'post_type' => array('event'),
+      'category_name' => 'Citywide',
       'posts_per_page' => -1,
       'order' => 'DESC'
     );
