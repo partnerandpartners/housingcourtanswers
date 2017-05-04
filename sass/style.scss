@@ -629,6 +629,10 @@ a[rel="tag"]{
     font-size: 32px;
 	}
 
+	.navbar-nav>li:hover {
+		border: none;
+	}
+
 	.dropdown-menu .active a, .dropdown-menu .active a:hover, .dropdown-menu .active a:focus {
 	    background-color: transparent;
 			color: $brand-primary;
