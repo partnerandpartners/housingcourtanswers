@@ -39,11 +39,11 @@ function housing_court_print_category_posts_tree( $category_id, $is_parent = fal
     }
 
     echo '<span class="anchor" id="' . $category->slug . '"></span><hr/>';
-    echo '<div class="category-page-section"><div class="row md-m-b-3"><div class="col-xs-12 xs-m-b-3 md-m-b-0">';
+    echo '<div class="category-page-section"><div class="row md-m-b-3"><div class="col-xs-12 md-m-b-3">';
 
     echo $current_section;
 
-    echo '</div></div><div class="row md-m-b-2">';
+    echo '</div></div><div class="row md-m-b-3">';
 
     while( $category_posts_query->have_posts() ) {
       $category_posts_query->the_post();
