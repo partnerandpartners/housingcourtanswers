@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Events Citywide
+ * Template Name: Events Queens
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
