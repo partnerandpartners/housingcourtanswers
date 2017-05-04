@@ -140,8 +140,8 @@ body.autocomplete-active #autocomplete {
         background-image: url("../img/hca-search-icon.png");
         -webkit-appearance: none;
         border: none;
-        height: 24px;
-        width: 24px;
+        height: 28px;
+        width: 28px;
         background-size: 100%;
         &:focus {
           outline: none;
@@ -160,6 +160,7 @@ body.autocomplete-active #autocomplete {
       padding: 12px;
       line-height: 1;
       border: solid 3px;
+      border-radius: 0px;
       &:focus {
         outline: none;
       }
