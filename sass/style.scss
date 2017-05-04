@@ -265,11 +265,18 @@ h1.single-tag-title {
 	font-weight: normal;
 	color: #fff;
 	line-height: 1;
+	margin-bottom: .325em;
 	vertical-align: middle;
 	white-space: nowrap;
 	text-align: center;
 	background-color: $hca-blue;
 	border-radius: 30px;
+}
+
+p.comments-notes {
+	font-family: "GrotesqueMT",serif;
+  font-size: 21px;
+  margin-bottom: 20px;
 }
 
 .cat-result {
