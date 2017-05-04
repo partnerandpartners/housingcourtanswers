@@ -700,6 +700,17 @@ a[rel="tag"]{
 	.navbar-nav>li>a {
 		padding: 9px 0px 9px 0px;
 	}
+
+	.header-image-right {
+	  height: 320px !important;
+	  img.main-image {
+	    width: 100% !important;
+	    height: auto !important;
+	    top: 55px !important;
+	    left: 0px !important;
+	  }
+	}
+
 }
 
 @media (max-width: 480px) {
@@ -747,15 +758,6 @@ a[rel="tag"]{
 	}
 	.category-title-section {
 		padding-top: 10em;
-	}
-	.header-image-right {
-	  height: 320px !important;
-	  img.main-image {
-	    width: 100% !important;
-	    height: auto !important;
-	    top: 55px !important;
-	    left: 0px !important;
-	  }
 	}
 	.navbar-nav>li:hover {
     border-bottom: none !important;
