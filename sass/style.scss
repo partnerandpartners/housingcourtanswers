@@ -253,6 +253,7 @@ h1.single-tag-title {
 	padding: 6px 10px;
 	border-radius: 12px;
 	margin-bottom: .325em;
+	font-weight: normal;
 }
 
 .cat-result {
@@ -622,6 +623,10 @@ a[rel="tag"]{
 
 	.lead {
     font-size: 18px;
+	}
+
+	h1.article-title {
+    font-size: 32px;
 	}
 
 	.dropdown-menu .active a, .dropdown-menu .active a:hover, .dropdown-menu .active a:focus {
