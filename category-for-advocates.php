@@ -26,7 +26,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7">
-					<div class="header-image-left" style="">
+					<div class="header-image-left hidden-sm hidden-xs" style="">
 						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-advocates-bg-shelf-books.png" />
 					</div>
 					<?php if ( have_posts() ): ?>

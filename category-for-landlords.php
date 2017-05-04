@@ -26,7 +26,7 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7">
-					<div class="header-image-left" style="">
+					<div class="header-image-left hidden-sm hidden-xs" style="">
 						<img class="img-responsive" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-left.png" />
 						<img class="clouds" id="cloud-left" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-left.png" />
 						<img class="clouds" id="cloud-center" style="" src="<?php echo get_template_directory_uri(); ?>/img/clouds/hca-bg-cloud-center.png" />
@@ -39,9 +39,12 @@ $output_array = array('main' => '', 'scrollspy' => '' );
 					<?php endif; ?>
 			</div>
 			<div class="col-md-5">
-				<div class="header-image-right" style="">
+				<div class="header-image-right hidden-sm hidden-xs" style="">
 					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png" />
-					<img class="img-responsive right-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-right.png" />
+					<img class="img-responsive right-image hidden-sm hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-right.png" />
+				</div>
+				<div class="header-image-right hidden-lg hidden-md hidden-sm visible-sm-*" style="">
+					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png" />
 				</div>
 			</div>
 	</div>
