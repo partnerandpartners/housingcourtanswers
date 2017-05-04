@@ -34,7 +34,7 @@
          <?php
          $tag = get_term_by( 'slug', get_query_var('tag'), 'post_tag' );
 
-         ?><h5 class="tag-count-text"><span class="badge"><?php echo $tag->count; ?> Tips</span> relating to "<?php echo single_tag_title( '', false ); ?>"</h5>
+         ?><h5 class="tag-count-text"><span class="large-badge"><?php echo $tag->count; ?> Tips</span> relating to "<?php echo single_tag_title( '', false ); ?>"</h5>
       </div>
    </div>
 </div>

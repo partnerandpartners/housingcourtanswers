@@ -256,6 +256,22 @@ h1.single-tag-title {
 	font-weight: normal;
 }
 
+.large-badge {
+	display: inline-block;
+	min-width: 10px;
+	padding: 8px 12px;
+	font-size: 18px;
+	margin-right: 5px;
+	font-weight: normal;
+	color: #fff;
+	line-height: 1;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-align: center;
+	background-color: $hca-blue;
+	border-radius: 30px;
+}
+
 .cat-result {
 	margin-bottom: 8px;
 }
