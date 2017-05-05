@@ -309,7 +309,7 @@
 		</div>
     <div class="col-md-3 col-md-offset-1">
 			<div id="scroll-nav" role="navigation">
-				<ul class="sub-nav nav hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="520" data-offset-bottom="763">
+				<ul class="sub-nav nav hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="520" data-offset-bottom="838">
 					<li class=""><a href="#what-we-do">What We Do</a></li>
           <li><a href="#history">History</a></li>
           <li><a href="#fighting-for-justice">Fighting for Justice</a></li>

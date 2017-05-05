@@ -538,6 +538,17 @@ body.autocomplete-active .site-content .glossary-label-wrapper {
   border-bottom: 3px solid $brand-primary;
 }
 
+a.footer-link {
+	font-size: $font-size-small;
+	border-bottom: 2px solid #eee;
+	opacity: 0.7;
+  padding-bottom: 1px;
+  line-height: 1.75;
+	&:hover {
+		opacity: 1;
+	}
+}
+
 .letter-table h3 {
   margin-top: 30px;
 }

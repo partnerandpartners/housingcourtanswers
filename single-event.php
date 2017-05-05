@@ -8,7 +8,12 @@
 	<article <?php post_class( 'xs-m-t-2' ); ?>>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-			<div class="xs-m-b-1"><span class="medium-borough-badge"><?php the_category( '&#58; ' ); ?></span></div>
+			<div class="xs-m-b-1"><span class="medium-borough-badge"
+			<?php $categories = get_the_category();
+			if ( ! empty( $categories ) ) {
+					echo $categories[0]->name;
+			}
+			?></span></div>
 			<h2 class="article-title"><?php the_title(); ?></h2>
 			<?php if( get_field('subtitle') ) { ?>
 		    <h5 class="xs-p-b-2"><?php the_field('subtitle'); ?></h5>

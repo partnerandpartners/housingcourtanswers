@@ -43,6 +43,13 @@
   &.yellow {
     background-color: $hca-yellow;
   }
+  &.black {
+    background-color: $brand-primary;
+    color: $white;
+    font-size: $font-size-small;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
 }
 
 .solid {
