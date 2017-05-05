@@ -1,5 +1,10 @@
 $button-padding: $spacer-y/2 $spacer-x * 1.5;
 
+.entry-content .btn {
+  font-size: $font-size-base;
+  font-family: $font-family-sans-serif;
+}
+
 .btn {
   font-size: inherit;
   line-height: inherit;;

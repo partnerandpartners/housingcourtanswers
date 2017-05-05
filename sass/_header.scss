@@ -2,6 +2,10 @@ body {
   padding-top: $navbar-height * 2;
 }
 
+body.logged-in>header.navbar {
+  padding-top: 32px;
+}
+
 .bg {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
