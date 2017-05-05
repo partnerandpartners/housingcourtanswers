@@ -108,7 +108,7 @@ if( have_posts() ) {
 							<h6 class="text-uppercase">Popular Terms</span>
 						</div>
 						<div class="col-xs-5 text-right">
-							<a href="<?php echo home_url(); ?>/glossary" class="all-button">VIEW ALL</a>
+							<a href="<?php echo home_url(); ?>/glossary" class="all-button">SEE ALL</a>
 						</div>
 						<div class="col-xs-12">
 							<hr/>
@@ -151,7 +151,7 @@ if( have_posts() ) {
 				<h6 class="text-uppercase">Upcoming Events</span>
 			</div>
 			<div class="col-xs-4 text-right">
-				<a href="<?php echo home_url(); ?>/events" class="all-button">VIEW ALL</a>
+				<a href="<?php echo home_url(); ?>/events" class="all-button">SEE ALL</a>
 			</div>
 			<div class="col-xs-12">
 				<hr/>
@@ -240,10 +240,10 @@ if( have_posts() ) {
 			if( $news_query->have_posts() ) { ?>
 			<div class="row">
 					<div class="col-xs-8">
-						<h6 class="text-uppercase">News & Campaigns</span>
+						<h6 class="text-uppercase">Recent News</span>
 					</div>
 					<div class="col-xs-4 text-right">
-						<a href="<?php echo home_url(); ?>/news" class="all-button">VIEW ALL</a>
+						<a href="<?php echo home_url(); ?>/news" class="all-button">SEE ALL</a>
 					</div>
 					<div class="col-xs-12">
 						<hr/>
