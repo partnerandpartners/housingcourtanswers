@@ -137,7 +137,7 @@ if( have_posts() ) {
 					<?php the_content(); ?>
 					<a href="<?php echo home_url(); ?>/about-us" class="btn btn-lg xs-m-t-2">Learn More</a>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 xs-m-t-3">
 					<img class="img-responsive main-image" style="" src="<?php echo get_template_directory_uri(); ?>/img/hcalogo-main.png" />
 				</div>
 			</div>
