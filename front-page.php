@@ -32,7 +32,7 @@ if( have_posts() ) {
 					<div class="col-sm-4 text-center xs-m-b-3 md-m-b-0">
 						<h4 class="text-uppercase">I'm a Tenant</h4>
 						<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-						<img class="img-responsive tenant-main-image hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" />
+						<a href="<?php echo esc_url( $category_link ); ?>"><img class="img-responsive tenant-main-image hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-home-desktop.png" /></a>
 					</div>
 				</a>
 				<?php
@@ -43,7 +43,7 @@ if( have_posts() ) {
 					<div class="col-sm-4 text-center xs-m-b-3 md-m-b-0">
 						<h4 class="text-uppercase">I'm a Landlord</h4>
 						<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-						<img class="img-responsive landlord-main-image hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" />
+						<a href="<?php echo esc_url( $category_link ); ?>"><img class="img-responsive landlord-main-image hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-home-desktop.png" /></a>
 					</div>
 				</a>
 				<?php
@@ -54,7 +54,7 @@ if( have_posts() ) {
 					<div class="col-sm-3 col-sm-offset-1 text-center xs-m-b-3 md-m-b-0">
 						<h4 class="text-uppercase">I'm an Advocate</h4>
 						<a href="<?php echo esc_url( $category_link ); ?>" class="more-link text-uppercase">FIND ANSWERS</a>
-						<img class="img-responsive advocates-main-image hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-home-image.png" />
+						<a href="<?php echo esc_url( $category_link ); ?>"><img class="img-responsive advocates-main-image hidden-xs" style="" src="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-home-image.png" /></a>
 					</div>
 				</a>
 	</div>
