@@ -4,10 +4,10 @@ Library homepage: https://github.com/Metafalica/background-size-emu
 This free library is result of my intellectual work.
 I (the author, named Konstantin Izofatov, living in Russia, metafalica@gmx.com) grant you (the user) permissions
 to use this library in any kind of projects and modify it in any way.
-  
+
 This library provided "AS IS". I am not responsible for any damages that you can receive from using it.
 Use it on your own risk.
-  
+
 This notice should not be removed.
 */
 
@@ -230,7 +230,7 @@ This notice should not be removed.
     BgSzEmu.prototype.getAvailableAreaSizeIn = function (elem)
     {
         var sz = { width: elem.clientWidth || elem.offsetWidth, height: elem.clientHeight || elem.offsetHeight };
-            
+
         return sz;
     };
 
@@ -758,7 +758,7 @@ var search_input_selector = '#search-input';
 
       if( $(search_input_selector).val().trim().length > 0 ) {
         $('#autocomplete-button-wrapper').append(
-          $('<a>').addClass('btn btn-lg').attr('href', 'http://dev.partnerandpartners.com/housingcourtanswers/?s=' + encodeURIComponent( $(search_input_selector).val() ) ).text('See All Results')
+          $('<a>').addClass('btn btn-lg').attr('href', 'http://housingcourtanswers.org/?s=' + encodeURIComponent( $(search_input_selector).val() ) ).text('See All Results')
         )
       }
     }
@@ -859,13 +859,13 @@ var search_input_selector = '#search-input';
 
           $('#for-landlords-results').empty();
           results = for_landlords_idx.search( $(this).val() );
-          
+
           if( results.length == 1 ) {
             $('#for-landlords-results').append('<div class="count">' + results.length + ' Tips</div>');
           } else {
             $('#for-landlords-results').append('<div class="count">' + results.length + ' Tips</div>');
           }
-          
+
           var num_for_landlords_added = 0;
 
           $(results).each(function(index, result){
@@ -917,11 +917,11 @@ var search_input_selector = '#search-input';
   $(document).ready(function(){
     $('.sticky').Stickyfill();
     // $("#nav").affix({
-    //     offset: { 
+    //     offset: {
     //         top: $('#nav').offset().top
     //     }
     // });
-    
+
     // $('#nav').affix({
     //   offset: {
     //     bottom: ($('footer').outerHeight(true) + $('.application').outerHeight(true)) + 60
