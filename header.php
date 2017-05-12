@@ -73,13 +73,13 @@
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } ?>
 
-		<link rel="apple-touch-icon" sizes="180x180" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/favicon-16x16.png">
-		<link rel="manifest" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/manifest.json">
-		<link rel="mask-icon" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/safari-pinned-tab.svg" color="#000000">
-		<link rel="shortcut icon" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/favicon.ico">
-		<meta name="msapplication-config" content="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/browserconfig.xml">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/apple-touch-icon.png#v1">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/favicon-32x32.png#v1">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/favicon-16x16.png#v1">
+		<link rel="manifest" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/manifest.json#v1">
+		<link rel="mask-icon" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/safari-pinned-tab.svg#v1" color="#000000">
+		<link rel="shortcut icon" href="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/favicon.ico#v1">
+		<meta name="msapplication-config" content="http://housingcourtanswers.org/wp-content/themes/housingcourtanswers/img/browserconfig.xml#v1">
 		<meta name="theme-color" content="#ffffff">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
