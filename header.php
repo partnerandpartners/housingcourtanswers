@@ -32,12 +32,21 @@
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
 			<meta property="og:description" content="Housing Court Answers does regular workshops and trainings for advocates, including a Spring Training Series every year. Check out our Upcoming Events."/>
 			<meta name="twitter:card" content="summary_large_image">
+		<?php } elseif (is_page('Glossary')) {
+			global $post;
+			?>
+			<title><?php wp_title(''); ?></title>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="<?php wp_title(''); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags($post->post_content); ?>"/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_tag()) {?>
 			<title>Glossary <?php wp_title('|'); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
-			<meta property="og:title" content="Glossary <?php wp_title('|', true, 'left'); ?>"/>
+			<meta property="og:title" content="Glossary | <?php echo single_tag_title( '', false ); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
-			<meta property="og:description" content="This is a test description for glossary terms"/>
+			<meta property="og:description" content="<?php echo tag_description(); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_search()) {?>
 			<title>Search results for "<?php echo get_search_query(); ?>"</title>
