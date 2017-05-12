@@ -46,7 +46,7 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Glossary | <?php echo single_tag_title( '', false ); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
-			<meta property="og:description" content="<?php echo tag_description(); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags(tag_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_search()) {?>
 			<title>Search results for "<?php echo get_search_query(); ?>"</title>
