@@ -28,7 +28,7 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Glossary <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-			<meta property="og:description" content="<?php echo tag_description(); ?>"/>
+			<meta property="og:description" content="This is a test description for glossary terms"/>
 		<?php } else { ?>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
