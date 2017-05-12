@@ -7,15 +7,22 @@ function getOffset(elmnt) {
   console.log(offsetTop + offsetLeft);
 }
 
+function navbarBgToggle () {
+  if (($(window).scrollTop() > 5)) {
+    $("header").addClass("bg-scrolled");
+  } else {
+    $("header").removeClass("bg-scrolled");
+  }
+}
+
 $( document ).ready(function() {
   var headerHeight = $(".full").outerHeight();
+
+  navbarBgToggle()
+
   console.log(headerHeight);
   $( window ).scroll(function() {
-    if (($(window).scrollTop() > 5)) {
-      $("header").addClass("bg-scrolled");
-    } else {
-      $("header").removeClass("bg-scrolled");
-    }
+    navbarBgToggle()
   });
   //$("li.dropdown:first-child").addClass("dropdown-toggle");
   if ($('#glossary-labels').length) {
