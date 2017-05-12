@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php if ((is_front_page())) { ?>
 		<meta property="og:site_name" content="Housing Court Answers"/>
-		<meta property="og:title" content="Housing Court Answers"/>
+		<meta property="og:title" content="Housing Court Answers | Fighting for Justice"/>
 		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-		<meta property="og:description" content="Fighting for Justice"/>
+		<meta property="og:description" content=""/>
 		<?php } elseif (is_category('For Tenants')) {?>
 		<meta property="og:site_name" content="Housing Court Answers"/>
 		<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
@@ -31,7 +31,7 @@
 			<meta property="og:description" content="This is a test description for glossary terms"/>
 		<?php } else { ?>
 			<meta property="og:site_name" content="Housing Court Answers"/>
-			<meta property="og:title" content="<?php wp_title(''); ?>"/>
+			<meta property="og:title" content="<?php wp_title(':', true, 'right'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 			<meta property="og:description" content="This is a test for all other pages description"/>
 		<?php } ?>
