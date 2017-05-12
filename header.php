@@ -24,6 +24,11 @@
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
 			<meta property="og:description" content="This is a test for the For Advocates description"/>
+		<?php } elseif (is_tag()) {?>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="Glossary <?php wp_title('|', true, 'left'); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
+			<meta property="og:description" content="<?php echo tag_description(); ?>"/>
 		<?php } else { ?>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
