@@ -6,23 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php if ((is_front_page())) { ?>
 		<meta property="og:site_name" content="Housing Court Answers"/>
-		<meta property="og:title" content="Housing Court Answers | Fighing for Justice"/>
+		<meta property="og:title" content="Housing Court Answers | Fighting for Justice"/>
 		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 		<meta property="og:description" content="This is a test for the homepage description"/>
 		<?php } elseif (is_category('For Tenants')) {?>
 		<meta property="og:site_name" content="Housing Court Answers"/>
 		<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png"/>
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
 		<meta property="og:description" content="This is a test for the For Tenants description"/>
 		<?php } elseif (is_category('For Landlords')) {?>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
-			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-landlords.png"/>
 			<meta property="og:description" content="This is a test for the For Landlords description"/>
 		<?php } elseif (is_category('For Advocates')) {?>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
-			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-advocates-main-image.png"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
 			<meta property="og:description" content="This is a test for the For Advocates description"/>
 		<?php } else { ?>
 			<meta property="og:site_name" content="Housing Court Answers"/>
