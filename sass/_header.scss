@@ -7,10 +7,10 @@ body.logged-in>header.navbar {
 }
 
 .bg {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: backgroundColor 0.5s ease;
+    -moz-transition: backgroundColor 0.5s ease;
+    -o-transition: backgroundColor 0.5s ease;
+    transition: backgroundColor 0.5s ease;
 }
 
 .navbar-brand {
