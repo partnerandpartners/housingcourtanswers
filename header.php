@@ -16,21 +16,21 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
-			<meta property="og:description" content="Understanding the court process can help you negotiate a better deal in Housing Court. You will find information on what happens in court and how you can fight your case."/>
+			<meta property="og:description" content="<?php echo category_description(); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Landlords')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-landlords.png"/>
-			<meta property="og:description" content="Housing Court explained for unrepresented owners of 1-4 family homes, coops, condos."/>
+			<meta property="og:description" content="<?php echo category_description(); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Advocates')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
-			<meta property="og:description" content="Housing Court Answers does regular workshops and trainings for advocates, including a Spring Training Series every year. Check out our Upcoming Events."/>
+			<meta property="og:description" content="<?php echo category_description(); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_page('Glossary')) {
 			global $post;
