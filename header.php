@@ -9,43 +9,50 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers | Fighting for Justice"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-			<meta property="og:description" content=""/>
+			<meta property="og:description" content="We answer questions about New York City’s Housing Court, housing laws and regulations."/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Tenants')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
 			<meta property="og:description" content="Understanding the court process can help you negotiate a better deal in Housing Court. You will find information on what happens in court and how you can fight your case."/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Landlords')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-landlords.png"/>
 			<meta property="og:description" content="Housing Court explained for unrepresented owners of 1-4 family homes, coops, condos."/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Advocates')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
 			<meta property="og:description" content="Housing Court Answers does regular workshops and trainings for advocates, including a Spring Training Series every year. Check out our Upcoming Events."/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_tag()) {?>
 			<title>Glossary <?php wp_title('|'); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Glossary <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
 			<meta property="og:description" content="This is a test description for glossary terms"/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_search()) {?>
 			<title>Search results for "<?php echo get_search_query(); ?>"</title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Search results for '<?php echo get_search_query(); ?>'"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 			<meta property="og:description" content="Search Housing Court Answers for housing court topics, terms and tips."/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category()) { ?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 			<meta property="og:description" content="<?php echo category_description(); ?>"/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } else {
 			global $post;
 			?>
@@ -54,6 +61,7 @@
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 			<meta property="og:description" content="<?php echo wp_strip_all_tags($post->post_content); ?>"/>
+			<meta name="twitter:card" content="summary_large_image">
 		<?php } ?>
 		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/favicon-152.png">
