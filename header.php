@@ -4,27 +4,47 @@
 		<meta charset="<?php esc_attr(bloginfo('charset')) ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<?php if ((is_front_page())) { ?>
+		<meta property="og:site_name" content="Housing Court Answers"/>
+		<meta property="og:title" content="<?php wp_title(); ?>"/>
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png"/>
+		<meta property="og:description" content="This is a test for the homepage description"/>
+		<?php elseif (is_category('For Tenants')) {?>
+		<meta property="og:site_name" content="Housing Court Answers"/>
+		<meta property="og:title" content="<?php wp_title(); ?>"/>
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/tenants/hca-tenants-bg-bldg-main.png"/>
+		<meta property="og:description" content="This is a test for the For Tenants description"/>
+		<?php elseif (is_category('For Landlords')) {?>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="<?php wp_title(); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/landlords/hca-landlords-bg-bldg-main.png"/>
+			<meta property="og:description" content="This is a test for the For Landlords description"/>
+		<?php elseif (is_category('For Advocates')) {?>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="<?php wp_title(); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/advocates/hca-advocates-main-image.png"/>
+			<meta property="og:description" content="This is a test for the For Advocates description"/>
+		<?php } else { ?>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="<?php wp_title(); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/hcalogo.png"/>
+			<meta property="og:description" content="This is a test for all other pages description"/>
+		<?php } ?>
 		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
 		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/favicon-152.png">
 		<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/img/favicon-144.png">
-
 		<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/img/favicon-120.png">
-
 		<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/favicon-114.png">
-
 		<!-- For first- and second-generation iPad: -->
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/favicon-72.png">
-
 		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/img/favicon-57.png">
-
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico"/>
-
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
