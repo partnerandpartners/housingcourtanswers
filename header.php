@@ -37,7 +37,7 @@
 		<?php } elseif (is_search()) {?>
 			<title>Search results for "<?php echo get_search_query(); ?>"</title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
-			<meta property="og:title" content="Search results for "<?php echo get_search_query(); ?>""/>
+			<meta property="og:title" content="Search results for '<?php echo get_search_query(); ?>'"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
 			<meta property="og:description" content="Search Housing Court Answers for housing court topics, terms and tips."/>
 		<?php } elseif (is_category()) { ?>
