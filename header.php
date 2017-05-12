@@ -124,7 +124,7 @@
 			<?php } elseif (is_category('For Advocates')) { ?>
 				<header class="not-home navbar navbar-fixed-top" id="top" role="navigation">
 			<?php } else { ?>
-				<header class="not-home navbar navbar-fixed-top bg" id="top" role="navigation">
+				<header class="not-home navbar navbar-fixed-top" id="top" role="navigation">
 			<?php } ?>
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
