@@ -5,37 +5,54 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php if ((is_front_page())) { ?>
-		<meta property="og:site_name" content="Housing Court Answers"/>
-		<meta property="og:title" content="Housing Court Answers | Fighting for Justice"/>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-		<meta property="og:description" content=""/>
+			<title><?php bloginfo( 'name' ); ?></title>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="Housing Court Answers | Fighting for Justice"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
+			<meta property="og:description" content=""/>
 		<?php } elseif (is_category('For Tenants')) {?>
-		<meta property="og:site_name" content="Housing Court Answers"/>
-		<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
-		<meta property="og:description" content="Understanding the court process can help you negotiate a better deal in Housing Court. You will find information on what happens in court and how you can fight your case."/>
+			<title><?php wp_title(''); ?></title>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
+			<meta property="og:description" content="Understanding the court process can help you negotiate a better deal in Housing Court. You will find information on what happens in court and how you can fight your case."/>
 		<?php } elseif (is_category('For Landlords')) {?>
+			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-landlords.png"/>
 			<meta property="og:description" content="Housing Court explained for unrepresented owners of 1-4 family homes, coops, condos."/>
 		<?php } elseif (is_category('For Advocates')) {?>
+			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
 			<meta property="og:description" content="Housing Court Answers does regular workshops and trainings for advocates, including a Spring Training Series every year. Check out our Upcoming Events."/>
 		<?php } elseif (is_tag()) {?>
+			<title>Glossary <?php wp_title('|'); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Glossary <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
 			<meta property="og:description" content="This is a test description for glossary terms"/>
-		<?php } else { ?>
+		<?php } elseif (is_search()) {?>
+			<title>Search results for "<?php echo get_search_query(); ?>"</title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
-			<meta property="og:title" content="<?php wp_title(':', true, 'left'); ?>"/>
+			<meta property="og:title" content="Search <?php wp_title(':', true, 'left'); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
+			<meta property="og:description" content="Search Housing Court Answers for housing court topics, terms and tips."/>
+		<?php } elseif (is_category()) { ?>
+			<title><?php wp_title(''); ?></title>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-			<meta property="og:description" content="This is a test for all other pages description"/>
+			<meta property="og:description" content="<?php echo category_description(); ?>"/>
+		<?php } else { ?>
+			<title><?php wp_title(''); ?></title>
+			<meta property="og:site_name" content="Housing Court Answers"/>
+			<meta property="og:title" content="<?php wp_title(''); ?>"/>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
+			<meta property="og:description" content="<?php echo the_content(); ?>"/>
 		<?php } ?>
-		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
 		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/favicon-152.png">
 		<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
