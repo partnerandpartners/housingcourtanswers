@@ -37,7 +37,7 @@
 		<?php } elseif (is_search()) {?>
 			<title>Search results for "<?php echo get_search_query(); ?>"</title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
-			<meta property="og:title" content="Search <?php wp_title(':', true, 'left'); ?>"/>
+			<meta property="og:title" content="Search results for "<?php echo get_search_query(); ?>""/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
 			<meta property="og:description" content="Search Housing Court Answers for housing court topics, terms and tips."/>
 		<?php } elseif (is_category()) { ?>
@@ -46,12 +46,14 @@
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 			<meta property="og:description" content="<?php echo category_description(); ?>"/>
-		<?php } else { ?>
+		<?php } else {
+			global $post;
+			?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-			<meta property="og:description" content="<?php echo wp_strip_all_tags(get_the_content()); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags($post->post_content); ?>"/>
 		<?php } ?>
 		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/favicon-152.png">
