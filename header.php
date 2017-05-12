@@ -16,21 +16,21 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
-			<meta property="og:description" content="<?php echo category_description(); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags(category_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Landlords')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-landlords.png"/>
-			<meta property="og:description" content="<?php echo category_description(); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags(category_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Advocates')) {?>
 			<title><?php wp_title(''); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
-			<meta property="og:description" content="<?php echo category_description(); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags(category_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_page('Glossary')) {
 			global $post;
@@ -60,7 +60,7 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-			<meta property="og:description" content="<?php echo category_description(); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags(category_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } else {
 			global $post;
