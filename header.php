@@ -51,7 +51,7 @@
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
-			<meta property="og:description" content="<?php echo the_content(); ?>"/>
+			<meta property="og:description" content="<?php echo wp_strip_all_tags(get_the_content()); ?>"/>
 		<?php } ?>
 		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/favicon-152.png">
