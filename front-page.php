@@ -167,7 +167,6 @@ if( have_posts() ) {
     $args = array(
       'post_type' => array('event'),
       'posts_per_page' => 3,
-      'order' => 'DESC'
     );
 
     $upcoming_events_query = new WP_Query( $args );
