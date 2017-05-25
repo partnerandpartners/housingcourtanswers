@@ -31,17 +31,16 @@
 	<div class="container">
 		<div class="row">
 		<?php
-			$columns_printed = 0;
-			$num_posts_printed = 0;
+			$rowCounter = 0;
 			$news_query = hca_get_news_query();
 			if( $news_query->have_posts() ) {
 				while( $news_query->have_posts() ){
 					$news_query->the_post();
 					get_template_part('templates/news');
-					$columns_printed++;
-					$num_posts_printed++;
-					if( $columns_printed === 3 && $num_posts_printed != $news_query->found_posts ) {
+					$rowCounter++;
+					if($rowCounter==3) {
 						echo '</div><div class="row">';
+            $rowCounter = 0;
 					}
 				}
 			}

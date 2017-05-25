@@ -12,21 +12,21 @@
 			<meta property="og:description" content="We answer questions about New York City’s Housing Court, housing laws and regulations."/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Tenants')) {?>
-			<title><?php wp_title(''); ?></title>
+			<title><?php wp_title(''); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-tenants.png"/>
 			<meta property="og:description" content="<?php echo wp_strip_all_tags(category_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Landlords')) {?>
-			<title><?php wp_title(''); ?></title>
+			<title><?php wp_title(''); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-landlords.png"/>
 			<meta property="og:description" content="<?php echo wp_strip_all_tags(category_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category('For Advocates')) {?>
-			<title><?php wp_title(''); ?></title>
+			<title><?php wp_title(''); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Housing Court Answers <?php wp_title('|', true, 'left'); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-advocates.png"/>
@@ -35,28 +35,28 @@
 		<?php } elseif (is_page('Glossary')) {
 			global $post;
 			?>
-			<title><?php wp_title(''); ?></title>
+			<title><?php wp_title(''); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
 			<meta property="og:description" content="<?php echo wp_strip_all_tags($post->post_content); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_tag()) {?>
-			<title>Glossary <?php wp_title('|'); ?></title>
+			<title>Glossary <?php wp_title('|'); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Glossary | <?php echo single_tag_title( '', false ); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-glossary.png"/>
 			<meta property="og:description" content="<?php echo wp_strip_all_tags(tag_description()); ?>"/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_search()) {?>
-			<title>Search results for "<?php echo get_search_query(); ?>"</title>
+			<title>Search results for "<?php echo get_search_query(); ?>" | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="Search results for '<?php echo get_search_query(); ?>'"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
 			<meta property="og:description" content="Search Housing Court Answers for housing court topics, terms and tips."/>
 			<meta name="twitter:card" content="summary_large_image">
 		<?php } elseif (is_category()) { ?>
-			<title><?php wp_title(''); ?></title>
+			<title><?php wp_title(''); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
@@ -65,7 +65,7 @@
 		<?php } else {
 			global $post;
 			?>
-			<title><?php wp_title(''); ?></title>
+			<title><?php wp_title(''); ?> | <?php bloginfo( 'name' ); ?></title>
 			<meta property="og:site_name" content="Housing Court Answers"/>
 			<meta property="og:title" content="<?php wp_title(''); ?>"/>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/housing-share-img.png"/>
@@ -87,10 +87,10 @@
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		
+
 		  ga('create', 'UA-99710288-1', 'auto');
 		  ga('send', 'pageview');
-		
+
 		</script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
