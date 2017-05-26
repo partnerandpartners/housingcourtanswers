@@ -617,8 +617,10 @@ a[rel="tag"]{
 	}
 }
 
-@media (max-width: 991px) {
-
+@media (min-width: 992px) {
+	h1.article-title {
+		margin-top: 20px;
+	}
 }
 
 @media (max-width: 767px) {
