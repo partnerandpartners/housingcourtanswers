@@ -4,7 +4,7 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class("solid lg-p-y-5 md-p-y-2 xs-p-a-1"); ?>>
+	<article <?php post_class("solid lg-p-a-5 md-p-a-3 xs-p-a-1"); ?>>
 
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
@@ -31,7 +31,7 @@
 						echo  $terms;
 					} ?>
 					</div>
-					<div class="xs-m-t-2" role="main">
+					<div class="xs-m-y-2" role="main">
 						<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
 					</div>
 		</div>

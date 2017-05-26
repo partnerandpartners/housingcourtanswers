@@ -618,9 +618,7 @@ a[rel="tag"]{
 }
 
 @media (max-width: 991px) {
-	h1.article-title {
-		font-size: 32px;
-	}
+
 }
 
 @media (max-width: 767px) {
@@ -671,6 +669,10 @@ a[rel="tag"]{
 	h3 {
     font-size: 32px;
     margin: 0 0 .5em 0;
+	}
+
+	h1.article-title {
+		font-size: 32px;
 	}
 
 	.main-lead {
