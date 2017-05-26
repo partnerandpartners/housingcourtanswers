@@ -4,10 +4,10 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class("solid md-p-y-3 xs-p-a-1"); ?>>
+	<article <?php post_class("solid md-p-y-5 xs-p-a-1"); ?>>
 
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
 				<h1 class="article-title"><?php the_title(); ?></h1>
 				<div class="md-m-t-2">
 					<div class="entry-content"><?php the_content(); ?></div>
@@ -31,7 +31,7 @@
 						echo  $terms;
 					} ?>
 					</div>
-					<div class="xs-m-t-2 xs-m-b-2" role="main">
+					<div class="xs-m-t-2" role="main">
 						<?php the_tags( '<span class="small-header">Related Glossary Terms</span><br/>', ' ', '' ); ?>
 					</div>
 		</div>
