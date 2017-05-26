@@ -4,7 +4,7 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class("solid md-p-y-5 xs-p-a-1"); ?>>
+	<article <?php post_class("solid lg-p-y-5 md-p-y-2 xs-p-a-1"); ?>>
 
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">

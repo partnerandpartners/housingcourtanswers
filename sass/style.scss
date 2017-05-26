@@ -617,8 +617,10 @@ a[rel="tag"]{
 	}
 }
 
-@media (max-width: 1024px) {
-
+@media (max-width: 991px) {
+	h1.article-title {
+		font-size: 32px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -677,10 +679,6 @@ a[rel="tag"]{
 
 	.lead {
     font-size: 18px;
-	}
-
-	h1.article-title {
-    font-size: 32px;
 	}
 
 	.navbar-nav>li:hover {
