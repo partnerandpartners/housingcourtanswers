@@ -86,10 +86,10 @@
 			$fields =  array(
 
   'author' =>
-    '<p class="comment-form-author md-m-t-2"><label for="author">' . __( 'Name', 'domainreference' ) . '<span class="required">*</span></label> ' .'<input id="author" name="author" type="text" value="' . '" size="30"' . ' /></p>',
+    '<p class="comment-form-author md-m-t-2"><label for="author">' . __( 'Name', 'domainreference' ) . '<span class="required">*</span></label> ' .'<input aria-required="true" id="author" name="author" type="text" value="' . '" size="30"' . ' /></p>',
 
   'email' =>
-    '<p class="comment-form-email md-m-t-2"><label for="email">' . __( 'Email', 'domainreference' ) . '<span class="required">*</span></label> ' . '<input id="email" name="email" type="text" value="'  . '" size="30"' . ' /></p>',
+    '<p class="comment-form-email md-m-t-2"><label for="email">' . __( 'Email', 'domainreference' ) . '<span class="required">*</span></label> ' . '<input aria-required="true" id="email" name="email" type="text" value="'  . '" size="30"' . ' /></p>',
 
   'url' =>  '',
 );
@@ -100,6 +100,7 @@
         'title_reply'=>'Do you have a question about this answer?',
         // remove "Text or HTML to be displayed after the set of comment fields"
         'comment_notes_after' => '',
+				'comment_notes_before' => "<p>We need your email address to get back in touch, we won't publish it. Required fields are marked <strong>*</strong></p>",
         // redefine your own textarea (the comment body)
         'comment_field' => '<p class="comment-form-comment md-m-t-2"><label for="comment">' . _x( 'Question', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
 				'fields' => $fields

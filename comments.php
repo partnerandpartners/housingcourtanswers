@@ -40,13 +40,17 @@
 		 */
 		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-	
+
 	<!-- <p>Comments are closed</p> -->
-	
+
 	<?php endif; ?>
 
+We need your email address to get back in touch, we won't publish your email address.
+
 	<?php comment_form(array(
+		'comment_notes_before' => '<p>Test</p>',
 		'fields' =>  array(
+			'comment_notes_before' => '<p>Test</p>',
 		  'author' =>
 		    '<div class="row"><div class="col-sm-6"><div class="form-group"><span class="small-header">Name</span><input placeholder="Name" id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .'" /></div></div></div>',
 		  'email' =>

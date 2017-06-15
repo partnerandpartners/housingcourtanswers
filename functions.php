@@ -17,9 +17,11 @@ function script_enqueuer() {
 	//wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery') );
 	//wp_register_script( 'compiled', get_template_directory_uri().'/js/compiled.js', array('jquery', 'bootstrap'), '', true );
 	wp_register_script( 'sitejs', get_template_directory_uri().'/js/hca.min.js', '', true );
-		wp_enqueue_script( 'sitejs' );
+	wp_enqueue_script( 'sitejs' );
 	wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
-			wp_enqueue_style( 'screen' );
+	wp_enqueue_style( 'screen' );
+	wp_enqueue_script( 'validator', get_template_directory_uri() . '/js/validator.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'ajax-comments', get_template_directory_uri() . '/js/ajax-comments.js', array('jquery', 'validator'), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'script_enqueuer', 10 );
 
@@ -628,3 +630,22 @@ function housing_court_get_front_page_suggestions() {
     'posts' => $posts_response,
   );
 }
+
+function housingcourtanswers_ajax_comments ($comment_ID, $comment_status) {
+	if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+		if ($comment_status == 0 || $comment_status == 1) {
+			wp_send_json_success(array(
+				'success' => true,
+				'error' => false
+			));
+		} else {
+			wp_send_json_error(array(
+				'error' => true,
+				'success' => false
+			));
+		}
+	}
+	exit;
+}
+
+add_action('comment_post', 'housingcourtanswers_ajax_comments', 20, 2);
