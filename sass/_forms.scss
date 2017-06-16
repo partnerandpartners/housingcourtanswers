@@ -48,6 +48,76 @@ textarea {
   min-height: 12rem;
 }
 
+p.error-message {
+  color: $red !important;
+}
+
+.success-message {
+  position: relative;
+  padding: 15px;
+  background: $hca-bright-green;
+  margin-top: 15px;
+  color: $white;
+}
+
+.system-error {
+  position: relative;
+  padding: 15px;
+  background: $red;
+  margin-top: 15px;
+  color: $white;
+}
+
+.system-message-title {
+  margin-bottom: 5px;
+}
+
+.invalid {
+  background: $bg-pink !important;
+  border: 3px solid $red !important;
+}
+
+.success-message a {
+    border-bottom: 2px solid #eee;
+    &:hover,
+  	&:active,
+  	&:focus {
+  		color: $hca-blue;
+  		cursor: pointer;
+  		border-bottom: 2px solid $hca-blue;
+  	}
+}
+
+.close-success-message {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $white;
+  font-size: 1.3em;
+  line-height: 0;
+  text-align: center;
+  border: none;
+  color: $hca-bright-green;
+}
+
+.close-error-message {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $white;
+  font-size: 1.3em;
+  line-height: 0;
+  text-align: center;
+  border: none;
+  color: $red;
+}
+
 input[type="radio"] {
   display:inline-block;
    width:19px;

@@ -45,7 +45,7 @@
 
 	<?php endif; ?>
 
-We need your email address to get back in touch, we won't publish your email address.
+<div class="comment-notes xs-m-b-2">We need your email address to get back in touch, we won't publish your email address.</div>
 
 	<?php comment_form(array(
 		'comment_notes_before' => '<p>Test</p>',
