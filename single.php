@@ -86,10 +86,10 @@
 			$fields =  array(
 
   'author' =>
-    '<p class="comment-form-author md-m-t-2 xs-m-b-2"><label for="author">' . __( 'Name', 'domainreference' ) . '<span class="required">*</span></label> ' .'<input aria-required="true" id="author" name="author" type="text" value="' . '" size="30"' . ' /></p>',
+    '<p class="comment-form-author md-m-t-2 xs-m-b-2"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .'<input aria-required="true" id="author" name="author" type="text" value="' . '" size="30"' . ' /></p>',
 
   'email' =>
-    '<p class="comment-form-email md-m-t-2 xs-m-b-2"><label for="email">' . __( 'Email', 'domainreference' ) . '<span class="required">*</span></label> ' . '<input aria-required="true" id="email" name="email" type="text" value="'  . '" size="30"' . ' /></p>',
+    '<p class="comment-form-email md-m-t-2 xs-m-b-2"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' . '<input aria-required="true" id="email" name="email" type="text" value="'  . '" size="30"' . ' /></p>',
 
   'url' =>  '',
 );
@@ -100,9 +100,9 @@
         'title_reply'=>'Have a question or comment?',
         // remove "Text or HTML to be displayed after the set of comment fields"
         'comment_notes_after' => '',
-				'comment_notes_before' => '<p class="comment-notes xs-m-b-1">We need your email address to respond, but we will not share or publish it. Required fields are marked <strong>*</strong></p>',
+				'comment_notes_before' => '<h6 class="comment-notes xs-m-b-2">We need your email address to respond, but we will not share or publish it.</h6>',
         // redefine your own textarea (the comment body)
-        'comment_field' => '<p class="comment-form-comment md-m-t-2"><label for="comment">' . _x( 'Message', 'noun' ) . '<span class="required">*</span></label><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+        'comment_field' => '<p class="comment-form-comment md-m-t-2"><label for="comment">' . _x( 'Message', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
 				'fields' => $fields
 				);
 
