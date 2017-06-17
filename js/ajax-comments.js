@@ -63,7 +63,7 @@
             console.log(jqXHR)
             console.log(textStatus)
             console.log(errorThrown)
-            $('form#commentform').append($('<div class="system-error"><h6 class="system-message-title">Message Failed to Send</h6><p>Check your internet connection and try again or you might have already submitted this message.</p><button class="close-error-message">×</button></div>'))
+            $('form#commentform').append($('<div class="system-error"><h6 class="system-message-title">Message Failed to Send</h6><p>Check your internet connection and try again or you might have already sent this message.</p><button class="close-error-message">×</button></div>'))
           },
           success: function (data, textStatus) {
             clearCommentForm()
