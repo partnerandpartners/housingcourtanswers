@@ -134,14 +134,14 @@ body.autocomplete-active #autocomplete {
 
   .input-group-btn {
     position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 9px;
+      top: 9px;
       button.search-button {
         background-image: url("../img/hca-search-icon.png");
         -webkit-appearance: none;
         border: none;
-        height: 28px;
-        width: 28px;
+        height: 30px;
+        width: 30px;
         background-size: 100%;
         &:focus {
           outline: none;
